@@ -1,42 +1,105 @@
 ---
-title: "Derek C. Briggs"
-image: images/profile.jpg
-about:
-  template: trestles
-  image-width: 15em
-  image-shape: round
-  links:
-    - icon: mortarboard-fill
-      text: Google Scholar
-      href: https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en
-    - icon: building
-      text: CU Boulder Profile
-      href: https://www.colorado.edu/education/derek-briggs
-    - icon: file-earmark-text
-      text: Curriculum Vitae
-      href: files/briggs_cv.pdf
-    - icon: envelope-fill
-      text: Email
-      href: mailto:derek.briggs@colorado.edu
+title: ""
+pagetitle: "Derek C. Briggs"
+format:
+  html:
+    toc: false
+    page-layout: full
 ---
 
-## Welcome
+::: {.hero-banner}
+::: {.hero-content}
 
-I am a **Professor of Research and Evaluation Methodology** in the School of Education at the University of Colorado Boulder. I also serve as **Associate Dean for Faculty** and direct the [Center for Assessment Design Research and Evaluation (CADRE)](https://www.colorado.edu/cadre/).
+# Derek C. Briggs
 
-My research focuses on educational measurement, psychometrics, and the validity of inferences drawn from standardized tests. I am particularly interested in questions about what we can claim to know from test scores about what students have learned.
+### Professor of Research & Evaluation Methodology
+### University of Colorado Boulder
 
-## Current Interests
+::: {.hero-buttons}
+[Google Scholar](https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en){.btn .btn-primary}
+[CU Boulder Profile](https://www.colorado.edu/education/derek-briggs){.btn .btn-secondary}
+[Contact Me](mailto:derek.briggs@colorado.edu){.btn .btn-secondary}
+:::
 
-I am increasingly exploring the intersection of **artificial intelligence and education**---both as a tool for teaching and as a subject of scholarly inquiry. This website features a [blog](blog.qmd) where I share reflections on using AI in my teaching and research practice.
+:::
+:::
 
-## Recent Highlights
+::: {.intro-section}
+::: {.profile-container}
+![](images/profile.jpg){.profile-photo}
+:::
 
-- **Elected Fellow**, American Educational Research Association
+::: {.intro-text}
+## What I Do
+
+I study **educational measurement and psychometrics**---the science of what we can claim to know from test scores about what students have learned.
+
+I direct the [Center for Assessment Design Research and Evaluation (CADRE)](https://www.colorado.edu/cadre/) and serve as **Associate Dean for Faculty** in the School of Education.
+
+Currently, I'm exploring the intersection of **artificial intelligence and education**---both as a tool for teaching and as a subject of scholarly inquiry.
+
+[Read my blog on AI & Education &rarr;](blog.qmd){.intro-link}
+:::
+:::
+
+::: {.highlights-section}
+## Highlights
+
+::: {.highlights-grid}
+
+::: {.highlight-card}
+![](images/Use_This_Historical and Conceptual Foundations of Measurement in the Human Sciences.jpg){.highlight-image}
+### My Book
+*Historical and Conceptual Foundations of Measurement in the Human Sciences*
+
+Tracing the intellectual history of educational and psychological measurement.
+:::
+
+::: {.highlight-card}
+![](images/Briggs_NCME_Presidential_Address.jpeg){.highlight-image}
+### NCME Presidential Address
+Delivered the presidential address at the 2022 National Council on Measurement in Education annual meeting.
+:::
+
+::: {.highlight-card}
+![](images/NAED Induction Ceremony.jpg){.highlight-image}
+### National Academy of Education
+Inducted as a member of the National Academy of Education in 2024.
+:::
+
+:::
+:::
+
+::: {.credentials-section}
+::: {.credentials-list}
+
+- **Fellow**, American Educational Research Association
 - **Member**, National Academy of Education
 - **Former President**, National Council on Measurement in Education
-- Author of *Historical and Conceptual Foundations of Measurement in the Human Sciences*
+- **Professor**, University of Colorado Boulder
 
----
+:::
+:::
 
-*Feel free to explore my [research](research.qmd), [teaching](teaching.qmd), or read my latest [blog posts](blog.qmd) on AI in education.*
+::: {.cta-section}
+## Explore More
+
+::: {.cta-grid}
+
+::: {.cta-card}
+### [Research](research.qmd)
+Publications, CADRE, and ongoing projects in psychometrics and educational measurement.
+:::
+
+::: {.cta-card}
+### [Teaching](teaching.qmd)
+Graduate courses in statistics, measurement theory, and research methods.
+:::
+
+::: {.cta-card}
+### [AI & Education Blog](blog.qmd)
+Reflections on using AI in teaching and research practice.
+:::
+
+:::
+:::
