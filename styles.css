@@ -1,8 +1,8 @@
 /*-- Custom styles for Derek Briggs' personal website --*/
 
-/* Profile image positioning - move image down to show more of head */
+/* Profile image positioning - show from very top of image */
 .about-image img {
-  object-position: center 10% !important;
+  object-position: center top !important;
 }
 
 /* Navbar styling */
