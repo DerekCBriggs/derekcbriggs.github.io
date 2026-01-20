@@ -42,7 +42,7 @@ The app allows students to:
 - See how the Rasch model maintains constant person comparisons across items
 - Contrast this with the 2PL model where comparisons depend on which items are used
 
-This is the kind of teaching tool I've wanted to create for years but never had the time. AI made it possible.
+This is the kind of teaching tool I've wanted to create for years but never had the time. AI made it possible. You can find the [Specific Objectivity Shiny App on GitHub](https://github.com/DerekCBriggs/Measurement-and-Psychometrics/tree/master/Specific%20Objectivity/Specific_Objectivity_App).
 
 ## Join the Conversation
 
