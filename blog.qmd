@@ -23,4 +23,4 @@ Topics I explore include:
 - **Critical Perspectives**: What are the limitations and risks of AI in educational contexts?
 - **Hands-On Examples**: Concrete demonstrations of AI-assisted workflows
 
-*Subscribe via RSS to stay updated on new posts.*
+[Subscribe via RSS](blog.xml) to stay updated on new posts.

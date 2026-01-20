@@ -52,4 +52,4 @@ If you're a fellow educator exploring these questions, I'd love to hear from you
 
 ---
 
-*This is the first post in what I hope will be an ongoing series. Subscribe via RSS or check back for updates.*
+*This is the first post in what I hope will be an ongoing series. [Subscribe via RSS](/blog.xml) or check back for updates.*
