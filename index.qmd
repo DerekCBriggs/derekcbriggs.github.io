@@ -50,25 +50,25 @@ Currently, I'm exploring the intersection of **artificial intelligence and educa
 ::: {.highlights-grid}
 
 ::: {.highlight-card}
-![](images/Use_This_Historical and Conceptual Foundations of Measurement in the Human Sciences.jpg){.highlight-image}
+[![](images/Use_This_Historical and Conceptual Foundations of Measurement in the Human Sciences.jpg){.highlight-image}](https://www.routledge.com/Historical-and-Conceptual-Foundations-of-Measurement-in-the-Human-Sciences-Credos-and-Controversies/Briggs/p/book/9780367225230)
 
-**My Book**
+[**My Book**](https://www.routledge.com/Historical-and-Conceptual-Foundations-of-Measurement-in-the-Human-Sciences-Credos-and-Controversies/Briggs/p/book/9780367225230)
 
 *Historical and Conceptual Foundations of Measurement in the Human Sciences*
 :::
 
 ::: {.highlight-card}
-![](images/Briggs_NCME_Presidential_Address.jpeg){.highlight-image .image-top}
+[![](images/Briggs_NCME_Presidential_Address.jpeg){.highlight-image .image-top}](https://www.youtube.com/watch?v=1jgUiZ2LUv8&t=12s)
 
-**NCME Presidential Address**
+[**NCME Presidential Address**](https://www.youtube.com/watch?v=1jgUiZ2LUv8&t=12s)
 
 2022 National Council on Measurement in Education
 :::
 
 ::: {.highlight-card}
-![](images/NAED Induction Ceremony.jpg){.highlight-image}
+[![](images/NAED Induction Ceremony.jpg){.highlight-image}](https://naeducation.org/)
 
-**National Academy of Education**
+[**National Academy of Education**](https://naeducation.org/)
 
 Inducted as a member of the National Academy of Education in 2025.
 :::
