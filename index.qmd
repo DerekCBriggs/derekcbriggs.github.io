@@ -7,30 +7,32 @@ format:
     page-layout: full
 ---
 
-::: {.hero-banner}
-::: {.hero-content}
-
-# Derek C. Briggs
-
-### Professor of Research & Evaluation Methodology
-### University of Colorado Boulder
-
-::: {.hero-buttons}
-[Google Scholar](https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en){.btn .btn-primary}
-[CU Boulder Profile](https://www.colorado.edu/education/derek-briggs){.btn .btn-secondary}
-[Contact Me](mailto:derek.briggs@colorado.edu){.btn .btn-secondary}
+::: {.hero-strip}
 :::
 
-:::
-:::
+::: {.main-intro}
 
-::: {.intro-section}
 ::: {.profile-container}
 ![](images/profile.jpg){.profile-photo}
 :::
 
-::: {.intro-text}
-## What I Do
+::: {.name-title}
+# Derek C. Briggs
+
+**Professor of Research & Evaluation Methodology**
+University of Colorado Boulder
+:::
+
+::: {.intro-buttons}
+[Google Scholar](https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en){.btn .btn-primary}
+[CU Boulder Profile](https://www.colorado.edu/education/derek-briggs){.btn .btn-secondary}
+[Curriculum Vitae](files/briggs_cv.pdf){.btn .btn-secondary}
+[Contact](mailto:derek.briggs@colorado.edu){.btn .btn-secondary}
+:::
+
+:::
+
+::: {.about-section}
 
 I study **educational measurement and psychometrics**---the science of what we can claim to know from test scores about what students have learned.
 
@@ -39,7 +41,7 @@ I direct the [Center for Assessment Design Research and Evaluation (CADRE)](http
 Currently, I'm exploring the intersection of **artificial intelligence and education**---both as a tool for teaching and as a subject of scholarly inquiry.
 
 [Read my blog on AI & Education &rarr;](blog.qmd){.intro-link}
-:::
+
 :::
 
 ::: {.highlights-section}
@@ -56,7 +58,7 @@ Currently, I'm exploring the intersection of **artificial intelligence and educa
 :::
 
 ::: {.highlight-card}
-![](images/Briggs_NCME_Presidential_Address.jpeg){.highlight-image}
+![](images/Briggs_NCME_Presidential_Address.jpeg){.highlight-image .image-top}
 
 **NCME Presidential Address**
 
