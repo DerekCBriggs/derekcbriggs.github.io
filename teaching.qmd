@@ -1,0 +1,60 @@
+---
+title: "Teaching"
+---
+
+## Teaching Philosophy
+
+I believe that deep understanding of quantitative methods requires both rigorous mathematical foundations and meaningful application to real problems. My courses aim to demystify statistical and psychometric concepts while maintaining intellectual honesty about their complexity.
+
+I am increasingly incorporating **AI tools** into my teaching---both as a subject of study and as a pedagogical aid. I view AI as an opportunity to help students engage more deeply with difficult concepts, not as a shortcut around the hard work of learning.
+
+---
+
+## Courses
+
+I teach graduate-level courses in the Research and Evaluation Methodology program at CU Boulder.
+
+### Current Courses
+
+| Course | Title | Description |
+|--------|-------|-------------|
+| EDUC 8230 | Quantitative Methods I | Introduction to statistical reasoning and analysis for educational research |
+| EDUC 8710 | Measurement in Survey Research | Principles of measurement as applied to survey design and analysis |
+| EDUC 8720 | Psychometric Modeling: Item Response Theory | Theory and application of IRT models |
+| EDUC 8740 | Latent Variable and Structural Equation Modeling | Advanced methods for modeling latent constructs |
+
+---
+
+## Teaching Resources
+
+I have developed several resources to support student learning:
+
+### Interactive Learning Modules
+
+- [Understanding Reliability](https://github.com/DerekCBriggs/Measurement-and-Psychometrics/tree/master/Reliability) - An R Markdown guide to reliability theory
+- [Specific Objectivity App](https://github.com/DerekCBriggs/Measurement-and-Psychometrics/tree/master/Specific%20Objectivity) - A Shiny app demonstrating Rasch measurement concepts
+
+### Course Materials
+
+Course materials are available to enrolled students through Canvas.
+
+---
+
+## Student Mentoring
+
+I welcome inquiries from prospective graduate students interested in:
+
+- Educational measurement and psychometrics
+- Validity theory and argument
+- Quantitative methods in education
+- The intersection of AI and assessment
+
+Please see the [CU Boulder School of Education](https://www.colorado.edu/education/academics/graduate-programs) for information about our graduate programs.
+
+---
+
+## Office Hours
+
+**Current students:** Please schedule office hours through Canvas or email me directly at [derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu).
+
+**Prospective students:** I am happy to discuss our programs. Please email with your background and interests.

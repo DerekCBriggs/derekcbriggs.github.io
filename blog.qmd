@@ -1,0 +1,26 @@
+---
+title: "AI & Education Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: true
+---
+
+Welcome to my blog on **Artificial Intelligence in Education**.
+
+Here I share reflections, experiments, and lessons learned from integrating AI tools into my teaching and research practice. As someone who has spent decades thinking carefully about measurement and validity, I find the emergence of large language models both exciting and worthy of critical examination.
+
+Topics I explore include:
+
+- **AI for Teaching**: How can tools like Claude and ChatGPT enhance student learning in statistics and psychometrics?
+- **AI for Research**: Using AI assistants for literature review, code development, and writing
+- **Critical Perspectives**: What are the limitations and risks of AI in educational contexts?
+- **Hands-On Examples**: Concrete demonstrations of AI-assisted workflows
+
+*Subscribe via RSS to stay updated on new posts.*

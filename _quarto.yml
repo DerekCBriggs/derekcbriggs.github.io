@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Derek C. Briggs"
+  description: "Professor of Research and Evaluation Methodology at CU Boulder"
+  site-url: https://derekcbriggs.github.io
+
+  navbar:
+    background: dark
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: blog.qmd
+        text: AI & Education Blog
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/derek-briggs-27495a6/
+        aria-label: LinkedIn
+      - icon: github
+        href: https://github.com/DerekCBriggs
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:derek.briggs@colorado.edu
+        aria-label: Email
+
+  page-footer:
+    center: |
+      &copy; 2025 Derek C. Briggs | University of Colorado Boulder
+
+  search: true
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+
+execute:
+  freeze: auto

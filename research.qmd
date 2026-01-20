@@ -1,0 +1,84 @@
+---
+title: "Research"
+---
+
+## Research Focus
+
+My research addresses fundamental questions about educational measurement and assessment:
+
+> **How do we know what students have truly learned?**
+
+This question sits at the heart of my scholarly work and connects issues of test validity, score interpretation, psychometric modeling, and educational policy.
+
+---
+
+## Research Areas
+
+### Validity and Assessment Arguments
+
+I am interested in the conceptual foundations of validity---the extent to which evidence and theory support the interpretations of test scores for their intended uses. This includes:
+
+- The structure and logic of validity arguments
+- Threats to valid score interpretation
+- The relationship between reliability and validity
+
+### Psychometric Theory and Methods
+
+My methodological work focuses on:
+
+- **Item Response Theory (IRT)**: Models for understanding how item characteristics relate to student ability
+- **Rasch Measurement**: The concept of specific objectivity and interval-level measurement
+- **Latent Variable Modeling**: Structural equation models and their applications
+
+### Educational Accountability
+
+I examine how test scores are used (and misused) for high-stakes decisions:
+
+- Value-added models for teacher evaluation
+- Growth models and their interpretation
+- The consequences of accountability policies
+
+### Learning Progressions
+
+I study how student understanding develops over time:
+
+- Defining and validating learning progressions
+- Connecting curriculum, instruction, and assessment
+- Developmental models of cognition
+
+---
+
+## CADRE
+
+I direct the [Center for Assessment Design Research and Evaluation (CADRE)](https://www.colorado.edu/cadre/) at CU Boulder. CADRE conducts research and provides services related to:
+
+- Assessment design and validation
+- Program evaluation
+- Psychometric consulting
+- Professional development for educators
+
+---
+
+## Selected Publications
+
+### Book
+
+**Briggs, D. C.** (2023). *Historical and Conceptual Foundations of Measurement in the Human Sciences: Credos and Controversies*. Academic Press.
+
+### Selected Articles
+
+<!-- Add your key publications here -->
+
+*A complete list of publications is available on my [Google Scholar profile](https://scholar.google.com/citations?user=YOUR_ID) or in my [CV](files/briggs_cv.pdf).*
+
+---
+
+## Current Projects
+
+I am currently exploring how AI tools can support:
+
+- Automated item generation and review
+- Analysis of student response patterns
+- Teaching of statistical and psychometric concepts
+
+Read more about these explorations on my [AI & Education Blog](blog.qmd).

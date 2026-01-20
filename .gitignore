@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto cache
+.quarto/
+/.quarto/
+
+# Rendered site (we'll use GitHub Actions to build)
+_site/
+
+# Temp files
+*~
+~$*
+*.tmp

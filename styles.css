@@ -1,0 +1,61 @@
+/*-- Custom styles for Derek Briggs' personal website --*/
+
+/* Navbar styling */
+.navbar {
+  font-weight: 500;
+}
+
+/* Homepage about section */
+.about-entity {
+  margin-top: 1rem;
+}
+
+/* Quote styling */
+blockquote {
+  border-left: 4px solid #2c3e50;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Table styling */
+table {
+  margin: 1.5rem 0;
+}
+
+/* Footer */
+.nav-footer {
+  padding: 1rem 0;
+}
+
+/* Blog post cards */
+.quarto-listing-default .listing-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks in blog posts */
+pre {
+  border-radius: 8px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Page title banner */
+.title-block-banner {
+  margin-bottom: 2rem;
+}

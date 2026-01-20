@@ -1,0 +1,55 @@
+---
+title: "About Me"
+---
+
+## Biography
+
+I am a Professor of Research and Evaluation Methodology in the School of Education at the University of Colorado Boulder, where I have been on the faculty since 2002. I currently serve as the **Associate Dean for Faculty** and as Director of the **Center for Assessment Design Research and Evaluation (CADRE)**.
+
+My work sits at the intersection of educational measurement, psychometrics, and policy. I am driven by the fundamental question: *How do we know what students have truly learned?* This deceptively simple question leads to deep considerations of validity, reliability, and the proper interpretation of test scores.
+
+## Education
+
+| Degree | Field | Institution | Year |
+|--------|-------|-------------|------|
+| Ph.D. | Education | University of California, Berkeley | 2002 |
+| M.A. | Education | University of California, Berkeley | 1998 |
+| B.A. | Economics | Carleton College | 1993 |
+
+## Professional Honors & Service
+
+### Honors
+- **Elected Fellow**, American Educational Research Association
+- **Member**, National Academy of Education
+
+### Leadership
+- **Former President**, National Council on Measurement in Education (NCME)
+- **Former Editor**, *Educational Measurement: Issues and Practice*
+
+## Research Interests
+
+My research spans several interconnected areas:
+
+- **Validity theory** and the logic of assessment-based arguments
+- **Item response theory** and psychometric modeling
+- **Educational accountability** and the use of test scores for policy decisions
+- **Causal inference** in educational research
+- **Learning progressions** and developmental models of student understanding
+- **Foundational issues** in measurement terminology and theory
+
+## Current Projects
+
+I am increasingly interested in how artificial intelligence can be leveraged for both teaching and research in the measurement sciences. This website serves as a space to document and share my explorations in this area.
+
+## Curriculum Vitae
+
+A full CV is available for download: [Download CV (PDF)](files/briggs_cv.pdf)
+
+---
+
+## Contact
+
+**Office:** Miramontes Baca Education Building, Room 400D
+**Address:** 249 UCB, Boulder, CO 80309
+**Email:** [derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu)
+**Phone:** 303-492-6320
