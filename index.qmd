@@ -49,22 +49,26 @@ Currently, I'm exploring the intersection of **artificial intelligence and educa
 
 ::: {.highlight-card}
 ![](images/Use_This_Historical and Conceptual Foundations of Measurement in the Human Sciences.jpg){.highlight-image}
-### My Book
-*Historical and Conceptual Foundations of Measurement in the Human Sciences*
 
-Tracing the intellectual history of educational and psychological measurement.
+**My Book**
+
+*Historical and Conceptual Foundations of Measurement in the Human Sciences*
 :::
 
 ::: {.highlight-card}
 ![](images/Briggs_NCME_Presidential_Address.jpeg){.highlight-image}
-### NCME Presidential Address
-Delivered the presidential address at the 2022 National Council on Measurement in Education annual meeting.
+
+**NCME Presidential Address**
+
+2022 National Council on Measurement in Education
 :::
 
 ::: {.highlight-card}
 ![](images/NAED Induction Ceremony.jpg){.highlight-image}
-### National Academy of Education
-Inducted as a member of the National Academy of Education in 2024.
+
+**National Academy of Education**
+
+Inducted as a member of the National Academy of Education in 2025.
 :::
 
 :::
