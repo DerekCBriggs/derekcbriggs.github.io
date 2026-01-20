@@ -2,7 +2,7 @@
 
 /* Profile image positioning - move image down to show more of head */
 .about-image img {
-  object-position: center 20% !important;
+  object-position: center 10% !important;
 }
 
 /* Navbar styling */
