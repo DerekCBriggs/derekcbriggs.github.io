@@ -1,5 +1,10 @@
 /*-- Custom styles for Derek Briggs' personal website --*/
 
+/* Profile image positioning - move image down to show more of head */
+.about-image img {
+  object-position: center 20% !important;
+}
+
 /* Navbar styling */
 .navbar {
   font-weight: 500;
