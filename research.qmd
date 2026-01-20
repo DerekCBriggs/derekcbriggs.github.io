@@ -55,7 +55,7 @@ I direct the [Center for Assessment Design Research and Evaluation (CADRE)](http
 - Assessment design and validation
 - Program evaluation
 - Psychometric consulting
-- Professional development for educators
+- Policy analysis
 
 ---
 
@@ -63,11 +63,13 @@ I direct the [Center for Assessment Design Research and Evaluation (CADRE)](http
 
 ### Book
 
-**Briggs, D. C.** (2023). *Historical and Conceptual Foundations of Measurement in the Human Sciences: Credos and Controversies*. Academic Press.
+**Briggs, D. C.** (2021). *Historical and Conceptual Foundations of Measurement in the Human Sciences: Credos and Controversies*. Academic Press.
 
 ### Selected Articles
 
-<!-- Add your key publications here -->
+**Briggs, D. C.**, Maul, A., & McGrane, J. (2025). On the nature of measurement. In L. Cook & M. Pitoniak (Eds.) *Educational Measurement*, 5th Edition. Oxford University Press.
+
+**Briggs, D. C.** (2026). Psychometrics. In T. Teo (Ed.) *The Palgrave Encyclopedia of Theoretical and Philosophical Psychology*. Palgrave Macmillan, Cham. [https://doi.org/10.1007/978-3-031-70581-6_115-1](https://doi.org/10.1007/978-3-031-70581-6_115-1)
 
 *A complete list of publications is available on my [Google Scholar profile](https://scholar.google.com/citations?user=YOUR_ID) or in my [CV](files/briggs_cv.pdf).*
 
