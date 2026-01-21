@@ -18,9 +18,9 @@ Here I share reflections, experiments, and lessons learned from integrating AI t
 
 Topics I explore include:
 
-- **AI for Teaching**: How can tools like Claude and ChatGPT enhance student learning in statistics and psychometrics?
+- **AI for Teaching**: How can LLMs like Claude, Gemini and ChatGPT enhance student learning in statistics and psychometrics?
 - **AI for Research**: Using AI assistants for literature review, code development, and writing
 - **Critical Perspectives**: What are the limitations and risks of AI in educational contexts?
-- **Hands-On Examples**: Concrete demonstrations of AI-assisted workflows
+- **Hands-On Examples**: Concrete demonstrations of AI-assisted tasks and projects
 
 [Subscribe via RSS](blog.xml) to stay updated on new posts.

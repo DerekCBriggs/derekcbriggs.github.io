@@ -1,0 +1,69 @@
+---
+title: "Welcome: Why I'm Starting This Blog"
+author: "Derek C. Briggs"
+date: "2026-01-21"
+categories: [AI, Teaching, Reflection]
+image: "thumbnail.png"
+draft: false
+---
+
+## AI Vertigo
+
+After many years of teaching statistics and psychometrics, I find I am now frequently experiencing AI vertigo. This is that destabilizing feeling that arises when you witness AI performing what seems indistinguishable from an act of sorcery. The emergence of these acts of sorcery from large language models---tools like Claude, ChatGPT, Gemini and others---is changing how I think about the process of teaching, research, and communication.
+
+This blog is my attempt to document and share what I'm learning.
+
+## Why AI in Education?
+
+As someone who has spent a career thinking carefully about **measurement, psychometrics and the concept of validity**, I approach AI with both enthusiasm and skepticism. These tools are remarkable in their capabilities, but they also raise important questions:
+
+- How do we know when an AI-generated response is *valid*?
+- What does it mean for students to *understand* a concept if they can get an AI to solve problems for them?
+- How can we use these tools to *enhance* learning rather than shortcut it?
+
+I don't have definitive answers to these questions. But I believe that engaging with them openly---and documenting my experiments---is more valuable than avoiding the technology altogether.
+
+## What to Expect
+
+In this blog, I plan to share:
+
+1. **Teaching experiments**: How I'm incorporating AI into my graduate courses on statistics and psychometrics
+2. **Research workflows**: Using AI for literature review, code development, and writing
+3. **Critical reflections**: Limitations, failures, and concerns
+4. **Concrete examples**: Actual prompts, outputs, and lessons learned
+
+## A First Example: This Website and Blog
+
+Here was the prompt I gave within the Claude Code interface on my terminal:
+
+<em>
+I'd like to create a new personal website with a page that features blog posts on the use of AI for teaching and research. First have a look at two pre-existing websites that include content about me: https://derekcbriggs.wixsite.com/my-site and https://www.colorado.edu/education/derek-briggs.  Could you suggest a structure for a personal website and take me through the steps I'd need to take to make it publicly visible?  
+</em>
+
+What you are reading now is the result, and it took about, two to three hours to complete. The process was exactly what I'd imagine if I was interacting and iterating with a professional web designer, but way faster. I'd say what I want, Claude would ask a few follop questions giving me options, I'd make my choice, and then bam--there were new files populating my root directory. The part that is typically most daunting to me is getting a website out onto a host. Claude figured all this out for me. It was full-fledged vibe coding. There were only a few occasions where I had to do follow some steps on my own at the githib website, but the directions were incredibly specific and easy to enact.
+
+Claude even drafted the text for this blog post, and to be honest, it could have really passed for things I would have written myself--but with a bit more grandiosity. But it gave me a great starting point for what you are reading. I started the process of creating a new personal website with a first blog post on a Monday afternoon. By Tuesday afternoon, it was out in the world for anyone with the address https://derekcbriggs.github.io/blog.html handy. Amazing.
+
+## A Second Example: Building a Shiny App for a Course I'm Teaching
+
+I also worked with Claude to build an interactive Shiny app for teaching the concept of *specific objectivity* in the context of the Rasch Model. This was based on some pre-existing powerpoint slides and an R script I had used to teach this concept as part of a course on item response theory. I think the content of these materials was great, but it was a bit clunky to enact in person. So, I asked Claude to help me develop something better. What would have taken me hours of coding took about 30 minutes of collaborative back-and-forth.
+
+The app allows students to:
+
+- Manipulate item parameters and student abilities
+- See how the Rasch model maintains constant person comparisons across items
+- Contrast this with the 2PL model where comparisons depend on which items are used
+
+You can find the [Specific Objectivity Shiny App on GitHub](https://github.com/DerekCBriggs/Measurement-and-Psychometrics/tree/master/Specific%20Objectivity/Specific_Objectivity_App).
+
+Is this a mind-blowing AI application? No. But I think it has led to an improved version of an instructional activity that will not be much easier for my students to find and and revisit within this one Shiny app, as opposed to having to find a subset a slides in a powerpoint presentation.
+
+## Join the Conversation
+
+I believe we need practical accounts of how AI is changing the way teachers teach, the way researchers research, and the ways that humans communicate. 
+
+If you're a fellow educator exploring these questions, I'd love to hear from you.
+
+---
+
+*This is the first post in what I hope will be an ongoing series. [Subscribe via RSS](/blog.xml) or check back for updates.*
