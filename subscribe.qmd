@@ -1,0 +1,44 @@
+---
+title: "How to Subscribe via RSS"
+---
+
+RSS (Really Simple Syndication) lets you get notified when new blog posts are published, without needing to check the website manually. Here's how to set it up:
+
+## Step 1: Choose an RSS Reader
+
+An RSS reader is an app that collects updates from websites you follow. Here are some free options:
+
+| Reader | Platform | Notes |
+|--------|----------|-------|
+| [Feedly](https://feedly.com) | Web, iOS, Android | Most popular, easy to use |
+| [NetNewsWire](https://netnewswire.com) | Mac, iOS | Free, simple, no account needed |
+| [Inoreader](https://www.inoreader.com) | Web, iOS, Android | Full-featured free tier |
+
+## Step 2: Add This Blog's Feed
+
+Once you have an RSS reader:
+
+1. **Copy this feed URL:**
+   ```
+   https://derekcbriggs.github.io/blog.xml
+   ```
+
+2. **In your RSS reader**, look for an option like:
+   - "Add Content" or "Add Feed"
+   - A **+** button
+   - "Subscribe" or "Follow"
+
+3. **Paste the feed URL** and confirm.
+
+That's it! New posts will now appear in your RSS reader automatically.
+
+## Why Use RSS?
+
+- **No algorithms** - You see every post, in chronological order
+- **No account needed** on my website
+- **Privacy** - I don't track who subscribes
+- **One place** - Follow multiple blogs in a single app
+
+---
+
+[Return to the blog](blog.qmd)
