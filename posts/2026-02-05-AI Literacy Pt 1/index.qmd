@@ -125,7 +125,7 @@ Claude and I then iterated between four different proposed versions of a table u
 | **Deep Learning** | A subset of ML using artificial neural networks with multiple layers to learn hierarchical representations of data. | Uses neural network architectures (inspired by the brain) rather than traditional ML algorithms like decision trees | Image recognition (facial recognition), speech recognition (Siri/Alexa), medical diagnosis from imaging |
 | **Large Language Model (LLM)** | A type of deep learning model trained on massive text datasets to understand and generate human language. | Specifically focused on language; uses transformer architecture; examples: GPT-4, Claude, Gemini | ChatGPT, Claude, Google Gemini, writing assistants, code generation, translation |
 | **Generative AI** | AI systems that create new content (text, images, audio, video, code) rather than just analyzing or classifying existing data. | Distinguished by output - creates rather than categorizes; LLMs are one type of generative AI | ChatGPT (text), DALL-E/Midjourney (images), Suno (music), GitHub Copilot (code) |
-| **Transformer** | A neural network architecture (introduced 2017) that processes sequences using attention mechanisms; foundational to modern LLMs. | Technical architecture enabling LLMs - readers may not need this, but useful for those wanting technical depth | GPT models, BERT, Claude, most modern LLMs |
+| **Transformer** | A neural network architecture (introduced 2017) that processes sequences using attention mechanisms; foundational to modern LLMs. | Technical architecture enabling LLMs | GPT models, BERT, Claude, most modern LLMs |
 
 ## Summary
 
