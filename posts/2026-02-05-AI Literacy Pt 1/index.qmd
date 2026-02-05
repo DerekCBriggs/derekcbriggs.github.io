@@ -1,0 +1,139 @@
+---
+title: "AI Literacy and Informed Skepticism Part 1: What is AI?"
+date: 2026-02-05
+categories: [AI Literacy, Generative AI, LLMs]
+description: "The first in a four-part series on AI Literacy, exploring definitions and key distinctions between AI, machine learning, LLMs, and generative AI."
+image: featured.png
+---
+
+![](featured.png)
+
+In today's blog I want to zoom out a bit and discuss the concept of AI Literacy. This will give me the opportunity to define some terms so I can avoid evoking in my readers one of those Inigo Montoya moments (["You keep using that word. I do not think it means what you think it means"](https://www.youtube.com/watch?v=dTRKCXC0JFg)) from the movie *The Princess Bride* (rest in peace Rob Reiner).
+
+## A Predisposition toward Skepticism
+
+I come at all this from an unabashed academic perspective—a university professor who does research about education, and who specializes in the application of quantitative methods (e.g., statistics, psychometrics) in the conduct of this research. For a long time I had this pair of sentences in the short biography section of my faculty website that gave people a kick:
+
+> "Dr. Briggs's long-term research agenda focuses upon building sound methodological approaches for the measurement and evaluation of growth in student learning. His daily agenda is to challenge conventional wisdom and methodological chicanery as they manifest themselves in educational research, policy and practice."
+
+(What can I say, anytime you have the opportunity to invoke the word *chicanery*, you have to take it.) I bring this up because it helps provide some insight into my hyper skeptical mindset when it comes to the methods we employ in academic research. I have a deep aversion to procedural "turn the crank" applications of statistical and psychometric models in which p-values less than .05 and reliability coefficients above .8 are reported reflexively as if these statistics confer some sort of scientific legitimacy on a research enterprise in and of themselves. I am equally averse—and getting increasingly cranky with age—at supposed innovations in quantitative methods that are just modeling for the sake of modeling. I don't mean to single out cognitive diagnostic models (CDM) here, but the ratio of unique CDMs to applications of a CDM with empirical data to solve a real-world problem must be something like 50 to 1. And if there are instances in which a new psychometric modeling approach for detecting differential item functioning has yielded novel insights into systematic causes of DIF, insights that have led to better item writing practices, please let me know. Most of these modeling innovations are great for helping assistant professors get tenure, or for helping junior research scientists in the assessment industry get promoted, but to paraphrase my colleague Lorrie Shepard, these models aren't really solving any big problems, they just focus attention on the angels dancing on the head of a pin.
+
+You can see why I would have a predisposition to be skeptical about the utility of AI academic research and teaching. Being skeptical just means having doubts and reservations. So hell, we should all be skeptical! But what is education if not the ongoing and dynamic interplay between doubts, reservations and intuitions about some phenomenon on the one hand, and the things we experience and observe when we interact with that phenomenon on the other hand?
+
+## Adapt or Run the Risk of Becoming Obsolete
+
+If you're an academic researcher, or someone reliant on research in support of your practice (or both) then there is no opting out of AI anymore than you can opt out of email or the internet. Rather, you need to be prepared to make the case that the magnification of your capabilities through collaboration with AI is superior to what an AI agent or team of agents can accomplish without you. If you're opting out, I hope you're close to retirement with a healthy 401K reserve waiting for you. For the rest of us, what is needed is the ability to co-exist with AI, and to do this well, we will need to learn how to use AI effectively, efficiently and ethically.
+
+## AI Literacy and Four Key Questions
+
+While I was on an academic sabbatical during 2025, I made it my goal to become an informed AI skeptic. How did I pursue this goal? By taking a systematic approach to increasing my literacy about AI. Although the concept of "AI Literacy" is still quite young, a definition I like is
+
+> "a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI; and use AI as a tool online, at home, and in the workplace" (Long & Magerko, 2020, p. 2).
+
+In my view the linchpin for developing AI Literacy is, first and foremost, to actually use AI! Because if you actively use AI, it will bring you face to face with four key questions:
+
+1. What is AI?
+2. What can AI do?
+3. How does AI work?
+4. How can AI be used ethically?
+
+For the next four weeks I'm going to consider each of these questions in turn. I'm not going to promise comprehensive answers to each one, but I'll make some important distinctions, show you how I collaborated with AI in the process (very meta), and I'll share some resources you can use to go deeper if you, like me, are actively seeking to increase your AI Literacy.
+
+## What is Artificial Intelligence?
+
+### AI Definitions
+
+To this point I have been using the term AI pretty casually as if it had some accepted definition, but it doesn't. Many things are described as AI, and as each new thing is added to the list, it places pressure on the need to update any pre-existing umbrella definition. One commonly invoked academic definition is attributed to the 4th edition of the 2022 textbook *Artificial Intelligence: A Modern Approach* by Stuart Russell and Peter Norvig. Russell and Norvig define AI as the
+
+> "study of agents that receive percepts from the environment and perform actions."
+
+A more concrete and detailed consensus definition comes from the OECD, which as of 2023 defined an AI system as
+
+> "a machine-based system that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments. Different AI systems vary in their levels of autonomy and adaptiveness after deployment."
+
+Finally, in an "Introduction to AI" web tutorial that Google offers within its "Google Skills" site (<https://www.skills.google/paths/118/course_templates/536>), AI is described as
+
+> "a branch of computer science that deals with the creation of intelligent agents and systems that can reason, act and learn autonomously. Put more simply, AI has to do with the theory and methods to build machines that think and act like humans."
+
+### Visualizations of Generative AI
+
+When I use the term AI in this blog, I'll almost always be referring to generative AI, a specific type of AI system that has entered public discourse primarily since the release of ChatGPT at the end of 2022. At this point, two graphic visualizations might help. I generated both using Google's Nano Banana Pro which I accessed within the pro version of Gemini. To generate the first graphic, I used the following prompt:
+
+> I am trying to better understand terminological distinctions between AI, machine learning, deep learning, LLMs, gen AI and NLP. Please create a diagram or infographic that helps clarify these distinctions.
+
+#### Gemini's Venn Diagram Style Graphic
+
+![Venn diagram showing relationships between AI, machine learning, deep learning, LLMs, generative AI and NLP](Gemini_Generated_Image_1.png)
+
+After scrutinizing the graphic, I asked Gemini a series of clarifying questions about the terminological distinctions implied via this Venn Diagram. Interestingly, because I had previously let Gemini know about my professional context as a researcher and psychometrician, it suggested that it might be more helpful to think of things more hierarchically in terms of nested layers. After some back and forth, I gave Gemini a new task:
+
+> It seems to me that the diagram I had you create for me to help make terminological distinctions is incomplete in the sense that it doesn't really help someone understand what generative AI means in the context of models like Gemini and ChatGPT. Generate an image as a conceptual hierarchy using Nano Banana.
+
+Here's what I got:
+
+![Hierarchical diagram showing the relationship between AI concepts from broad to specific](Gemini_Generated_Image_2.png)
+
+### Provoking an AI Chatbot Debate
+
+I thought it was interesting that in this second graphic Gemini is making a point to distinguish itself as something more than a "traditional" LLM in which text inputs are used to generate text output, but rather as a "large multi-modal model" (LMM) in which multimodal inputs (text, images, audio and video) are used to generate multimodal outputs. This got me wondering whether it was appropriate to use the term LLM as a shorthand for what was driving Chatbots like Gemini, ChatGPT and Claude. I decided to ask ChatGPT 5.2 to weigh in on this topic. My prompt:
+
+> Gemini makes a distinction between an LLM and an LMM. I think the gist is that once you have a model that can use a picture as an input and have it generate a picture or audio as an output, we are moving beyond the original notion of an LLM. Give me a critical evaluation of this point. Keep in mind I may be paraphrasing this incorrectly.
+
+ChatGPT responded that Gemini's point is basically right "in spirit" but mostly a minor "terminological fight."
+
+> Gemini's distinction is conceptually helpful (multimodal capability really does go beyond the original "language-only" idea), but it's not a hard boundary—many "multimodal models" are best understood as LLM cores plus multimodal interfaces/heads, so "LLM" can still be accurate depending on whether you mean the core model or the whole system.
+
+At this point I have to admit I was having a lot of fun getting these AI Chatbots to argue amongst themselves. I shared ChatGPT's response with Gemini. Gemini countered that
+
+> ChatGPT is making a fair point about the colloquial use of the term, but for a researcher in a technical field like yours, "it depends" isn't quite precise enough.
+
+Gemini went on to argue that if I was writing about this topic for "a peer-reviewed journal in psychometrics or measurement," calling Gemini an "LLM" could be viewed as a technical error. Gemini suggested that the best compromise was to use the term "foundation model" for the underlying architecture of a generative AI chatbot.
+
+I next turned to Claude for help in settling the matter after first informing it that I was in the process of writing this blog post (something I had not shared with ChatGPT and Gemini).
+
+> Gemini argues that it is better to use the term "foundation model" as that which underlies generative AI chatbots as opposed to an LLM or LMM. Gemini argues that LMM or MLMM is the most accurate description, and that LLM is used more colloquially. Is foundation model the best compromise?
+
+Claude's response:
+
+> **Short answer:** No, "foundation model" isn't the best compromise for your education audience—it's actually more technical jargon that obscures rather than clarifies.
+>
+> **Why Gemini's argument misses the mark for your context:**
+>
+> - **LLM is the established term** - It's what people encounter in news, education discourse, and everyday conversation. Your audience needs to understand the term they'll actually see used.
+> - **Foundation model is insider jargon** - It's a term from AI research circles (popularized by Stanford's 2021 paper) that hasn't penetrated public discourse the way "LLM" has.
+> - **LLM vs LMM/MLMM** - Gemini is technically correct that modern models like GPT-4o, Claude, and Gemini handle images/video, not just language. But:
+>   - "LLM" remains the dominant term even for multimodal models
+>   - Introducing LMM/MLMM adds confusion without clarity for non-experts
+>   - The language capability is still the core differentiator people care about
+
+(Aside: Does Claude know that I have, on multiple occasions in my own writing used the phrase "obscures rather than clarifies?" Is it appealing to my hatred of academic jargon?)
+
+**Bottom line:** It seems fine to me given my general target audience to refer to generative AI Chatbots as instances of LLMs (and I will likely do so for future entries in this blog), but let's keep in mind that modern LLMs can also process images, audio and video, and then produce novel output in these varied modalities.
+
+### A Table of Working Definitions with Examples
+
+The Nano Banana generated graphics above are useful, but let's also create a table with definitions. Because I have found Claude to be the most consistently succinct, I delegated this particular task to it.
+
+> I'm trying to figure out the best terminology to use for a post I'm writing for my blog AI in Education. My prospective audience could include people who know very little about the inner workings of generative AI. I want this post to give an overview and make salient distinctions between AI, machine learning, LLMs and generative AI. I'd like to include a table with working definitions of key terms that I could cross-reference in subsequent blog posts. What you propose for the contents of this table?
+
+Claude and I then iterated between four different proposed versions of a table until I settled on the one below as optimal.
+
+| **Term** | **Definition** | **Key Distinction** | **Examples/Applications** |
+|----------|----------------|---------------------|---------------------------|
+| **Artificial Intelligence (AI)** | Computer systems designed to perform tasks that typically require human intelligence, such as reasoning, learning, problem-solving, and pattern recognition. | Broadest category - encompasses all the terms below | Spam filters, recommendation systems, voice assistants, autonomous vehicles, game-playing systems |
+| **Machine Learning (ML)** | A subset of AI where systems learn patterns from data rather than following explicit programmed rules. | Distinguished by its ability to improve through experience without being explicitly programmed for every scenario | Email spam detection, credit card fraud detection, Netflix recommendations, predictive text |
+| **Deep Learning** | A subset of ML using artificial neural networks with multiple layers to learn hierarchical representations of data. | Uses neural network architectures (inspired by the brain) rather than traditional ML algorithms like decision trees | Image recognition (facial recognition), speech recognition (Siri/Alexa), medical diagnosis from imaging |
+| **Large Language Model (LLM)** | A type of deep learning model trained on massive text datasets to understand and generate human language. | Specifically focused on language; uses transformer architecture; examples: GPT-4, Claude, Gemini | ChatGPT, Claude, Google Gemini, writing assistants, code generation, translation |
+| **Generative AI** | AI systems that create new content (text, images, audio, video, code) rather than just analyzing or classifying existing data. | Distinguished by output - creates rather than categorizes; LLMs are one type of generative AI | ChatGPT (text), DALL-E/Midjourney (images), Suno (music), GitHub Copilot (code) |
+| **Transformer** | A neural network architecture (introduced 2017) that processes sequences using attention mechanisms; foundational to modern LLMs. | Technical architecture enabling LLMs - readers may not need this, but useful for those wanting technical depth | GPT models, BERT, Claude, most modern LLMs |
+
+## Summary
+
+My knee jerk reaction to any new method that is being put forward as a tool for research, or as an intervention intended to improve teaching and learning, is to be skeptical. But I strive to be an informed skeptic, and this means I need to attain some basic level of AI literacy. My goal is to be an appropriately critical evaluator of AI use cases in academic research settings. To that end, I think it's important to be able to have (evolving) answers to four questions: (1) What is AI? (2) What can AI do? (3) How does AI work? (4) How can AI be used ethically?
+
+In this post I've defined AI and established generative AI as special subset of AI technologies. In the next post I'll turn to the question of what AI can do.
+
+## Resources
+
+- [Introduction to Large Language Models (Google Skills)](https://www.skills.google/course_templates/539)
+- [Generative AI for Everyone by Andrew Ng (DeepLearning.AI via Coursera)](https://www.coursera.org/learn/generative-ai-for-everyone)
