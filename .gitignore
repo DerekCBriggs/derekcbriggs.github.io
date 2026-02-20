@@ -18,3 +18,5 @@ _site/
 *~
 ~$*
 *.tmp
+
+**/*.quarto_ipynb
