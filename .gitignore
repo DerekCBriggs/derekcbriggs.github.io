@@ -11,7 +11,7 @@
 .quarto/
 /.quarto/
 
-# Rendered site (we'll use GitHub Actions to build)
+# Rendered site (built by GitHub Actions)
 _site/
 
 # Temp files

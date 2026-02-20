@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "!posts/2026-02-20-26_AI Literacy Pt 2/*.Rmd"
+    - "**/*.qmd"
 
 website:
   title: "Derek C. Briggs"
