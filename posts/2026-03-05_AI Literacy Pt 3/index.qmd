@@ -7,7 +7,7 @@ image: thumbnail.png
 toc-depth: 4
 ---
 
-![](thumbnail.png){width=50% fig-align="center"}
+![](thumbnail.png){width=100% fig-align="center"}
 
 ## Introduction
 
