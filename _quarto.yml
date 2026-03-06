@@ -42,6 +42,7 @@ website:
 
 format:
   html:
+    include-after-body: _goatcounter.html
     theme:
       light: flatly
       dark: darkly
