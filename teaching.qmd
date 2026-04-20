@@ -20,7 +20,7 @@ I teach graduate-level courses in the Research and Evaluation Methodology progra
 |--------|-------|-------------|
 | EDUC 8230 | Quantitative Methods I | Introduction to statistical reasoning and analysis for educational research |
 | EDUC 8710 | Measurement in Survey Research | Principles of measurement as applied to survey design and analysis |
-| EDUC 8720 | Psychometric Modeling: Item Response Theory | Theory and application of IRT models |
+| EDUC 8720 | [Psychometric Modeling: Item Response Theory](https://DerekCBriggs.github.io/Measurement-and-Psychometrics/) | Theory and application of IRT models |
 | EDUC 8740 | Latent Variable and Structural Equation Modeling | Advanced methods for modeling latent constructs |
 
 ---
