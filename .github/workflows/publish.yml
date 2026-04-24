@@ -28,12 +28,9 @@ jobs:
           use-public-rspm: true
 
       - name: Install R packages
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          packages: |
-            any::yaml
-            any::readr
-            any::knitr
+        shell: Rscript {0}
+        run: |
+          install.packages(c("yaml", "readr", "knitr"))
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
