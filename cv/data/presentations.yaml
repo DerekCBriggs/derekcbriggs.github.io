@@ -1,0 +1,705 @@
+# ----------------------------------------------------------------
+# presentations.yaml — invited talks and conference presentations.
+#
+# SCOPE: Full list of invited talks/keynotes (26), plus conference
+# presentations from 2015 onward (22). Earlier conference activity
+# (1999-2014) is aggregated; see the note below the conference list.
+#
+# FIELDS
+#   category   invited | conference
+#   year       integer
+#   authors    APA-style string
+#   title      string
+#   details    string: the venue / event / date / location, verbatim
+#              from the source CV (free-form for layout flexibility)
+#   url        optional link to recording, slides, or proceedings
+# ----------------------------------------------------------------
+
+presentations:
+
+  # =========================================================
+  # INVITED TALKS & KEYNOTE ADDRESSES
+  # =========================================================
+
+  - category: invited
+    year: 2025
+    authors: "Briggs, D. C."
+    title: "On the Nature of Measurement"
+    details: "Presentation at the annual meeting of the National Council on Measurement in Education, April 25, 2025."
+
+  - category: invited
+    year: 2025
+    authors: "Briggs, D. C."
+    title: "Is Unaccounted-for Multidimensionality Really That Problematic?"
+    details: "Organized Discussion at the annual meeting of the National Council on Measurement in Education, April 24, 2025."
+
+  - category: invited
+    year: 2024
+    authors: "Briggs, D. C."
+    title: "Scaling and its Relationship with Measurement: Past, Present and Future"
+    details: "Invited Keynote Presentation, Society for the Study of Measurement, Berkeley, CA, August 7, 2024."
+
+  - category: invited
+    year: 2024
+    authors: "Briggs, D. C."
+    title: "Content-Referenced Growth"
+    details: "Keynote Address for Michigan State Testing Conference, February 15, 2024."
+
+  - category: invited
+    year: 2024
+    authors: "Briggs, D. C."
+    title: "Reflections on educational accountability and assessment"
+    details: "Invited Womer Lecture, University of Michigan, February 14, 2024."
+
+  - category: invited
+    year: 2023
+    authors: "Briggs, D. C."
+    title: "Some lessons about measurement and measurers"
+    details: "Keynote Address for the International Objective Measurement Workshop, Chicago, IL, April 12, 2023."
+
+  - category: invited
+    year: 2022
+    authors: "Briggs, D. C."
+    title: "Content-referenced growth"
+    details: "Keynote address for the annual meeting of the Association for Educational Assessment-Europe, Dublin, November 12, 2022."
+
+  - category: invited
+    year: 2022
+    authors: "Briggs, D. C."
+    title: "Historical Foundations and New Frontiers: Units of Measurement"
+    details: "Keynote address for Division 5 of the American Psychological Association, Minneapolis, MN, August 4, 2022."
+
+  - category: invited
+    year: 2022
+    authors: "Briggs, D. C."
+    title: "Turning the page to the next chapter of educational measurement"
+    details: "Presidential Address at the annual meeting of the National Council on Measurement in Education, April 23, 2022."
+    url: "https://www.youtube.com/watch?v=1jgUiZ2LUv8"
+
+  - category: invited
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "The use of content-referencing to evaluate the magnitude of student growth"
+    details: "Keynote address at the 17th conference of the Israeli Psychometric Association, January 27, 2021 (virtual)."
+
+  - category: invited
+    year: 2020
+    authors: "Briggs, D. C."
+    title: "A general factor, neural bonds, and the next generation of science standards"
+    details: "Meeting of Testing Issues in Large-Scale Assessment (TILSA) group during meeting of the Council of Chief State School Officers, New Orleans, LA, February 18, 2020."
+
+  - category: invited
+    year: 2019
+    authors: "Briggs, D. C."
+    title: "The role of measurement in evaluating the practical significance of learning outcomes"
+    details: "Invited presentation, Stanford University Graduate School of Education, May 23, 2019."
+
+  - category: invited
+    year: 2018
+    authors: "Briggs, D. C."
+    title: "Tolerating approximate answers about student learning"
+    details: "Invited presentation, Oxford University Centre for Assessment, Ashmolean Museum, May 24, 2018."
+    url: "http://media.podcasts.ox.ac.uk/education/general/2018-05-24briggsv1720.mp4"
+
+  - category: invited
+    year: 2018
+    authors: "Briggs, D. C."
+    title: "Visualizing location and growth: Design principles for person-item maps"
+    details: "Invited keynote presentation, Rasch Measurement Conference, University of Western Australia, Perth, Australia, January 18, 2018."
+
+  - category: invited
+    year: 2017
+    authors: "Briggs, D. C."
+    title: "Longitudinal growth models and classroom assessment"
+    details: "Invited presentation at North Carolina State University, School of Education, November 9, 2017."
+
+  - category: invited
+    year: 2016
+    authors: "Briggs, D. C."
+    title: "Psychometrics, measurement and obtainable goals"
+    details: "Invited presentation at the International Meeting of the Psychometric Society, Asheville, NC, July 13, 2016."
+
+  - category: invited
+    year: 2015
+    authors: "Briggs, D. C."
+    title: "Measuring Student Learning: Assessment 101"
+    details: "Invited presentation at The Aspen Institute, Aspen, CO, September 26, 2015."
+
+  - category: invited
+    year: 2015
+    authors: "Briggs, D. C."
+    title: "Psychometrics, Testing and Obtainable Goals"
+    details: "Invited debate at the National Council for Measurement in Education, April 19, 2015."
+
+  - category: invited
+    year: 2015
+    authors: "Briggs, D. C."
+    title: "Standardized Testing and Special Needs"
+    details: "Presentation at Chautauqua Education Series, Boulder, CO, March 18, 2015."
+
+  - category: invited
+    year: 2013
+    authors: "Briggs, D. C."
+    title: "An Economist, a Psychometrician and a Father of a Special Needs Child Walk into a School"
+    details: "Invited Womer Lecture, University of Michigan, February 19, 2013."
+
+  - category: invited
+    year: 2013
+    authors: "Briggs, D. C."
+    title: "Comparability Challenges Facing PARCC and SBAC"
+    details: "Invited presentation, annual meeting of the National Council for Measurement in Education, San Francisco, CA, April 30, 2013."
+
+  - category: invited
+    year: 2013
+    authors: "Briggs, D. C."
+    title: "NCME Hot Topics: Growth and Value-Added Modeling"
+    details: "Invited workshop presentation, annual meeting of the National Council for Measurement in Education, San Francisco, CA, April 27, 2013."
+
+  - category: invited
+    year: 2013
+    authors: "Briggs, D. C."
+    title: "The Impact of Coaching on College Admissions (sometimes even a small effect can matter!)"
+    details: "Invited presentation at Seminario Internacional de Investigación sobre Calidad de la Educación, Bogotá, Colombia, November 8, 2013."
+
+  - category: invited
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Can We Use Large-Scale Assessments for both Summative and Formative Purposes?"
+    details: "Invited presentation at the Reidy Interactive Lectures Series, Cambridge, MA, October 22, 2010."
+
+  - category: invited
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Rationales for measuring growth in student achievement: choosing between orthodoxy and pragmatism"
+    details: "Invited presentation at the BEAR Seminar, University of California, Berkeley, September 14, 2010."
+
+  - category: invited
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "The Measurement of Learning Progressions"
+    details: "Invited talk at the University of Arizona, February 21, 2008."
+
+  # =========================================================
+  # CONFERENCE PRESENTATIONS (2015–present, full list)
+  # Merged from the PDF's "Professional Conference Papers" and
+  # "Conference Presentations" sections, deduplicated.
+  # =========================================================
+
+  - category: conference
+    year: 2025
+    authors: "Briggs, D. C."
+    title: "From Interval Scales to Scales with Intervals"
+    details: "Presentation at the International Meeting of the Psychometric Society, Minneapolis, MN, July 15, 2025."
+
+  - category: conference
+    year: 2025
+    authors: "Student, S., & Briggs, D. C."
+    title: "A self-contained empirical Bayes approach to weekly scoring"
+    details: "Paper presented at the annual meeting of the National Council on Measurement in Education, Denver, CO, April 26, 2025."
+
+  - category: conference
+    year: 2023
+    authors: "Briggs, D. C."
+    title: "Technicians, Curators or Guides on the Assessment Reform Journey? Preparing the Next Generation of Educational Measurement Professionals"
+    details: "Symposium presentation at the AEA-Europe Conference, Malta, November 3, 2023."
+
+  - category: conference
+    year: 2023
+    authors: "Briggs, D. C., Marion, S., & Sireci, S."
+    title: "Improving large-scale standardized testing"
+    details: "Coordinated symposium at the annual meeting of the American Educational Research Association, Chicago, IL, April 13, 2023."
+
+  - category: conference
+    year: 2023
+    authors: "Cox, O., & Briggs, D. C."
+    title: "Development of a reading foundational skills learning progression"
+    details: "Paper presented at the annual meeting of the National Council on Measurement in Education, Chicago, IL, April 13, 2023."
+
+  - category: conference
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "Historical and conceptual foundation of measurement in the human sciences: credos and controversies"
+    details: "Presentation for the Institute of Behavioral Sciences, University of Colorado Boulder, November 1, 2021 (virtual)."
+
+  - category: conference
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "Some lessons learned from research on vertical scaling"
+    details: "Invited presentation for Associação Brasileira de Avaliação Educacional (ABAVE), September 27, 2021 (virtual)."
+
+  - category: conference
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "Historical lessons from the modeling and measuring of human abilities"
+    details: "Invited presentation for the 2021 annual conference of the National Council on Measurement in Education, May 18, 2021 (virtual)."
+
+  - category: conference
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "State plans for administering large-scale K-12 assessments in 2021"
+    details: "Education Congressional Staff Network Call coordinated by The Aspen Institute, March 19, 2021 (virtual)."
+
+  - category: conference
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "Discussion: Psychometrics and looming causal inferences"
+    details: "TILSA Panel coordinated by the Center for Assessment, February 23, 2021 (virtual)."
+
+  - category: conference
+    year: 2021
+    authors: "Briggs, D. C., Maul, A., & McGrane, J."
+    title: "On the nature of measurement"
+    details: "Spotlight presentation at the International Objective Measurement Workshop, February 5, 2021 (virtual)."
+
+  - category: conference
+    year: 2020
+    authors: "Briggs, D. C."
+    title: "Teaching and learning 'educational measurement': defining the discipline?"
+    details: "Presentation for the annual meeting of the National Council on Measurement in Education, 2020 (virtual)."
+
+  - category: conference
+    year: 2019
+    authors: "Briggs, D. C., & Furtak, E. M."
+    title: "Learning Progressions and NGSS"
+    details: "Presentation at the Special Conference for Classroom Assessment, Boulder, CO, September 18, 2019."
+
+  - category: conference
+    year: 2019
+    authors: "Briggs, D. C."
+    title: "Some thoughts on the origins of classical test theory"
+    details: "Presentation at the annual meeting of the National Council on Measurement in Education, Toronto, April 8, 2019."
+
+  - category: conference
+    year: 2019
+    authors: "Briggs, D. C., & Furtak, E."
+    title: "Learning progressions and embedded assessment"
+    details: "Presentation at the annual meeting of the National Council on Measurement in Education, Toronto, April 6, 2019."
+
+  - category: conference
+    year: 2018
+    authors: "Briggs, D. C."
+    title: "You can't know where you're going unless you find out where you've been"
+    details: "Invited presentation as part of a panel on 'measurement problems' inspired by Howard Wainer, annual meeting of the National Council on Measurement in Education, New York, NY, April 16, 2018."
+
+  - category: conference
+    year: 2018
+    authors: "Furtak, E. M., Briggs, D. C., & Chattergoon, R."
+    title: "Toward a system of classroom assessments for three-dimensional secondary science learning: the case of the Aspire study"
+    details: "Paper presented as part of the symposium 'The Challenge of Assessing Knowledge in Use' at the annual meeting of the International Conference of the Learning Sciences, London, UK, 2018."
+
+  - category: conference
+    year: 2018
+    authors: "Chattergoon, R., Briggs, D. C., Mahr, B., & Furtak, E. M."
+    title: "Developing a learning progression for the crosscutting concept of energy"
+    details: "Paper presented at the annual meeting of the National Council on Measurement in Education, New York, NY, April 17, 2018."
+
+  - category: conference
+    year: 2018
+    authors: "Briggs, D. C., & Alzen, J. L."
+    title: "The hidden facets of teacher growth"
+    details: "Paper presented at the annual meeting of the National Council on Measurement in Education, New York, NY, April 15, 2018."
+
+  - category: conference
+    year: 2018
+    authors: "Burkhardt, A., & Briggs, D. C."
+    title: "The state of district level interim assessments"
+    details: "Paper presented at the annual meeting of the National Council on Measurement in Education, New York, NY, April 15, 2018."
+
+  - category: conference
+    year: 2017
+    authors: "Briggs, D. C., Chattergoon, R., & Burkhardt, A."
+    title: "Examining the use of Student Learning Objectives to evaluate teachers"
+    details: "Paper presented at the annual meeting of the National Council on Measurement in Education, San Antonio, TX, April 29, 2017."
+
+  - category: conference
+    year: 2015
+    authors: "Briggs, D. C., Diaz-Bilello, E., Peck, F., Alzen, J., Chattergoon, R., & Johnson, R."
+    title: "Using a Learning Progression Framework to Assess and Evaluate Student Growth"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, Chicago, IL, March 23, 2015."
+
+  # ---- Pre-2015 conference activity (merged + deduplicated from the PDF's
+  #      "Professional Conference Papers" and "Conference Presentations" sections) ----
+
+  - category: conference
+    year: 2014
+    authors: "Briggs, D. C., & Kizil, R. C."
+    title: "The Riddle of Dimensional Structure in Surveys of Teacher Preparation"
+    details: "Presentation at the annual meeting of the National Council on Measurement in Education, Philadelphia, PA, April 4, 2014."
+
+  - category: conference
+    year: 2014
+    authors: "Briggs, D. C."
+    title: "Improving the Science Behind Vertical Scaling"
+    details: "Presentation at the annual meeting of the National Council on Measurement in Education, Philadelphia, PA, April 5, 2014."
+
+  - category: conference
+    year: 2014
+    authors: "Turner, M., Bibilos, C., Briggs, D. C., Maul, A., & Diaz-Bilello, E."
+    title: "New Evidence on the Effect of the Denver Public Schools Professional Compensation System on Teacher Attitudes"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, Philadelphia, PA, April 6, 2014."
+
+  - category: conference
+    year: 2014
+    authors: "Briggs, D. C., Kizil, R. C., & McClarty, K."
+    title: "Challenges when Using an Artificial Neural Network to Make Diagnostic Classifications from Ordered Multiple Choice Items"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, Philadelphia, PA, April 7, 2014."
+
+  - category: conference
+    year: 2013
+    authors: "Dadey, N., & Briggs, D. C."
+    title: "The curious case of linking items with p-value reversals"
+    details: "Paper presented at the annual meeting of the National Council for Measurement in Education, San Francisco, CA, April 30, 2013."
+
+  - category: conference
+    year: 2013
+    authors: "Briggs, D. C., & Alzen, J."
+    title: "Does Taking an Online Version of a Course have a Negative Effect on Student Learning?"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, San Francisco, CA, May 1, 2013."
+
+  - category: conference
+    year: 2013
+    authors: "Briggs, D. C., Circi, R., Seidel, K., & Green, K."
+    title: "Challenges in Measuring Core Competencies in Teacher Preparation Programs"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, San Francisco, CA, May 1, 2013."
+
+  - category: conference
+    year: 2012
+    authors: "Briggs, D. C., & Domingue, B."
+    title: "Exploring Value-Added Across Multiple Dimensions: A Bifactor Approach"
+    details: "Presentation at the Maryland Assessment Conference, October 18, 2012."
+
+  - category: conference
+    year: 2012
+    authors: "Briggs, D. C."
+    title: "Due Diligence and the Evaluation of Teachers"
+    details: "Presentation at the Joint Statistics Meeting, San Diego, CA, July 29, 2012."
+
+  - category: conference
+    year: 2012
+    authors: "Briggs, D. C."
+    title: "Prospects for modeling growth with tests designed by the state assessment consortia"
+    details: "Paper presented at the annual meeting of the National Council for Measurement in Education, Vancouver, BC, April 15, 2012."
+
+  - category: conference
+    year: 2011
+    authors: "Briggs, D. C."
+    title: "Generalizing Causal Inferences: Test Scales and Meta-Analysis"
+    details: "Presentation at the European Association of Research on Learning and Instruction, Exeter, UK, August 31, 2011."
+
+  - category: conference
+    year: 2011
+    authors: "Briggs, D. C., & Maul, A."
+    title: "The comparability of assessments that include performance tasks"
+    details: "Paper presented at the annual meeting of the National Council for Measurement in Education, New Orleans, LA, April 11, 2011."
+
+  - category: conference
+    year: 2011
+    authors: "Dadey, N., Briggs, D. C., & Weeks, J. P."
+    title: "Making sense of growth trends from vertically scaled assessments"
+    details: "Paper presented at the annual meeting of the National Council for Measurement in Education, New Orleans, LA, April 9, 2011."
+
+  - category: conference
+    year: 2011
+    authors: "Briggs, D. C."
+    title: "Why Measuring Growth in Student Learning is a Lot Harder than Most People Realize"
+    details: "Presentation at the University of Oslo, March 17, 2011."
+
+  - category: conference
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Why aren't states with developmental score scales measuring growth?"
+    details: "Paper presented at the 2010 International Meeting of the Psychometric Society, Athens, GA, July 10, 2010."
+
+  - category: conference
+    year: 2010
+    authors: "Weeks, J. P., Domingue, B., & Briggs, D. C."
+    title: "Design issues in developing a multidimensional vertical scale"
+    details: "Presentation at the 2010 International Meeting of the Psychometric Society, Athens, GA, July 10, 2010."
+
+  - category: conference
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Making inferences about teachers and schools in the United States: Do we need value-added?"
+    details: "Invited presentation at the 2010 Symposium on Causality, Jena University, Germany, July 14, 2010."
+
+  - category: conference
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "The problem with vertical scales"
+    details: "Paper presented at the 2010 Annual Meeting of the American Educational Research Association, Denver, CO, May 3, 2010."
+
+  - category: conference
+    year: 2010
+    authors: "Weeks, J. P., Domingue, B., & Briggs, D. C."
+    title: "Is a multidimensional vertical scale really necessary? Modeling student achievement growth in multiple dimensions"
+    details: "Paper presented at the annual meeting of the National Council for Measurement in Education, Denver, CO, May 1, 2010."
+
+  - category: conference
+    year: 2010
+    authors: "Iverson, H. I., Briggs, D. C., Ruiz-Primo, M. A., Talbot, R. M., & Shepard, L. A."
+    title: "A closer look at undergraduate physics course innovations: a meta-analysis of their impact on student learning"
+    details: "Paper presented at the American Educational Research Association Annual Meeting, Denver, CO, April 30, 2010."
+
+  - category: conference
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Pathology or pragmatism? Why psychometricians don't measure growth in student achievement"
+    details: "School of Education Colloquium Series, University of Colorado Boulder, April 7, 2010."
+
+  - category: conference
+    year: 2009
+    authors: "Briggs, D. C."
+    title: "Using Learning Progressions on a Large-Scale Basis"
+    details: "Invited presentation to the Massachusetts Department of Education, November 13, 2009."
+
+  - category: conference
+    year: 2009
+    authors: "Iverson, H., Briggs, D. C., Ruiz-Primo, M., Talbot, R., & Shepard, L."
+    title: "Undergraduate Physics Course Innovations and Their Impact on Student Learning"
+    details: "Paper presented at the 2009 Physics Education Research Conference, Ann Arbor, MI, July 29-30, 2009."
+
+  - category: conference
+    year: 2009
+    authors: "Briggs, D. C., & Alonzo, A. C."
+    title: "The psychometric modeling of ordered multiple-choice item responses for diagnostic assessment with a learning progression"
+    details: "Paper presented at the Learning Progressions in Science (LeaPS) Conference, Iowa City, IA, June 25, 2009."
+
+  - category: conference
+    year: 2009
+    authors: "Briggs, D. C., & Alonzo, A. C."
+    title: "Building a Learning Progression as a Cognitive Model"
+    details: "Paper presented at the symposium 'How to Build a Cognitive Model for Educational Assessments,' at the annual meeting of the National Council for Measurement in Education, San Diego, CA, April 16, 2009."
+
+  - category: conference
+    year: 2009
+    authors: "Choi, J., Briggs, D. C., & Wilson, M."
+    title: "Multidimensional Extension of Generalizability in Item Response Modeling"
+    details: "Paper presented at the annual meeting of the National Council for Measurement in Education, San Diego, CA, April 16, 2009."
+
+  - category: conference
+    year: 2009
+    authors: "Briggs, D. C., & Betebenner, D."
+    title: "Is Growth in Student Achievement Scale Dependent?"
+    details: "Paper presented at the invited symposium 'Measuring and Evaluating Changes in Student Achievement,' at the annual meeting of the National Council for Measurement in Education, San Diego, CA, April 14, 2009."
+
+  - category: conference
+    year: 2009
+    authors: "Talbot, R., Briggs, D. C., & Otero, V."
+    title: "Can Science Teachers' Strategic Knowledge be Conceptualized as a Learning Progression?"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, San Diego, CA, April 14, 2009."
+
+  - category: conference
+    year: 2009
+    authors: "Domingue, B., & Briggs, D. C."
+    title: "Using Propensity Score Matching to Estimate the Effect of Coaching on the SAT"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, San Diego, CA, April 14, 2009."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "The goals and uses of value-added models"
+    details: "Presentation for a workshop held by the Committee on Value-Added Methodology for Instructional Improvement, Program Evaluation and Educational Accountability, sponsored by the National Research Council and the National Academy of Education, Washington, D.C., November 13-14, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "Validating the use of tests for high-stake inferences in education"
+    details: "Presentation at the National Academy of Education's Annual Meeting and Fellows' Retreat, Seattle, WA, October 17, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "Cause or effect? Validating the use of tests for high-stake inferences in education"
+    details: "Invited presentation at the Festschrift in honor of the career of Paul Holland, ETS, Princeton, NJ, September 20, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "Cause or effect? Validating the use of tests for high-stake inferences in education"
+    details: "Invited presentation at the Symposium on Causality, Jena, Germany, July 18, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Ruiz-Primo, M. A., Briggs, D., Shepard, L., Iverson, H., & Huchton, M."
+    title: "Innovations in undergraduate science education: Lessons Learned"
+    details: "Invited plenary session, International Conference of Active Learning in Engineering Education, Bogotá, Colombia, June 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C., Weeks, J. P., & Wiley, E."
+    title: "The Impact of Vertical Scaling Decisions on Growth Projections"
+    details: "Presentation at the National Conference on Student Assessment, Orlando, FL, June 16, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C., Weeks, J. P., & Wiley, E. W."
+    title: "The Sensitivity of Value-Added Modeling to Vertical Scaling"
+    details: "Paper presented at the National Conference on Value-Added Modeling, Madison, WI, April 22-24, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C., & Weeks, J. P."
+    title: "The Persistence of Value-Added School Effects"
+    details: "Paper presented at the 2008 Annual Meeting of the American Educational Research Association, Division D, New York, NY, March 27, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Talbot, R., & Briggs, D. C."
+    title: "Measuring the Pedagogical Sophistication of Science Teachers using the Flexible Application of Student-Centered Instruction (FASCI) Instrument"
+    details: "Paper presented at the annual meeting of the American Educational Research Association, Division D, New York, NY, March 27, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C., Weeks, J. P., & Wiley, E."
+    title: "The Impact of Vertical Scaling Decisions on Growth Projections"
+    details: "Paper presented at the annual meeting of the National Council for Measurement in Education, New York, NY, March 26, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "The Process of Developing and Validating Learning Progressions: Issues From Two Case Studies"
+    details: "Poster presented at the Annual Meeting of the American Educational Research Association, Division D, New York, NY, March 25, 2008."
+
+  - category: conference
+    year: 2008
+    authors: "Talbot, R. M., Briggs, D., & Otero, V."
+    title: "A new instrument for measuring the pedagogical knowledge of physics teachers"
+    details: "Workshop at the Physics Teacher Education Coalition Conference, Austin, TX, March 1, 2008."
+
+  - category: conference
+    year: 2007
+    authors: "Briggs, D. C."
+    title: "Value-Added Modeling as a Tool for Accountability"
+    details: "Education in the Public Interest Center Conference, Boulder, CO, October 12, 2007."
+
+  - category: conference
+    year: 2007
+    authors: "Briggs, D. C., Geil, K., Harlow, D., & Talbot, R."
+    title: "Measuring the pedagogical sophistication of math and science teachers using scenario-based items"
+    details: "Paper presented at the 2007 Annual Meeting of the American Educational Research Association, Division D, Chicago, IL, April 10, 2007."
+
+  - category: conference
+    year: 2007
+    authors: "Briggs, D. C."
+    title: "Causes and Effects"
+    details: "Invited presentation for the CRESST Conference: The Future of Test-based Accountability, Los Angeles, CA, January 22, 2007."
+
+  - category: conference
+    year: 2006
+    authors: "Briggs, D. C., Wiley, E., & Weeks, J."
+    title: "Vertical scaling in value-added models for student learning: a simulation study"
+    details: "Paper presented at the 2006 Annual Meeting of the American Educational Research Association, Division D, San Francisco, CA, April 10, 2006."
+
+  - category: conference
+    year: 2005
+    authors: "Briggs, D. C."
+    title: "Measuring racial/ethnic achievement gaps by dimension and level"
+    details: "Presentation at the 2005 AERA Conference, Montreal, Canada, April 12, 2005."
+
+  - category: conference
+    year: 2005
+    authors: "Wilson, M., & Briggs, D. C."
+    title: "Generalizability in item response modeling"
+    details: "Invited lecture at the 21st University of Twente IRT Workshop, Enschede, The Netherlands, 2005."
+
+  - category: conference
+    year: 2004
+    authors: "Briggs, D. C."
+    title: "Adequate yearly progress and causal inference"
+    details: "Presentation at the CRESST Conference, Los Angeles, CA, September 9, 2004."
+
+  - category: conference
+    year: 2004
+    authors: "Briggs, D. C."
+    title: "Multidimensionality and latent item predictors as extensions to item response modeling under a GLMM framework"
+    details: "Presentation at the Society for Multivariate Analysis in the Behavioral Sciences Conference, Jena, Germany, July 21, 2004."
+
+  - category: conference
+    year: 2004
+    authors: "Briggs, D. C."
+    title: "Generalizability theory in item response modeling"
+    details: "Presentation at the International Meeting of the Psychometric Society, Pacific Grove, CA, June 15, 2004."
+
+  - category: conference
+    year: 2004
+    authors: "Briggs, D., Alonzo, A., Schwab, C., & Wilson, M."
+    title: "Developmental assessment with ordered multiple-choice items"
+    details: "Presentation at the International Meeting of the Psychometric Society, Pacific Grove, CA, June 16, 2004."
+
+  - category: conference
+    year: 2004
+    authors: "Briggs, D., Alonzo, A., Schwab, C., & Wilson, M."
+    title: "Developmental assessment with ordered multiple-choice items"
+    details: "Presentation at the 2004 AERA Conference, San Diego, CA, April 15, 2004."
+
+  - category: conference
+    year: 2003
+    authors: "Briggs, D. C."
+    title: "Causal inference and the Heckman model"
+    details: "Paper presented at the National Council on Measurement in Education, Chicago, IL, April 22, 2003."
+
+  - category: conference
+    year: 2003
+    authors: "Briggs, D. C."
+    title: "SAT coaching and causal inference"
+    details: "Presentation at the National Council on Measurement in Education, Chicago, IL, April 22, 2003."
+
+  - category: conference
+    year: 2003
+    authors: "Briggs, D. C."
+    title: "SAT coaching and causal inference"
+    details: "Presentation at the UCLA Department of Statistics, Los Angeles, CA, February 11, 2003."
+
+  - category: conference
+    year: 2002
+    authors: "Briggs, D. C."
+    title: "Evaluating SAT test preparation: gains, effects and self-selection"
+    details: "Presentation at the Western Regional Meeting of The College Board, Anaheim, CA, February 24, 2002."
+
+  - category: conference
+    year: 2001
+    authors: "Briggs, D. C., & Hansen, B."
+    title: "Evaluating SAT test preparation: gains, effects and self-selection"
+    details: "Presentation at the University of California, Santa Barbara 'Rethinking the SAT in University Admissions' Conference, Santa Barbara, CA, November 12, 2001."
+
+  - category: conference
+    year: 2001
+    authors: "Briggs, D. C."
+    title: "The effect of admissions test preparation: evidence from NELS:88"
+    details: "Presentation at the Board of Testing and Assessment, National Research Council, Washington, D.C., June 6, 2001."
+
+  - category: conference
+    year: 2001
+    authors: "Briggs, D. C., & Wilson, M."
+    title: "An introduction to multidimensional measurement using Rasch models"
+    details: "Presentation at the 2001 AERA Conference, Seattle, WA, April 10, 2001."
+
+  - category: conference
+    year: 2000
+    authors: "Briggs, D. C., & Wilson, M."
+    title: "An introduction to multidimensional measurement"
+    details: "Presentation at the International Objective Measurement Workshop, New Orleans, LA, April 22, 2000."
+
+  - category: conference
+    year: 2000
+    authors: "Briggs, D. C."
+    title: "Measuring the racial/ethnic gap in science achievement"
+    details: "Presentation at the Berkeley Evaluation and Assessment Research (BEAR) Seminar, UC Berkeley Department of Education, 2000."
+
+  - category: conference
+    year: 1999
+    authors: "Wilson, M., & Briggs, D."
+    title: "An introduction to individual growth modeling: A multilevel modeling perspective"
+    details: "Presentation at the Institute for Human Development, UC Berkeley Department of Psychology, December 3, 1999."
+
+  - category: conference
+    year: 1999
+    authors: "Briggs, D."
+    title: "Longitudinal data in educational research: NELS-88"
+    details: "Presentation at the Berkeley Evaluation and Assessment Research (BEAR) Seminar, UC Berkeley Department of Education, 1999."
+
+  - category: conference
+    year: 1999
+    authors: "Stern, D. S., & Briggs, D."
+    title: "Competition or complementarity between work and school: some insights from high school students"
+    details: "Paper presented at the 1999 AERA Conference, Montreal, 1999."

@@ -26,7 +26,7 @@ University of Colorado Boulder
 ::: {.intro-buttons}
 [Google Scholar](https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en){.btn .btn-primary}
 [CU Boulder Profile](https://www.colorado.edu/education/derek-briggs){.btn .btn-secondary}
-[Curriculum Vitae](files/briggs_cv.pdf){.btn .btn-secondary}
+[Curriculum Vitae](cv/cv.qmd){.btn .btn-secondary}
 [Contact](mailto:derek.briggs@colorado.edu){.btn .btn-secondary}
 :::
 

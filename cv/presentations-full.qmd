@@ -1,0 +1,89 @@
+---
+title: "Conference Presentations — Full List"
+format:
+  html:
+    theme: none
+    css: cv.css
+    toc: true
+    toc-location: right
+    toc-depth: 1
+    toc-title: "Years"
+    anchor-sections: true
+    link-external-newwindow: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+library(yaml)
+
+presentations_raw <- yaml::read_yaml("data/presentations.yaml")$presentations
+
+esc <- function(x) {
+  if (is.null(x)) return("")
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x
+}
+
+title_end <- function(p) {
+  last <- substr(p$title, nchar(p$title), nchar(p$title))
+  if (last %in% c("?", "!", ".")) "" else "."
+}
+
+format_presentation <- function(p) {
+  a <- esc(p$authors)
+  y <- as.character(p$year)
+  t <- esc(p$title)
+  te <- title_end(p)
+  d <- if (!is.null(p$details)) paste0(" ", esc(p$details)) else ""
+  u <- if (!is.null(p$url))
+         sprintf(' <a href="%s" class="pub-doi">%s</a>', esc(p$url), esc(p$url))
+       else ""
+  sprintf('<div class="pub-entry">%s (%s). %s%s%s%s</div>',
+          a, y, t, te, d, u)
+}
+
+# Render conference presentations grouped by year, reverse-chronological.
+# Within a year, YAML source order is preserved (typically newest-date first).
+render_by_year <- function(category_name) {
+  entries <- Filter(function(p) identical(p$category, category_name), presentations_raw)
+  if (!length(entries)) return(invisible())
+  years <- sort(unique(vapply(entries, function(p) as.numeric(p$year), numeric(1))),
+                decreasing = TRUE)
+  for (y in years) {
+    base::cat(sprintf("\n## %d\n\n", y))
+    yr_entries <- Filter(function(p) as.numeric(p$year) == y, entries)
+    base::cat(paste(vapply(yr_entries, format_presentation, character(1)),
+                    collapse = "\n\n"))
+    base::cat("\n\n")
+  }
+}
+
+n_conf <- sum(vapply(presentations_raw,
+  function(p) identical(p$category, "conference"), logical(1)))
+```
+
+::: {.dashboard}
+::: {.dashboard-header}
+# Conference Presentations {.name}
+
+::: {.titles}
+Derek C. Briggs · Full chronological list (`r n_conf` entries, 1999–present)
+:::
+
+::: {.contact}
+[← Back to CV](cv.html)
+:::
+:::
+:::
+
+```{r}
+#| results: asis
+render_by_year("conference")
+```

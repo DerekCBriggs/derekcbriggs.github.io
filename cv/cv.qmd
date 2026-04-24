@@ -1,0 +1,763 @@
+---
+title: "Derek C. Briggs — Curriculum Vitae"
+author: "Derek C. Briggs"
+date: last-modified
+date-format: "MMMM YYYY"
+format:
+  html:
+    theme: none
+    css: cv.css
+    toc: true
+    toc-location: right
+    toc-depth: 2
+    toc-title: "Contents"
+    anchor-sections: true
+    link-external-newwindow: true
+    include-in-header:
+      text: |
+        <meta name="description" content="Curriculum vitae of Derek C. Briggs, Professor of Research and Evaluation Methodology, University of Colorado Boulder.">
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+library(yaml)
+library(readr)
+library(knitr)
+
+pubs_raw <- yaml::read_yaml("data/publications.yaml")$publications
+grants_raw <- readr::read_csv("data/grants.csv", show_col_types = FALSE)
+students_raw <- readr::read_csv("data/students.csv", show_col_types = FALSE)
+presentations_raw <- yaml::read_yaml("data/presentations.yaml")$presentations
+
+# -----------------------------------------------------------------
+# Counts for section headings + the h-index line under Publications.
+# Update h_index and metrics_date once/year (or whenever Scholar is checked).
+# -----------------------------------------------------------------
+h_index      <- 34L              # Google Scholar, verify at
+                                 # https://scholar.google.com/citations?user=FsarJmwAAAAJ
+metrics_date <- "April 2026"
+
+n_by_category <- function(cat) sum(vapply(pubs_raw,
+  function(p) identical(p$category, cat), logical(1)))
+
+n_books            <- n_by_category("book")
+n_journal_articles <- n_by_category("journal-article")
+n_book_chapters    <- n_by_category("book-chapter")
+n_reports          <- n_by_category("report")
+n_commentaries     <- n_by_category("commentary")
+n_blogs            <- n_by_category("blog")
+n_in_progress      <- n_by_category("in-progress")
+
+n_invited_talks    <- sum(vapply(presentations_raw,
+  function(p) identical(p$category, "invited"), logical(1)))
+n_conf_total       <- sum(vapply(presentations_raw,
+  function(p) identical(p$category, "conference"), logical(1)))
+n_conf_selected    <- sum(vapply(presentations_raw,
+  function(p) identical(p$category, "conference") && as.numeric(p$year) >= 2015,
+  logical(1)))
+
+# Escape HTML special chars in plain strings
+esc <- function(x) {
+  if (is.null(x)) return("")
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x
+}
+
+# Sort key: integer years normal; "in press" / "in preparation" float to top.
+year_sort_key <- function(y) {
+  if (is.numeric(y)) return(as.numeric(y))
+  if (identical(y, "in press")) return(9999)
+  if (identical(y, "in preparation")) return(9998)
+  suppressWarnings(as.numeric(y))
+}
+
+# Build "volume(issue), pages" tail used for journal articles & commentaries.
+vol_tail <- function(p) {
+  out <- ""
+  if (!is.null(p$volume)) {
+    out <- esc(p$volume)
+    if (!is.null(p$issue)) out <- paste0(out, "(", esc(p$issue), ")")
+  }
+  if (!is.null(p$pages)) {
+    out <- if (nchar(out)) paste0(out, ", ", esc(p$pages)) else esc(p$pages)
+  }
+  if (nchar(out)) paste0(", ", out) else ""
+}
+
+# Build "Location: Publisher" string.
+loc_pub <- function(p) {
+  if (is.null(p$publisher) && is.null(p$location)) return("")
+  if (!is.null(p$location) && !is.null(p$publisher)) {
+    sprintf("%s: %s", esc(p$location), esc(p$publisher))
+  } else if (!is.null(p$publisher)) {
+    esc(p$publisher)
+  } else {
+    esc(p$location)
+  }
+}
+
+title_html <- function(p) esc(p$title)
+
+# "." after title unless title already ends with ? or ! (avoids "?." double punct).
+title_end <- function(p) {
+  last <- substr(p$title, nchar(p$title), nchar(p$title))
+  if (last %in% c("?", "!", ".")) "" else "."
+}
+
+# Linking: DOI preferred, else URL. Both get .pub-doi class.
+link_html <- function(p) {
+  if (!is.null(p$doi)) {
+    sprintf(' <a href="https://doi.org/%s" class="pub-doi">https://doi.org/%s</a>',
+            esc(p$doi), esc(p$doi))
+  } else if (!is.null(p$url)) {
+    sprintf(' <a href="%s" class="pub-doi">%s</a>', esc(p$url), esc(p$url))
+  } else ""
+}
+
+# Per-category body.
+format_pub <- function(p) {
+  year_str <- as.character(p$year)
+  t <- title_html(p)
+  te <- title_end(p)
+  a <- esc(p$authors)
+
+  body <- switch(p$category,
+    "book" = {
+      lp <- loc_pub(p)
+      sprintf("%s (%s). <em>%s</em>%s%s",
+              a, year_str, t, te,
+              if (nchar(lp)) paste0(" ", lp, ".") else "")
+    },
+
+    "journal-article" = {
+      venue <- if (!is.null(p$venue)) sprintf(" <em>%s</em>%s.", esc(p$venue), vol_tail(p)) else ""
+      sprintf("%s (%s). %s%s%s", a, year_str, t, te, venue)
+    },
+
+    "commentary" = {
+      if (!is.null(p$editors)) {
+        book <- if (!is.null(p$venue)) sprintf(" In %s, <em>%s</em>.", esc(p$editors), esc(p$venue)) else ""
+        lp <- loc_pub(p); lp_str <- if (nchar(lp)) paste0(" ", lp, ".") else ""
+        sprintf("%s (%s). %s%s%s%s", a, year_str, t, te, book, lp_str)
+      } else {
+        venue <- if (!is.null(p$venue)) sprintf(" <em>%s</em>%s.", esc(p$venue), vol_tail(p)) else ""
+        sprintf("%s (%s). %s%s%s", a, year_str, t, te, venue)
+      }
+    },
+
+    "book-chapter" = {
+      ed <- if (!is.null(p$editors)) paste0(" In ", esc(p$editors), ",") else " In"
+      book <- if (!is.null(p$venue)) sprintf(" <em>%s</em>", esc(p$venue)) else ""
+      pp <- if (!is.null(p$pages)) sprintf(" (pp. %s)", esc(p$pages)) else ""
+      lp <- loc_pub(p); lp_str <- if (nchar(lp)) paste0(" ", lp, ".") else ""
+      sprintf("%s (%s). %s%s%s%s%s.%s",
+              a, year_str, t, te, ed, book, pp, lp_str)
+    },
+
+    "report" = {
+      venue <- if (!is.null(p$venue)) esc(p$venue) else ""
+      loc <- if (!is.null(p$location)) esc(p$location) else ""
+      tail <- if (nchar(loc) && nchar(venue)) sprintf(" %s: %s.", loc, venue)
+              else if (nchar(venue)) sprintf(" %s.", venue)
+              else if (nchar(loc))   sprintf(" %s.", loc)
+              else ""
+      sprintf("%s (%s). <em>%s</em>%s%s", a, year_str, t, te, tail)
+    },
+
+    "blog" = {
+      venue <- if (!is.null(p$venue)) sprintf(" <em>%s</em>.", esc(p$venue)) else ""
+      sprintf("%s (%s). %s%s%s", a, year_str, t, te, venue)
+    },
+
+    "in-progress" = {
+      status <- if (!is.null(p$status)) sprintf(" (%s)", esc(p$status)) else ""
+      venue <- if (!is.null(p$venue)) sprintf(" %s.", esc(p$venue)) else ""
+      sprintf("%s%s. %s%s%s", a, status, t, te, venue)
+    },
+
+    sprintf("%s (%s). %s%s", a, year_str, t, te)
+  )
+
+  if (!is.null(p$note)) body <- paste0(body, " ", esc(p$note), ".")
+  body <- paste0(body, link_html(p))
+
+  sprintf('<div class="pub-entry">%s</div>', body)
+}
+
+render_category <- function(category_name) {
+  entries <- Filter(function(p) identical(p$category, category_name), pubs_raw)
+  if (!length(entries)) return(invisible())
+  keys <- vapply(entries, function(p) year_sort_key(p$year), numeric(1))
+  entries <- entries[order(keys, decreasing = TRUE)]
+  base::cat(paste(vapply(entries, format_pub, character(1)), collapse = "\n\n"))
+  base::cat("\n")
+}
+
+# Render books and book chapters as a single reverse-chronological list.
+# Used in place of two separate sections because "Books" alone is a 1-entry
+# category and looks lonely on its own; merging with chapters preserves the
+# book's visibility within a unified timeline of long-form scholarly output.
+render_books_and_chapters <- function() {
+  entries <- Filter(function(p) p$category %in% c("book", "book-chapter"), pubs_raw)
+  if (!length(entries)) return(invisible())
+  keys <- vapply(entries, function(p) year_sort_key(p$year), numeric(1))
+  entries <- entries[order(keys, decreasing = TRUE)]
+  base::cat(paste(vapply(entries, format_pub, character(1)), collapse = "\n\n"))
+  base::cat("\n")
+}
+
+# Render the small curated set of signature works flagged with `featured: true`.
+# Reverse-chronological. Appears at the top of the Publications section (in the
+# By Type view). Entries still appear in their normal category lists below.
+render_featured <- function() {
+  entries <- Filter(function(p) isTRUE(p$featured), pubs_raw)
+  if (!length(entries)) return(invisible())
+  keys <- vapply(entries, function(p) year_sort_key(p$year), numeric(1))
+  entries <- entries[order(keys, decreasing = TRUE)]
+  base::cat(paste(vapply(entries, format_pub, character(1)), collapse = "\n\n"))
+  base::cat("\n")
+}
+
+# Render publications grouped by tag (topic). A publication with N tags
+# appears N times — intentional duplication, since many papers sit at the
+# intersection of multiple topics. Tags rendered alphabetically; within a
+# tag, entries are reverse-chronological.
+title_case_tag <- function(s) {
+  # Preserve lowercase words that shouldn't be capitalized (e.g. "of", "and")
+  small <- c("of", "and", "the", "in", "on", "for", "to", "vs")
+  parts <- strsplit(s, " ")[[1]]
+  out <- vapply(seq_along(parts), function(i) {
+    w <- parts[i]
+    if (i > 1 && tolower(w) %in% small) tolower(w)
+    else paste0(toupper(substr(w, 1, 1)), substr(w, 2, nchar(w)))
+  }, character(1))
+  paste(out, collapse = " ")
+}
+
+render_by_topic <- function() {
+  # Mirror the by-type view by excluding categories hidden there (currently
+  # in-progress). Keeps the two views consistent — a publication hidden in one
+  # should be hidden in the other.
+  pubs_visible <- Filter(function(p) !identical(p$category, "in-progress"), pubs_raw)
+  all_tags <- sort(unique(unlist(lapply(pubs_visible, function(p) p$tags))))
+  all_tags <- all_tags[nzchar(all_tags)]
+  for (tag in all_tags) {
+    entries <- Filter(function(p) !is.null(p$tags) && tag %in% p$tags, pubs_visible)
+    if (!length(entries)) next
+    keys <- vapply(entries, function(p) year_sort_key(p$year), numeric(1))
+    entries <- entries[order(keys, decreasing = TRUE)]
+    base::cat(sprintf("\n### %s (%d)\n\n",
+                      title_case_tag(tag), length(entries)))
+    base::cat(paste(vapply(entries, format_pub, character(1)), collapse = "\n\n"))
+    base::cat("\n")
+  }
+}
+
+# --- Grants table -----------------------------------------------------------
+
+render_grants <- function() {
+  g <- grants_raw
+  g <- g[order(g$end, decreasing = TRUE), ]
+
+  fmt_range <- function(s, e) {
+    sy <- substr(as.character(s), 1, 4)
+    ey <- substr(as.character(e), 1, 4)
+    if (sy == ey) sy else sprintf("%s–%s", sy, ey)
+  }
+  dates <- mapply(fmt_range, g$start, g$end)
+  amount <- sprintf("$%s", formatC(g$amount, format = "d", big.mark = ","))
+
+  # Bold "PI" entries to visually distinguish lead from collaborative roles;
+  # Co-PI stays in normal weight. Manually HTML-escape the other text-bearing
+  # columns since we set escape = FALSE below to allow the <strong> tag through.
+  esc_html <- function(x) {
+    x <- gsub("&", "&amp;", x, fixed = TRUE)
+    x <- gsub("<", "&lt;", x, fixed = TRUE)
+    x <- gsub(">", "&gt;", x, fixed = TRUE)
+    x
+  }
+  role_html <- ifelse(g$role == "PI",
+                      '<strong>PI</strong>',
+                      esc_html(g$role))
+
+  display <- data.frame(
+    Funder = esc_html(g$funder),
+    Title = esc_html(g$title),
+    Role = role_html,
+    Amount = amount,
+    Dates = dates,
+    stringsAsFactors = FALSE
+  )
+  knitr::kable(display,
+               align = c("l", "l", "l", "r", "l"),
+               format = "html",
+               escape = FALSE,
+               table.attr = 'class="grants-table"')
+}
+
+# --- PhD students table -----------------------------------------------------
+
+render_students <- function() {
+  s <- students_raw
+  s <- s[order(s$year, decreasing = TRUE), ]
+  s$position <- ifelse(is.na(s$position) | s$position == "", "—", s$position)
+  display <- data.frame(
+    Name = s$name,
+    Year = as.character(s$year),
+    `Current position` = s$position,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+  knitr::kable(display,
+               align = c("l", "l", "l"),
+               format = "html",
+               escape = TRUE,
+               table.attr = 'class="students-table"')
+}
+
+# --- Presentations ----------------------------------------------------------
+
+format_presentation <- function(p) {
+  a <- esc(p$authors)
+  y <- as.character(p$year)
+  t <- esc(p$title)
+  te <- title_end(p)
+  d <- if (!is.null(p$details)) paste0(" ", esc(p$details)) else ""
+  u <- if (!is.null(p$url))
+         sprintf(' <a href="%s" class="pub-doi">%s</a>', esc(p$url), esc(p$url))
+       else ""
+  sprintf('<div class="pub-entry">%s (%s). %s%s%s%s</div>',
+          a, y, t, te, d, u)
+}
+
+render_presentations <- function(category_name, year_min = NULL) {
+  entries <- Filter(function(p) identical(p$category, category_name), presentations_raw)
+  if (!is.null(year_min)) {
+    entries <- Filter(function(p) as.numeric(p$year) >= year_min, entries)
+  }
+  if (!length(entries)) return(invisible())
+  keys <- vapply(entries, function(p) as.numeric(p$year), numeric(1))
+  entries <- entries[order(keys, decreasing = TRUE)]
+  base::cat(paste(vapply(entries, format_presentation, character(1)), collapse = "\n\n"))
+  base::cat("\n")
+}
+```
+
+::: {.dashboard}
+
+::: {.dashboard-header}
+
+[Download PDF](cv.pdf){.pdf-download-btn download="Derek C. Briggs CV.pdf"}
+
+# Derek C. Briggs {.name}
+
+::: {.titles}
+Professor · Research and Evaluation Methodology · University of Colorado Boulder
+
+Associate Dean of Faculty, School of Education
+
+Director, Center for Assessment, Design, Research and Evaluation (CADRE)
+:::
+
+::: {.contact}
+[derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu) ·
+[Website](https://derekcbriggs.github.io/) ·
+[Google Scholar](https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en) ·
+[ORCID: 0000-0003-1628-4661](https://orcid.org/0000-0003-1628-4661)
+:::
+
+::: {.honor-chips}
+[National Academy of Education (2025)]{.chip}
+[AERA Fellow (2023)]{.chip}
+[NCME President (2021–22)]{.chip}
+:::
+
+:::
+
+:::
+
+::: {.last-updated}
+*Last updated `r format(Sys.Date(), "%B %Y")`*
+:::
+
+## Research Expertise
+
+My research examines how measurement works—and how it can mislead—in educational
+contexts. I work at the intersection of psychometrics, causal inference, and
+assessment policy, with sustained attention to vertical scaling and growth
+modeling in K–12 assessment, the theoretical and historical foundations of
+measurement in the human sciences, and the design of large-scale assessment
+systems that can genuinely inform teaching and learning. Recent work develops
+learning progressions as an alternative framework for scale construction,
+content-referenced approaches to growth reporting, and the philosophical
+commitments that distinguish measurement in the social sciences from its
+counterparts in the physical sciences.
+
+*Keywords:* assessment policy; causal inference in education;
+educational measurement; growth modeling; history and philosophy of measurement;
+item response theory; learning progressions; psychometrics; Rasch model;
+vertical scaling.
+
+## Professional Experience
+
+::: {.timeline}
+
+2026
+:   Associate Dean of Faculty, School of Education, University of Colorado Boulder
+
+2025
+:   Visiting Scholar, Curriculum Associates
+
+2016--present
+:   Director, [Center for Assessment, Design, Research and Evaluation (CADRE)](https://www.colorado.edu/cadre/), University of Colorado Boulder
+
+2013--present
+:   Professor, Research and Evaluation Methodology, School of Education, University of Colorado Boulder
+
+2009--2013
+:   Associate Professor, Research and Evaluation Methodology, School of Education, University of Colorado Boulder
+
+2003--2009
+:   Assistant Professor, Research and Evaluation Methodology, School of Education, University of Colorado Boulder
+
+2002--2003
+:   Postdoctoral Scholar, Berkeley Evaluation and Assessment Research Center, University of California, Berkeley
+
+1993--1996
+:   Assistant Analyst, Macroeconomic Analysis Division, Congressional Budget Office, Washington, D.C.
+
+:::
+
+## Education
+
+::: {.timeline}
+
+2002
+:   **Ph.D.**, University of California, Berkeley. Education: Quantitative Methods and Evaluation. Dissertation: *SAT Coaching, Bias and Causal Inference* (winner, AERA Division D Outstanding Dissertation Award, 2004). Advisor: Mark Wilson.
+
+1993
+:   **B.A.**, Carleton College. Economics (Departmental Distinction).
+
+:::
+
+## Honors & Awards
+
+::: {.timeline}
+
+2025
+:   Elected to the National Academy of Education
+
+2024
+:   Award for Significant Contribution to Educational Measurement and Research Methodology, American Educational Research Association Division D, for the book *Historical and Conceptual Foundations of Measurement in the Human Sciences* (Briggs, 2021)
+
+2023
+:   American Educational Research Association Fellow
+
+2021--2022
+:   Elected President, National Council for Measurement in Education (presidential term)
+
+2020--2022
+:   Honorary Research Fellow, University of Oxford, Department of Education
+
+2016--2019
+:   Elected at-large member of Board of Directors, National Council for Measurement in Education
+
+2013--2016
+:   Editor, *Educational Measurement: Issues and Practice*
+
+2013
+:   Outstanding Reviewer Award, *Journal of Educational and Behavioral Statistics*
+
+2012
+:   University of Colorado Provost's Award for Faculty Achievement
+
+2012
+:   Annual Award for Contributions to Theory and Practice, National Council on Measurement in Education
+
+2012
+:   Outstanding Reviewer Award, *Educational Researcher*
+
+2007--2009
+:   National Academy of Education / Spencer Postdoctoral Fellowship
+
+2004
+:   AERA Division D Outstanding Dissertation Award
+
+2003
+:   UC Berkeley Graduate School of Education Commencement Address
+
+2002
+:   Educational Testing Service Summer Associate
+
+2000
+:   RAND Summer Associate
+
+1993
+:   Departmental Distinction in Economics, Carleton College
+
+:::
+
+## Grants and Contracts
+
+```{r}
+#| results: asis
+render_grants()
+```
+
+```{r}
+#| results: asis
+total <- sum(grants_raw$amount)
+pi_total <- sum(grants_raw$amount[grants_raw$role == "PI"])
+copi_total <- total - pi_total
+base::cat(sprintf(
+  "\n**Totals:** $%s across %d projects (PI: $%s · Co-PI: $%s)\n",
+  formatC(total, big.mark = ",", format = "d"),
+  nrow(grants_raw),
+  formatC(pi_total, big.mark = ",", format = "d"),
+  formatC(copi_total, big.mark = ",", format = "d")
+))
+```
+
+## Teaching
+
+### Courses
+
+- EDUC 8230: Quantitative Methods in Educational Research I
+- EDUC 8710: Measurement in Survey Research
+- EDUC 8720: [Psychometric Modeling: Item Response Theory](https://DerekCBriggs.github.io/Measurement-and-Psychometrics/)
+- EDUC 8804: Using AI in Academic Research
+- EDUC 7396: Latent Variable and Structural Equation Modeling
+
+### PhD Students Graduated
+
+```{r}
+#| results: asis
+render_students()
+```
+
+## Publications
+
+::: {.section-meta}
+**h-index:** `r h_index` &nbsp;·&nbsp; Google Scholar, `r metrics_date`
+:::
+
+<div class="pub-view-toggle" role="tablist" aria-label="Publication grouping">
+<button type="button" class="active" data-view="by-type" aria-pressed="true">By Type</button>
+<button type="button" data-view="by-topic" aria-pressed="false">By Topic</button>
+</div>
+
+::: {.pub-view data-view="by-type"}
+
+### Selected Publications
+
+```{r}
+#| results: asis
+render_featured()
+```
+
+### Refereed Journal Articles (`r n_journal_articles`)
+
+```{r}
+#| results: asis
+render_category("journal-article")
+```
+
+### Books and Book Chapters (`r n_books + n_book_chapters`)
+
+```{r}
+#| results: asis
+render_books_and_chapters()
+```
+
+### Reports & Working Papers (`r n_reports`)
+
+```{r}
+#| results: asis
+render_category("report")
+```
+
+### Commentaries & Reviews (`r n_commentaries`)
+
+```{r}
+#| results: asis
+render_category("commentary")
+```
+
+### Blogs, Interviews, Podcasts (`r n_blogs`)
+
+```{r}
+#| results: asis
+render_category("blog")
+```
+
+:::
+
+::: {.pub-view data-view="by-topic" hidden="hidden"}
+
+```{r}
+#| results: asis
+render_by_topic()
+```
+
+:::
+
+## Presentations
+
+### Invited Talks & Keynotes (`r n_invited_talks`)
+
+```{r}
+#| results: asis
+render_presentations("invited")
+```
+
+### Conference Presentations since 2015 (`r n_conf_selected`)
+
+```{r}
+#| results: asis
+render_presentations("conference", year_min = 2015)
+```
+
+[See full list of `r n_conf_total` conference presentations →](presentations-full.html){.pdf-download}
+
+## Professional Service
+
+### National & International Leadership
+
+- Executive Committee (elected), National Council for Measurement in Education, 2020--2023
+- At-Large Board Member (elected), National Council for Measurement in Education, 2016--2019
+- Research Methods Section Chair, Society for Research on Educational Effectiveness (SREE), Spring 2014 Conference
+- NCME Dissertation Award Committee Chair, 2010--2011
+- Conference Chair, International Objective Measurement Workshop, 2010
+- AERA Division L, Section 5 Program Chair, 2009--2010
+
+### Editorial Roles
+
+#### Editor
+
+- Editor, *Educational Measurement: Issues and Practice*, 2013--2015
+
+#### Editorial Boards (Current)
+
+- *Educational Assessment* (since 2010)
+- *Journal of Educational Measurement* (since 2016)
+
+#### Editorial Boards (Past)
+
+- *AERA Open* (2014--2021)
+- *International Journal of Testing* (2016--2019)
+- *Educational Measurement: Issues and Practice* (2007--2009)
+- *Educational Researcher* (2006--2009)
+
+### Advisory Panels & Technical Committees
+
+#### Current
+
+- ETS-Carnegie Job for the Future Panel (since 2024)
+- NAEP Validity Studies Panel (since 2023)
+- Curriculum Associates, Technical Advisory Committee (since 2018)
+- Multistate Alternate Assessment Consortium, Chair of Technical Advisory Committee (since 2016)
+- State of Kansas Assessment Technical Advisory Committee (since 2019)
+- State of Arizona Assessment Technical Advisory Committee (since 2016)
+- National Assessment of Educational Progress, ETS Design Advisory Committee (since 2013)
+- Partnership for the Assessment of College and Career Readiness Consortium (now New Meridian), Technical Advisory Panel (since 2011)
+- Smarter Balanced Assessment Consortium (SBAC), Technical Advisory Panel (since 2011)
+- State of New York Assessment Technical Advisory Committee (since 2012)
+- State of Utah Assessment Technical Advisory Committee (since 2007)
+
+#### Past
+
+- Educational Testing Service Visiting Panel on Research (2019--2025)
+- NAEP Reading Framework Revision, Technical Advisory Panel (2019--2021)
+- NAEP Mathematics Framework Revision, Technical Advisory Panel (2018--2019)
+- Institute of Education Sciences Review Panel, Education Systems and Broad Reform (2016--2019)
+- State of Nevada Assessment Technical Advisory Committee (2016--2019)
+- State of Indiana Assessment Technical Advisory Committee (2016)
+- State of Tennessee Assessment Technical Advisory Committee (2015--2018)
+- State of Michigan Assessment Technical Advisory Committee (2013--2015)
+- English Language Proficiency Assessment Consortium (ELPA21), Technical Advisory Committee (2013--2016)
+- National Centers and State Collaborative (NCSC), Technical Advisory Committee (2011--2015)
+- Georgia Educator Effectiveness Technical Advisory Committee (2011--2019)
+- State of Montana Assessment Technical Advisory Committee (2006--2017)
+- Gates Foundation, Measures of Effective Teaching Technical Advisory Panel (2010)
+- National Council on Measurement in Education, Brenda Loyd Dissertation Award Committee (2008--2011)
+- Expert Panel, Evaluating the Validity of English Language Proficiency Assessments (2009--2011)
+- Expert Panel, GSEG Consortia: Validity Evaluation, National Alternate Assessment Center (2008--2009)
+- Expert Panel, Growth Model Task Force, National Center for Learning Disabilities (2008)
+
+### Institutional Service — University of Colorado Boulder
+
+- Associate Dean of Faculty, School of Education, 2026--
+- Faculty Salary Equity Fellow, Office of the Provost, 2025--2026
+- Vice-Chancellor's Advisory Committee (Promotion and Tenure Review), 2024
+- School of Education, Faculty Merit Review Committee, 2023--2025
+- School of Education, Research and Evaluation Methodology Program Chair, 2008--2019
+- Chair, Research and Evaluation Methodology Search Committees, 2008--2016 (multiple cycles)
+- Member, Dean Search Committee, 2014--2016
+- Coordinator of Bi-Weekly Research & Evaluation Methodology Seminar, 2003--2014
+- Graduate Student Recruitment Taskforce, 2006--2008
+- Science Education Search Committee, 2005--2006
+- Doctoral Curriculum Taskforce, 2003--2005
+
+### Manuscript Reviewing
+
+::: {.manuscript-reviews}
+- *AERA Open*
+- *American Educational Research Journal*
+- *Applied Psychological Measurement*
+- *Assessment in Education*
+- *Behavioral Research Methods*
+- *British Journal of Mathematical and Statistical Psychology*
+- *Cognition and Instruction*
+- *Educational Evaluation and Policy Analysis*
+- *Educational Measurement: Issues and Practice*
+- *Educational Policy*
+- *Educational Researcher*
+- *Evaluation Review*
+- *International Journal of Testing*
+- *Journal of Educational and Behavioral Statistics*
+- *Journal of Educational Measurement*
+- *Journal of Experimental Child Psychology*
+- *Journal of Teacher Education*
+- *Multivariate Behavioral Research*
+- *Physical Review*
+- *Psychological Methods*
+- *Psychometrika*
+- *Review of Educational Research*
+- *Theory & Psychology*
+- Routledge Publications
+- SAGE Publications
+:::
+
+### Professional Affiliations
+
+National Academy of Education; American Educational Research Association; National Council on Measurement in Education; The Psychometric Society; Society for the Study of Measurement; National Education Policy Center.
+
+<script>
+// Publication view toggle: swap between "By Type" and "By Topic" groupings.
+(function () {
+  const toggle = document.querySelector('.pub-view-toggle');
+  if (!toggle) return;
+  const views = document.querySelectorAll('.pub-view');
+  toggle.addEventListener('click', function (e) {
+    const btn = e.target.closest('button[data-view]');
+    if (!btn) return;
+    const target = btn.dataset.view;
+    toggle.querySelectorAll('button').forEach(function (b) {
+      const isActive = b.dataset.view === target;
+      b.classList.toggle('active', isActive);
+      b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+    views.forEach(function (v) {
+      if (v.dataset.view === target) v.removeAttribute('hidden');
+      else v.setAttribute('hidden', 'hidden');
+    });
+  });
+})();
+</script>

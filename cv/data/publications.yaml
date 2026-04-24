@@ -1,0 +1,1048 @@
+# ----------------------------------------------------------------
+# publications.yaml — source of truth for CV publications.
+#
+# Each list entry is one citation rendered in the CV.
+# Entries within a category render reverse-chronological (newest first).
+#
+# REQUIRED FIELDS
+#   category    one of: book | journal-article | book-chapter |
+#                       report | commentary | blog | in-progress
+#   year        integer, OR the literal string "in press" / "in preparation"
+#   authors     APA-style string; rendered verbatim
+#               (e.g., "Briggs, D. C., McClure, K., & Davis, L.")
+#   title       string
+#
+# OPTIONAL FIELDS
+#   venue       journal / book title / outlet / podcast name
+#   editors     "A. Alonzo & A. Gotwals (Eds.)"  (book-chapter)
+#   volume      "46"
+#   issue       "2"
+#   pages       "961-971"
+#   publisher   "Routledge"     (book, book-chapter)
+#   location    "New York, NY"  (book, book-chapter, report)
+#   doi         "10.1080/..."   bare DOI, no URL prefix — renderer prepends it
+#   url         full URL; used when there is no DOI
+#   note        free-text trailer, e.g., "Report for Denver Public Schools"
+#   status      "in press" | "in preparation" | "under review"
+#   tags        YAML list of topic keywords used by the "By Topic" view on the
+#               CV Publications section. A publication may have multiple tags;
+#               it will appear once per tag in the topic view. Current tags in use:
+#               vertical scaling, growth modeling, causal inference,
+#               learning progressions, item response theory, rasch model,
+#               history of measurement, educational measurement,
+#               large-scale assessment, assessment policy, diagnostic assessment,
+#               value-added modeling, teacher evaluation, test preparation,
+#               meta-analysis, validity, formative assessment, science education,
+#               fairness.
+#   featured    true/false — when true, the entry is surfaced in a "Selected
+#               Publications" section at the top of the Publications section,
+#               in addition to its normal placement in its category. Keep the
+#               featured set small (5-7 signature works) so the section stays
+#               curatorial, not inflationary.
+#
+# DATA-ENTRY NOTES
+#   - Author style: APA 7 (comma-separated; "&" before last; space between initials).
+#   - DOIs: strip any "https://doi.org/" prefix; keep only bare "10.xxx/...".
+#   - Where the old CV has only a URL (no DOI), use `url`.
+#   - Dissertation and Encyclopedia entries are kept in their original CV
+#     category even when non-standard, to preserve user's taxonomy.
+# ----------------------------------------------------------------
+
+publications:
+
+  # =========================================================
+  # BOOKS
+  # =========================================================
+
+  - category: book
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "Historical and conceptual foundations of measurement in the human sciences: Credos and controversies"
+    publisher: "Routledge"
+    location: "New York, NY"
+    tags: [educational measurement, history of measurement]
+    featured: true
+
+  # =========================================================
+  # REFEREED JOURNAL ARTICLES
+  # =========================================================
+
+  - category: journal-article
+    year: 2025
+    authors: "Briggs, D. C., McClure, K., Student, S., Wellberg, S., Minchen, N., Cox, O., Whitfield, E., Buchbinder, N., & Davis, L."
+    title: "Visualizing and reporting content-referenced growth on a learning progression"
+    venue: "Educational Assessment"
+    pages: "1-23"
+    doi: "10.1080/10627197.2025.2503288"
+    tags: [formative assessment, learning progressions]
+    featured: true
+
+  - category: journal-article
+    year: 2025
+    authors: "Student, S. R., Briggs, D. C., & Davis, L."
+    title: "Growth across grades and common item grade alignment in vertical scaling using the Rasch model"
+    venue: "Educational Measurement: Issues and Practice"
+    doi: "10.1111/emip.12639"
+    tags: [rasch model, vertical scaling]
+
+  - category: journal-article
+    year: 2024
+    authors: "Briggs, D. C."
+    title: "The past, present, and future of large-scale assessment consortia"
+    venue: "Educational Measurement: Issues and Practice"
+    volume: "43"
+    pages: "62-72"
+    doi: "10.1111/emip.12634"
+    tags: [large-scale assessment]
+
+  - category: journal-article
+    year: 2024
+    authors: "Shear, B., & Briggs, D. C."
+    title: "Measurement issues in causal inference"
+    venue: "Asia Pacific Education Review"
+    doi: "10.1007/s12564-024-09942-9"
+    tags: [causal inference]
+
+  - category: journal-article
+    year: 2023
+    authors: "Ackerman, T. A., Bandalos, D. L., Briggs, D. C., Everson, H. T., Ho, A. D., Lottridge, S. M., Madison, M. J., Sinharay, S., Rodriguez, M. C., Russell, M., von Davier, A. A., & Wind, S. A."
+    title: "Foundational competencies in educational measurement"
+    venue: "Educational Measurement: Issues and Practice"
+    doi: "10.1111/emip.12581"
+    tags: [educational measurement]
+
+  - category: journal-article
+    year: 2022
+    authors: "Briggs, D. C."
+    title: "NCME presidential address 2022: Turning the page to the next chapter of educational measurement"
+    venue: "Journal of Educational Measurement"
+    volume: "59"
+    issue: "4"
+    pages: "398-417"
+    doi: "10.1111/jedm.12350"
+    tags: [educational measurement]
+    featured: true
+
+  - category: journal-article
+    year: 2021
+    authors: "Peck, F., Johnson, R., Briggs, D. C., & Alzen, J."
+    title: "Toward learning trajectory-based instruction: A framework of conceptions of learning and assessment"
+    venue: "School Science and Mathematics"
+    volume: "121"
+    pages: "357-368"
+    doi: "10.1111/ssm.12489"
+    tags: [learning progressions]
+
+  - category: journal-article
+    year: 2019
+    authors: "Briggs, D. C., Chattergoon, R., & Burkhardt, A."
+    title: "Examining the dual purpose use of student learning objectives for classroom assessment and teacher evaluation"
+    venue: "Journal of Educational Measurement"
+    doi: "10.1111/jedm.12233"
+    tags: [formative assessment, teacher evaluation]
+
+  - category: journal-article
+    year: 2019
+    authors: "Briggs, D. C."
+    title: "Interpreting and visualizing the unit of measurement in the Rasch model"
+    venue: "Measurement"
+    volume: "46"
+    pages: "961-971"
+    doi: "10.1016/j.measurement.2019.07.035"
+    tags: [rasch model]
+
+  - category: journal-article
+    year: 2019
+    authors: "Briggs, D. C., & Alzen, J. L."
+    title: "Making inferences about teacher observation scores over time"
+    venue: "Educational and Psychological Measurement"
+    doi: "10.1177/0013164419826237"
+    tags: [teacher evaluation]
+
+  - category: journal-article
+    year: 2017
+    authors: "Briggs, D. C., & Kizil, R. C."
+    title: "Challenges to the use of artificial neural networks for diagnostic classifications with student test data"
+    venue: "International Journal of Testing"
+    doi: "10.1080/15305058.2017.1297816"
+    tags: [diagnostic assessment]
+
+  - category: journal-article
+    year: 2017
+    authors: "Penuel, W. R., Briggs, D. C., Davidson, K. L., Herlihy, C., Sherer, D., Hill, H. C., Farrell, C., & Allen, A."
+    title: "How school and district leaders access, perceive, and use research"
+    venue: "AERA Open"
+    volume: "3"
+    issue: "2"
+    pages: "1-17"
+    doi: "10.1177/2332858417705370"
+    tags: [assessment policy]
+
+  - category: journal-article
+    year: 2016
+    authors: "Briggs, D. C., & Dadey, N."
+    title: "Principal holistic judgments and high-stakes evaluations of teachers"
+    venue: "Educational Assessment, Evaluation and Accountability"
+    volume: "29"
+    pages: "155-178"
+    doi: "10.1007/s11092-016-9256-7"
+    tags: [assessment policy, teacher evaluation]
+
+  - category: journal-article
+    year: 2015
+    authors: "Briggs, D. C., & Peck, F. A."
+    title: "Rejoinder to commentaries on using learning progressions to design vertical scales"
+    venue: "Measurement: Interdisciplinary Research and Perspectives"
+    volume: "13"
+    issue: "3-4"
+    pages: "206-218"
+    doi: "10.1080/15366367.2015.1104113"
+    tags: [learning progressions, vertical scaling]
+
+  - category: journal-article
+    year: 2015
+    authors: "Briggs, D. C., & Peck, F. A."
+    title: "Using learning progressions to design vertical scales that support coherent inferences about student growth"
+    venue: "Measurement: Interdisciplinary Research & Perspectives"
+    volume: "13"
+    pages: "75-99"
+    doi: "10.1080/15366367.2015.1042814"
+    tags: [growth modeling, learning progressions, vertical scaling]
+    featured: true
+
+  - category: journal-article
+    year: 2015
+    authors: "Briggs, D. C., & Dadey, N."
+    title: "Making sense of common test items that do not get easier over time: Implications for vertical scale designs"
+    venue: "Educational Assessment"
+    volume: "20"
+    issue: "1"
+    pages: "1-22"
+    tags: [vertical scaling]
+
+  - category: journal-article
+    year: 2013
+    authors: "Briggs, D. C., & Domingue, B."
+    title: "The gains from vertical scaling"
+    venue: "Journal of Educational and Behavioral Statistics"
+    volume: "38"
+    issue: "6"
+    pages: "551-576"
+    doi: "10.3102/1076998613508317"
+    tags: [growth modeling, vertical scaling]
+
+  - category: journal-article
+    year: 2013
+    authors: "Briggs, D. C."
+    title: "Measuring growth with vertical scales"
+    venue: "Journal of Educational Measurement"
+    volume: "50"
+    issue: "2"
+    pages: "204-226"
+    doi: "10.1111/jedm.12011"
+    tags: [growth modeling, vertical scaling]
+    featured: true
+
+  - category: journal-article
+    year: 2013
+    authors: "Safran, R. J., Flaxman, S. M., Kopp, M., Irwin, D. E., Briggs, D., Evans, M., Funk, W., Gray, Hebbets, E., Seddon, N., Scordato, E., Symes, L., Tobias, J., Toews, D., & Uy, J."
+    title: "A robust new metric of phenotypic distance to estimate and compare multiple trait differences among populations"
+    venue: "Current Zoology"
+    volume: "58"
+    issue: "3"
+    pages: "426-439"
+
+  - category: journal-article
+    year: 2012
+    authors: "Briggs, D. C., Ruiz-Primo, M. A., Furtak, E., Shepard, L., & Yin, Y."
+    title: "Meta-analytic methodology and conclusions about the efficacy of formative assessment"
+    venue: "Educational Measurement: Issues and Practice"
+    pages: "13-17"
+    doi: "10.1111/j.1745-3992.2012.00251.x"
+    tags: [formative assessment, meta-analysis]
+
+  - category: journal-article
+    year: 2012
+    authors: "Dadey, N., & Briggs, D. C."
+    title: "A meta-analysis of growth trends from vertically scaled assessments"
+    venue: "Practical Assessment, Research & Evaluation"
+    volume: "17"
+    issue: "14"
+    url: "http://pareonline.net/getvn.asp?v=17&n=14"
+    tags: [meta-analysis]
+
+  - category: journal-article
+    year: 2012
+    authors: "Furtak, E. M., Seidel, T., Iverson, H., & Briggs, D. C."
+    title: "Experimental and quasi-experimental studies of inquiry-based science teaching: A meta-analysis"
+    venue: "Review of Educational Research"
+    pages: "300-329"
+    doi: "10.3102/0034654312457206"
+    tags: [meta-analysis, science education]
+
+  - category: journal-article
+    year: 2011
+    authors: "Briggs, D. C., & Weeks, J. P."
+    title: "The persistence of value-added school effects"
+    venue: "Journal of Educational and Behavioral Statistics"
+    volume: "36"
+    issue: "5"
+    pages: "616-637"
+    tags: [value-added modeling]
+
+  - category: journal-article
+    year: 2011
+    authors: "Ruiz-Primo, M., Briggs, D. C., Iverson, H., Talbot, R., & Shepard, L."
+    title: "Impact of undergraduate science course innovations on learning"
+    venue: "Science"
+    volume: "331"
+    pages: "1269-1270"
+    doi: "10.1126/science.1198976"
+    tags: [science education]
+
+  - category: journal-article
+    year: 2009
+    authors: "Briggs, D. C., & Weeks, J. P."
+    title: "The sensitivity of value-added modeling to the creation of a vertical scale"
+    venue: "Education Finance & Policy"
+    volume: "4"
+    issue: "4"
+    pages: "384-414"
+    doi: "10.1162/edfp.2009.4.4.384"
+    tags: [value-added modeling, vertical scaling]
+
+  - category: journal-article
+    year: 2009
+    authors: "Briggs, D. C., & Weeks, J. P."
+    title: "The impact of vertical scaling decisions on growth interpretations"
+    venue: "Educational Measurement: Issues & Practice"
+    volume: "28"
+    issue: "4"
+    pages: "3-14"
+    doi: "10.1111/j.1745-3992.2009.00158.x"
+    tags: [vertical scaling]
+
+  - category: journal-article
+    year: 2009
+    authors: "Domingue, B. W., & Briggs, D. C."
+    title: "Using linear regression and propensity score matching to estimate the effect of coaching on the SAT"
+    venue: "Multiple Linear Regression Viewpoints"
+    volume: "35"
+    issue: "1"
+    pages: "12-29"
+    tags: [causal inference, test preparation]
+
+  - category: journal-article
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "Using explanatory item response models to analyze group differences in science achievement"
+    venue: "Applied Measurement in Education"
+    volume: "21"
+    issue: "2"
+    pages: "89-118"
+    doi: "10.1080/08957340801926086"
+    tags: [item response theory]
+    featured: true
+
+  - category: journal-article
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "Synthesizing causal inferences"
+    venue: "Educational Researcher"
+    volume: "37"
+    issue: "1"
+    pages: "15-22"
+    tags: [causal inference]
+
+  - category: journal-article
+    year: 2007
+    authors: "Briggs, D. C., & Wilson, M."
+    title: "Generalizability in item response modeling"
+    venue: "Journal of Educational Measurement"
+    volume: "44"
+    issue: "2"
+    pages: "131-155"
+    doi: "10.1111/j.1745-3984.2007.00031.x"
+    tags: [item response theory]
+
+  - category: journal-article
+    year: 2006
+    authors: "Briggs, D., Alonzo, A., Schwab, C., & Wilson, M."
+    title: "Diagnostic assessment with ordered multiple-choice items"
+    venue: "Educational Assessment"
+    volume: "11"
+    issue: "1"
+    pages: "33-64"
+    doi: "10.1207/s15326977ea1101_2"
+    tags: [diagnostic assessment]
+
+  - category: journal-article
+    year: 2005
+    authors: "Briggs, D. C."
+    title: "Meta-analysis: A case study"
+    venue: "Evaluation Review"
+    volume: "29"
+    issue: "2"
+    pages: "87-127"
+    doi: "10.1177/0193841X04272555"
+    tags: [meta-analysis]
+
+  - category: journal-article
+    year: 2004
+    authors: "Briggs, D. C."
+    title: "Causal inference and the Heckman model"
+    venue: "Journal of Educational and Behavioral Statistics"
+    volume: "29"
+    issue: "4"
+    pages: "397-420"
+    tags: [causal inference]
+
+  - category: journal-article
+    year: 2003
+    authors: "Briggs, D. C., & Wilson, M."
+    title: "An introduction to multidimensional measurement using Rasch models"
+    venue: "Journal of Applied Measurement"
+    volume: "4"
+    issue: "1"
+    pages: "87-100"
+    tags: [item response theory, rasch model]
+
+  - category: journal-article
+    year: 2002
+    authors: "Briggs, D. C."
+    title: "SAT coaching, bias and causal inference"
+    venue: "Dissertation Abstracts International"
+    note: "DAI-A 64/12, p. 4433 (UMI No. 3115515)"
+    tags: [causal inference, test preparation]
+
+  - category: journal-article
+    year: 2001
+    authors: "Briggs, D. C."
+    title: "The effect of admissions test preparation: Evidence from NELS-88"
+    venue: "Chance"
+    volume: "14"
+    issue: "1"
+    pages: "10-18"
+    tags: [test preparation]
+
+  - category: journal-article
+    year: 2001
+    authors: "Stern, D., & Briggs, D."
+    title: "Does paid employment help or hinder performance in secondary school? Insights from US high school students"
+    venue: "Journal of Education and Work"
+    volume: "14"
+    issue: "3"
+    pages: "355-372"
+    tags: [assessment policy]
+
+  - category: journal-article
+    year: 2001
+    authors: "Stern, D., & Briggs, D."
+    title: "Changing admissions policies: Mounting pressures, new developments, more questions"
+    venue: "Change"
+    volume: "33"
+    issue: "1"
+    pages: "34-41"
+    tags: [assessment policy, test preparation]
+
+  # =========================================================
+  # REFEREED BOOK CHAPTERS
+  # =========================================================
+
+  - category: book-chapter
+    year: 2026
+    authors: "Briggs, D. C."
+    title: "Psychometrics"
+    venue: "The Palgrave Encyclopedia of Theoretical and Philosophical Psychology"
+    editors: "Teo, T. (Ed.)"
+    publisher: "Palgrave Macmillan"
+    location: "Cham"
+    doi: "10.1007/978-3-031-70581-6_115-1"
+    tags: [educational measurement]
+
+  - category: book-chapter
+    year: 2025
+    authors: "Briggs, D. C., Maul, A., & McGrane, J."
+    title: "On the nature of measurement"
+    venue: "Educational Measurement (5th ed.)"
+    editors: "Cook, L., & Pitoniak, M. (Eds.)"
+    url: "https://ncme.org/wp-content/uploads/2026/01/Educational-Measurement-Fifth-Edition-Chapter-21.pdf"
+    tags: [history of measurement]
+    featured: true
+
+  - category: book-chapter
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "A history of scaling and its relationship to measurement"
+    venue: "A History of Educational Measurement"
+    editors: "Clauser, B. (Ed.)"
+    publisher: "Routledge"
+    location: "New York, NY"
+    tags: [history of measurement]
+
+  - category: book-chapter
+    year: 2019
+    authors: "Briggs, D. C., & Furtak, E. F."
+    title: "Learning progressions and embedded assessment"
+    venue: "Classroom Assessment and Educational Measurement"
+    editors: "Brookhart, S., & McMillan, J. (Eds.)"
+    publisher: "Routledge"
+    note: "NCME Book Series"
+    doi: "10.4324/9780429507533-9"
+    tags: [learning progressions]
+
+  - category: book-chapter
+    year: 2014
+    authors: "Briggs, D., & Domingue, B."
+    title: "Value-added to what? The paradox of multidimensionality"
+    venue: "Value-added Modeling and Growth Modeling with Particular Application to Teacher and School Effectiveness"
+    editors: "Lissitz, R. (Ed.)"
+    publisher: "Information Age Publishing"
+    location: "Charlotte, NC"
+    tags: [value-added modeling]
+
+  - category: book-chapter
+    year: 2013
+    authors: "Camilli, G., Briggs, D. C., Sloane, F., & Chiu, T.-W."
+    title: "Psychometric perspectives on test fairness: Shrinkage estimation"
+    venue: "APA Handbook of Testing and Assessment in Psychology, Volume 3: Testing and Assessment in School Psychology and Education"
+    tags: [fairness]
+
+  - category: book-chapter
+    year: 2012
+    authors: "Briggs, D. C."
+    title: "Making value-added inferences from large-scale assessments"
+    venue: "Improving Large-Scale Assessment in Education: Theory, Issues and Practice"
+    editors: "Simon, M., Ercikan, K., & Rousseau, M. (Eds.)"
+    publisher: "Routledge"
+    location: "London"
+    doi: "10.4324/9780203154519"
+    tags: [large-scale assessment, value-added modeling]
+
+  - category: book-chapter
+    year: 2012
+    authors: "Briggs, D. C."
+    title: "Making progress in the modeling of learning progressions"
+    venue: "Learning Progressions in Science"
+    editors: "Alonzo, A., & Gotwals, A. (Eds.)"
+    pages: "293-316"
+    publisher: "Sense Publishers"
+    doi: "10.1007/978-94-6091-824-7_15"
+    tags: [learning progressions]
+
+  - category: book-chapter
+    year: 2012
+    authors: "Briggs, D. C., & Alonzo, A. C."
+    title: "The psychometric modeling of ordered multiple-choice item responses for diagnostic assessment with a learning progression"
+    venue: "Learning Progressions in Science"
+    editors: "Alonzo, A., & Gotwals, A. (Eds.)"
+    pages: "345-355"
+    publisher: "Sense Publishers"
+    tags: [diagnostic assessment, item response theory, learning progressions]
+
+  - category: book-chapter
+    year: 2011
+    authors: "Briggs, D. C."
+    title: "Cause or effect? Validating the use of tests for high-stakes inferences in education"
+    venue: "Looking Back: Proceedings of a Conference in Honor of Paul W. Holland"
+    editors: "Dorans, N. J., & Sinharay, S. (Eds.)"
+    publisher: "Springer"
+    location: "New York, NY"
+    doi: "10.1007/978-1-4419-9389-2_8"
+    tags: [assessment policy, causal inference, validity]
+
+  - category: book-chapter
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Two Philadelphia reports"
+    venue: "Think Tank Research Quality: Lessons for Policymakers, the Media, and the Public"
+    editors: "Welner, K., Hinchey, P., Molnar, A., & Weizman, D. (Eds.)"
+    publisher: "Information Age Publishing"
+    tags: [assessment policy]
+
+  - category: book-chapter
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Schools in eight states: Effects on achievement, attainment, integration, and competition"
+    venue: "Think Tank Research Quality: Lessons for Policymakers, the Media, and the Public"
+    editors: "Welner, K., Hinchey, P., Molnar, A., & Weizman, D. (Eds.)"
+    publisher: "Information Age Publishing"
+    tags: [assessment policy]
+
+  - category: book-chapter
+    year: 2008
+    authors: "Briggs, D. C., & Wiley, E."
+    title: "Causes and effects"
+    venue: "The Future of Test-Based Educational Accountability"
+    editors: "Ryan, K., & Shepard, L. (Eds.)"
+    publisher: "Routledge"
+    doi: "10.4324/9780203895092"
+    tags: [causal inference]
+
+  - category: book-chapter
+    year: 2008
+    authors: "Ruiz-Primo, M. A., Briggs, D., Shepard, L., Iverson, H., & Huchton, M."
+    title: "Evaluating the impact of instructional innovations in engineering education"
+    venue: "Engineering Education for the XXI Century: Foundations, Strategies and Cases"
+    editors: "Duque, M. (Ed.)"
+    pages: "241-274"
+    publisher: "ACOFI Publications"
+    location: "Bogotá, Colombia"
+    tags: [science education]
+
+  - category: book-chapter
+    year: 2004
+    authors: "Rijmen, F., & Briggs, D. C."
+    title: "Multiple person dimensions and latent item predictors"
+    venue: "Explanatory Item Response Models: A Generalized Linear and Nonlinear Approach"
+    editors: "De Boeck, P., & Wilson, M. (Eds.)"
+    publisher: "Springer"
+    doi: "10.1007/978-1-4757-3990-9_8"
+    tags: [item response theory]
+
+  - category: book-chapter
+    year: 2004
+    authors: "Tuerlinckx, F., Rijmen, F., Molenberghs, G., Verbeke, G., Briggs, D., Van den Noorgate, W., Meulders, M., & De Boeck, P."
+    title: "Estimation and software"
+    venue: "Explanatory Item Response Models: A Generalized Linear and Nonlinear Approach"
+    editors: "De Boeck, P., & Wilson, M. (Eds.)"
+    publisher: "Springer"
+    tags: [item response theory]
+
+  - category: book-chapter
+    year: 2004
+    authors: "Briggs, D. C."
+    title: "Evaluating SAT coaching: Gains, effects and self-selection"
+    venue: "Rethinking the SAT: The Future of Standardized Testing in University Admissions"
+    editors: "Zwick, R. (Ed.)"
+    publisher: "RoutledgeFalmer"
+    doi: "10.4324/9780203463932"
+    tags: [test preparation]
+
+  - category: book-chapter
+    year: 2002
+    authors: "Briggs, D. C."
+    title: "Test preparation programs: Impact"
+    venue: "Encyclopedia of Education (2nd ed.)"
+    tags: [test preparation]
+
+  # =========================================================
+  # REPORTS & WORKING PAPERS
+  # =========================================================
+
+  - category: report
+    year: 2025
+    authors: "Briggs, D. C., Carrasco, D., Martinez, S., Hopfenbeck, T., & Sandoval-Hernandez, A."
+    title: "Psychometric issues related to the PAES reporting scales"
+    venue: "International Scientific Committee"
+    note: "2nd Report"
+    tags: [large-scale assessment]
+
+  - category: report
+    year: 2023
+    authors: "Briggs, D. C., Cox, O., Student, S., & Whitfield, E."
+    title: "Teacher perspectives on the content-reference growth reporting prototype: Findings from interviews"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE), University of Colorado Boulder"
+    location: "Boulder, CO"
+    tags: [formative assessment, growth modeling]
+
+  - category: report
+    year: 2023
+    authors: "Cox, O., & Briggs, D. C."
+    title: "Development of a reading foundational skills learning progression"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE), University of Colorado Boulder"
+    location: "Boulder, CO"
+    tags: [learning progressions]
+
+  - category: report
+    year: 2023
+    authors: "Wellberg, S., Briggs, D. C., & Student, S."
+    title: "Big ideas in the understanding of fractions: A learning progression"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE), University of Colorado Boulder"
+    location: "Boulder, CO"
+    tags: [learning progressions]
+
+  - category: report
+    year: 2022
+    authors: "Briggs, D. C., & Wellberg, S."
+    title: "Evidence of 'summer learning loss' on the i-Ready diagnostic assessment"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE), University of Colorado Boulder"
+    location: "Boulder, CO"
+    url: "https://www.colorado.edu/cadre/2022/09/27/evidence-summer-learning-loss-i-ready-diagnostic-assessment"
+    tags: [diagnostic assessment]
+
+  - category: report
+    year: 2020
+    authors: "Hill, H. C., & Briggs, D. C."
+    title: "Education leaders' knowledge of causal research design: A measurement challenge"
+    venue: "Annenberg Institute at Brown University"
+    note: "EdWorkingPaper 20-298"
+    doi: "10.26300/vxt5-ws91"
+    tags: [causal inference]
+
+  - category: report
+    year: 2019
+    authors: "Buell, J. Y., Briggs, D. C., Burkhardt, A., Chattergoon, R., Fine, C., Furtak, E. M., Henson, K., Mahr, B., & Tayne, K."
+    title: "A learning progression for modeling energy flows in systems"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE)"
+    location: "Boulder, CO"
+    url: "https://www.colorado.edu/cadre/2019/07/19/learning-progression-modeling-energy-flows-systems"
+    tags: [learning progressions]
+
+  - category: report
+    year: 2015
+    authors: "Atteberry, A., Briggs, D. C., LaCour, S., & Bibilos, C."
+    title: "Year 2 Denver ProComp evaluation report: Teacher retention and variability in bonus pay, 2001-02 through 2013-14"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE)"
+    note: "Report for Denver Public Schools"
+    tags: [assessment policy, teacher evaluation]
+
+  - category: report
+    year: 2015
+    authors: "Briggs, D. C., Diaz-Bilello, E., Peck, F., Alzen, J., Chattergoon, R., & Johnson, R."
+    title: "Using a learning progression framework to assess and evaluate growth"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE)"
+    note: "Working Paper"
+    tags: [learning progressions]
+
+  - category: report
+    year: 2015
+    authors: "Briggs, D. C., Dadey, N., & Kizil, R. C."
+    title: "Comparing student growth and teacher observation to principal judgments in the evaluation of teacher effectiveness"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE)"
+    note: "Report for the Georgia Department of Education"
+    tags: [growth modeling, teacher evaluation]
+
+  - category: report
+    year: 2015
+    authors: "Briggs, D. C., Kizil, R. C., & Dadey, N."
+    title: "Adjusting mean growth percentiles for classroom composition"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE)"
+    note: "Report for the Georgia Department of Education"
+    tags: [growth modeling]
+
+  - category: report
+    year: 2014
+    authors: "Briggs, D. C., Diaz-Bilello, E., Peck, F., Alzen, J., Chattergoon, R., & McClelland, A."
+    title: "Tier 3 student learning objective pilot: Documentation of pilot work and lessons learned in the 2013-2014 school year"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE)"
+    note: "Report for Denver Public Schools"
+    tags: [assessment policy, teacher evaluation]
+
+  - category: report
+    year: 2014
+    authors: "Briggs, D. C., Diaz-Bilello, E., Maul, A., Turner, M., & Bibilos, C."
+    title: "Denver ProComp evaluation report: 2010-2012"
+    venue: "Center for Assessment, Design, Research and Evaluation (CADRE) and the National Center for the Improvement of Educational Assessment"
+    tags: [teacher evaluation]
+
+  - category: report
+    year: 2014
+    authors: "Diaz-Bilello, E. K., & Briggs, D. C."
+    title: "Using student growth percentiles for educator evaluations at the teacher level: Key issues and technical considerations for school districts in Colorado"
+    venue: "Center for Assessment and the Center for Assessment, Design, Research and Evaluation (CADRE)"
+    tags: [assessment policy, growth modeling]
+
+  - category: report
+    year: 2013
+    authors: "Briggs, D., & Alzen, J."
+    title: "Does taking an online version of a course have a negative effect on student learning? An evaluation study"
+    note: "Commissioned by the University of Colorado's Department of Continuing Education"
+    tags: [teacher evaluation]
+
+  - category: report
+    year: 2012
+    authors: "Alzen, J., Briggs, D., Whitcomb, J., Haug, C., Paterson, W., & Klopfenstein, K."
+    title: "An initial exploration of Colorado-trained teachers: Providing context for outcome-based teacher preparation program evaluation"
+    note: "Report Commissioned by the Colorado Department of Higher Education"
+    tags: [teacher evaluation]
+
+  - category: report
+    year: 2012
+    authors: "Alzen, J., Briggs, D., Whitcomb, J., Haug, C., Paterson, W., & Klopfenstein, K."
+    title: "Enhancing Colorado data systems: Linking teachers to preparation programs"
+    note: "Report Commissioned by the Colorado Department of Higher Education"
+    tags: [assessment policy, teacher evaluation]
+
+  - category: report
+    year: 2011
+    authors: "Briggs, D. C."
+    title: "Making inferences about growth and value-added: Design issues for the PARCC consortium"
+    note: "White Paper Commissioned by the PARCC Large-Scale Assessment Consortium"
+    tags: [large-scale assessment, value-added modeling]
+
+  - category: report
+    year: 2011
+    authors: "Briggs, D. C., & Domingue, B. D."
+    title: "Due diligence and the evaluation of teachers: A review of the value-added analysis underlying the effectiveness rankings of Los Angeles Unified School District teachers by the Los Angeles Times"
+    venue: "National Education Policy Center"
+    url: "http://nepc.colorado.edu/publication/due-diligence"
+    tags: [assessment policy, teacher evaluation, value-added modeling]
+
+  - category: report
+    year: 2011
+    authors: "Briggs, D. C., & Domingue, B. D."
+    title: "Hawaii school improvement growth model analysis: 2010 results"
+    note: "Report Commissioned by the Hawaii Department of Education"
+    tags: [assessment policy, growth modeling]
+
+  - category: report
+    year: 2010
+    authors: "Briggs, D. C., & Domingue, B. D."
+    title: "Hawaii school improvement growth model analysis: 2009 results and sensitivity analysis"
+    note: "Report Commissioned by the Hawaii Department of Education"
+    tags: [assessment policy, growth modeling]
+
+  - category: report
+    year: 2009
+    authors: "Gaertner, M., & Briggs, D. C."
+    title: "Detecting and addressing item parameter drift in IRT test equating contexts"
+    note: "Report Commissioned by the National Center for the Improvement of Educational Assessment"
+    tags: [item response theory]
+
+  - category: report
+    year: 2009
+    authors: "Briggs, D. C."
+    title: "Preparation for college admissions exams"
+    note: "Report Commissioned by the National Association of College Admissions Counselors"
+    tags: [assessment policy]
+
+  - category: report
+    year: 2009
+    authors: "Briggs, D. C., & Weeks, J. P."
+    title: "Hawaii school improvement: Growth model analysis"
+    note: "Report Commissioned by the Hawaii Department of Education"
+    tags: [assessment policy, growth modeling]
+
+  - category: report
+    year: 2008
+    authors: "Briggs, D. C."
+    title: "The goals and uses of value-added models"
+    note: >
+      Paper prepared for a workshop held by the Committee on Value-Added
+      Methodology for Instructional Improvement, Program Evaluation and
+      Educational Accountability, sponsored by the National Research
+      Council and the National Academy of Education, Washington DC,
+      November 13-14, 2008.
+    tags: [assessment policy, value-added modeling]
+
+  # =========================================================
+  # PUBLISHED COMMENTARIES & REVIEWS
+  # =========================================================
+
+  - category: commentary
+    year: 2024
+    authors: "Briggs, D. C."
+    title: "Strive for measurement, set new standards, and try not to be evil. Commentary on Duolingo English Test responsible AI standards"
+    venue: "Journal of Educational and Behavioral Statistics"
+    doi: "10.3102/10769986241238479"
+    tags: [assessment policy, educational measurement]
+
+  - category: commentary
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "Book review: A pragmatic perspective of measurement by David Torres Irribarra"
+    venue: "Integrative Psychological and Behavioral Science"
+    note: "Online First"
+    doi: "10.1007/s12124-021-09635-7"
+    tags: [educational measurement, history of measurement]
+
+  - category: commentary
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "Commentary: Comment on college admissions tests and social responsibility"
+    venue: "Educational Measurement: Issues and Practice"
+    doi: "10.1111/emip.12455"
+    tags: [assessment policy, test preparation]
+
+  - category: commentary
+    year: 2017
+    authors: "Briggs, D. C."
+    title: "Learning theory and psychometrics: Room for growth"
+    venue: "Assessment in Education: Principles, Policy & Practice"
+    volume: "24"
+    issue: "3"
+    pages: "351-358"
+    doi: "10.1080/0969594X.2017.1336987"
+    tags: [educational measurement]
+
+  - category: commentary
+    year: 2016
+    authors: "Briggs, D. C."
+    title: "Can Campbell's law be mitigated?"
+    venue: "Meeting the Challenges to Measurement in an Era of Accountability"
+    editors: "Braun, H. (Ed.)"
+    publisher: "Routledge"
+    note: "NCME Book Series"
+    tags: [assessment policy]
+
+  - category: commentary
+    year: 2013
+    authors: "Briggs, D. C."
+    title: "Teacher evaluation as Trojan horse: The case for teacher-developed assessments"
+    venue: "Measurement: Interdisciplinary Research and Perspectives"
+    volume: "11"
+    issue: "1-2"
+    pages: "24-29"
+    doi: "10.1080/15366367.2013.784153"
+    tags: [teacher evaluation]
+
+  - category: commentary
+    year: 2010
+    authors: "Briggs, D. C."
+    title: "Validate high stakes inferences by designing good experiments, not audit items"
+    venue: "Measurement: Interdisciplinary Research and Perspectives"
+    volume: "8"
+    issue: "4"
+    pages: "185-190"
+    tags: [assessment policy, validity]
+
+  - category: commentary
+    year: 2009
+    authors: "Briggs, D. C."
+    title: 'Review of "Charter schools in eight states: Effects on achievement, attainment, integration and competition" by Ron Zimmer, Brian Gill, Kevin Booker, Stephanie Lavertu, Tim Sass and John Witte'
+    venue: "Education Policy Studies Laboratory"
+    url: "http://www.epicpolicy.org/thinktank/review-charter-schools-eight-states"
+    tags: [assessment policy]
+
+  - category: commentary
+    year: 2007
+    authors: "Talbot, R., & Briggs, D. C."
+    title: "Does theory drive the items or do items drive the theory?"
+    venue: "Measurement: Interdisciplinary Research and Perspectives"
+    volume: "5"
+    issue: "2-3"
+    pages: "205-208"
+    doi: "10.1080/15366360701492906"
+    tags: [educational measurement]
+
+  - category: commentary
+    year: 2007
+    authors: "Briggs, D. C."
+    title: 'Review of "State takeover, school restructuring, private management, and student achievement in Philadelphia" by Gill, Zimmer, Christman, and Blanc, and "School reform in Philadelphia" by Peterson'
+    venue: "Education Policy Studies Laboratory"
+    url: "http://epsl.asu.edu/epru/epru_2007_thinktankreview.htm"
+    tags: [assessment policy]
+
+  - category: commentary
+    year: 2007
+    authors: "Wiley, E., & Briggs, D. C."
+    title: "Can value-added assessment improve accountability?"
+    venue: "Education Views"
+    note: "University of Colorado at Boulder, School of Education, Winter 2007"
+    tags: [assessment policy, value-added modeling]
+
+  - category: commentary
+    year: 2007
+    authors: "Briggs, D. C."
+    title: "Assessing what students know or how they know it?"
+    venue: "Measurement: Interdisciplinary Research and Perspectives"
+    volume: "5"
+    issue: "1"
+    pages: "62-65"
+    doi: "10.1080/15366360701293618"
+    tags: [educational measurement]
+
+  - category: commentary
+    year: 2006
+    authors: "Briggs, D. C."
+    title: 'Review of "Getting farther ahead by staying behind: A second-year evaluation of Florida''s policy to end social promotion" by Jay Greene and Marcus Winters'
+    venue: "Education Policy Studies Laboratory"
+    url: "http://epsl.asu.edu/epru/epru_2006_thinktankreview.htm"
+
+  - category: commentary
+    year: 2006
+    authors: "Briggs, D. C."
+    title: "Book review: The SAGE handbook of quantitative methods in the social sciences"
+    venue: "Applied Psychological Methods"
+    volume: "30"
+    issue: "5"
+    pages: "447-451"
+    tags: [educational measurement]
+
+  - category: commentary
+    year: 2004
+    authors: "Briggs, D. C."
+    title: "Comment: Making an argument for design validity before interpretive validity"
+    venue: "Measurement: Interdisciplinary Research and Perspectives"
+    volume: "2"
+    issue: "3"
+    pages: "171-174"
+    tags: [validity]
+
+  - category: commentary
+    year: 2002
+    authors: "Briggs, D. C."
+    title: "Comment: Jack Kaplan's new study of SAT coaching"
+    venue: "Chance"
+    volume: "15"
+    issue: "1"
+    pages: "7-8"
+    tags: [test preparation]
+
+  # =========================================================
+  # BLOGS, INTERVIEWS & PODCASTS
+  # =========================================================
+
+  - category: blog
+    year: 2025
+    authors: "Briggs, D. C."
+    title: "How do we know if our students are learning? And if not, what can we do about it?"
+    venue: "Extraordinary Educators Blog, Curriculum Associates"
+    url: "https://www.curriculumassociates.com/blog/progress-over-mastery"
+    tags: [formative assessment, growth modeling]
+
+  - category: blog
+    year: 2022
+    authors: "Briggs, D. C."
+    title: "Gain scores and the regression fallacy"
+    venue: "CADRE Newsletter"
+    url: "https://www.colorado.edu/cadre/gain-scores-and-regression-fallacy"
+    note: "March 2022"
+    tags: [growth modeling]
+
+  - category: blog
+    year: 2022
+    authors: "Marion, S., & Briggs, D. C."
+    title: "Just give us a little: Please make one small change in federal testing law to yield big improvements"
+    venue: "National Center for the Improvement of Educational Assessment"
+    url: "https://www.nciea.org/blog/just-give-us-a-little"
+    note: "July 13, 2022"
+    tags: [assessment policy, large-scale assessment]
+
+  - category: blog
+    year: 2022
+    authors: "Briggs, D. C., & Marion, S."
+    title: "NEPC talks education: An interview with Derek Briggs and Scott Marion"
+    venue: "National Education Policy Center (podcast)"
+    url: "https://open.spotify.com/episode/4OKNlwrl2fDizsAuI62XEo"
+    note: "Interview, January 2022"
+    tags: [assessment policy, educational measurement]
+
+  - category: blog
+    year: 2021
+    authors: "Briggs, D. C."
+    title: "The history of measurement: A conversation with Derek Briggs"
+    venue: "Quantitude, Season 3 Episode 12"
+    url: "https://quantitudepod.org/s3e12-the-history-of-measurement-a-conversation-with-derek-briggs/"
+    note: "Podcast interview, November 30, 2021"
+    tags: [history of measurement]
+
+  # =========================================================
+  # SELECTED WORKS IN PROGRESS
+  # =========================================================
+
+  - category: in-progress
+    year: "in press"
+    status: "in press"
+    authors: "Briggs, D. C., Shepard, L. A., & Buchbinder, N."
+    title: "How can NAEP mathematics subscales and subscale weights inform policy research?"
+    venue: "White Paper for the NAEP Validity Studies Panel"
+    tags: [assessment policy, large-scale assessment]
+
+  - category: in-progress
+    year: "in preparation"
+    status: "in preparation"
+    authors: "Briggs, D. C."
+    title: "On interval scales"
+    tags: [educational measurement, history of measurement]

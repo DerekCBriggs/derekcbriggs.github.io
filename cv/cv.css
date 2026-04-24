@@ -1,0 +1,571 @@
+/* ---------------------------------------------------------------
+   CV stylesheet — Derek C. Briggs
+   Shared by HTML (browser) and PDF (weasyprint).
+   Single accent-color change: edit --accent below.
+   --------------------------------------------------------------- */
+
+:root {
+  --accent: #1a3050;
+  --accent-soft: #2a4a72;
+  --ink: #1b1b1b;
+  --ink-muted: #555;
+  --rule: #e2e6ec;
+  --chip-bg: rgba(255, 255, 255, 0.14);
+  --chip-border: rgba(255, 255, 255, 0.32);
+  --page-max: 52rem;
+  --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif Pro", "Georgia", serif;
+}
+
+/* -------- base -------- */
+
+html {
+  font-size: 17px;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  line-height: 1.55;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  background: #fff;
+}
+
+/* Hide Quarto's auto-generated title block — the .dashboard acts as our header. */
+#title-block-header,
+header#title-block-header,
+.quarto-title-block {
+  display: none !important;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.02rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-soft);
+}
+
+h4 {
+  font-size: 0.95rem;
+  margin-top: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42, 74, 114, 0.25);
+}
+
+a:hover {
+  border-bottom-color: var(--accent-soft);
+}
+
+p {
+  margin: 0.5rem 0 0.9rem;
+}
+
+/* -------- dashboard header -------- */
+
+.dashboard {
+  margin-bottom: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.6rem 1.75rem 0.7rem;
+  position: relative;   /* anchor for .pdf-download-btn */
+}
+
+/* Download PDF pill, top-right corner of the dashboard banner. */
+.pdf-download-btn {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.6rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  color: #fff !important;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.32) !important;
+  transition: background-color 0.12s;
+  white-space: nowrap;
+}
+.pdf-download-btn::before {
+  content: "↓ ";
+}
+.pdf-download-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+/* The markdown `[text](url){.class}` syntax generates a <p> wrapper around
+   the download link. Since the link is absolutely positioned, the wrapper is
+   empty-but-still-takes-line-height, which pushes the h1 down. Collapse it. */
+.dashboard-header > p:has(> .pdf-download-btn) {
+  margin: 0;
+  line-height: 0;
+}
+
+/* Tighten the gap between the dashboard and the first section heading only.
+   Quarto outputs h2 directly after .dashboard (no <section> wrapper), so the
+   adjacent-sibling selector targets it directly. Other h2 margins stay at
+   their default 2.4rem for comfortable section separation. */
+.dashboard + h2 {
+  margin-top: 2rem;
+}
+
+.dashboard-header .name,
+.dashboard-header h1.name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.01em;
+}
+
+.dashboard-header .titles {
+  font-size: 0.98rem;
+  opacity: 0.92;
+  margin-bottom: 0.6rem;
+  line-height: 1.45;
+}
+
+/* Two-line titles: keep paragraphs tight so they read as one block. */
+.dashboard-header .titles p {
+  margin: 0 0 0.1rem;
+}
+.dashboard-header .titles p:last-child {
+  margin-bottom: 0;
+}
+
+/* "Last updated" stamp below dashboard. */
+.last-updated {
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin: 0.4rem 0 0;
+}
+
+.dashboard-header .contact {
+  font-size: 0.88rem;
+  opacity: 0.88;
+  margin-bottom: 0.95rem;
+}
+
+.dashboard-header .contact a {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.honor-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+/* -------- small section-level meta line (e.g., h-index under Publications) -------- */
+
+.section-meta {
+  margin: -0.3rem 0 1rem;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+}
+
+.section-meta strong {
+  color: var(--accent);
+}
+
+/* -------- Publication view toggle (By Type / By Topic) -------- */
+
+.pub-view-toggle {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.25rem 0 1.25rem;
+}
+
+.pub-view-toggle button {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--rule);
+  background: #fff;
+  color: var(--ink-muted);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.12s, color 0.12s, border-color 0.12s;
+}
+
+.pub-view-toggle button:hover {
+  color: var(--accent);
+  border-color: var(--accent-soft);
+}
+
+.pub-view-toggle button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* Hidden attribute already sets display:none; this is a guard for older browsers. */
+.pub-view[hidden] {
+  display: none;
+}
+
+/* -------- year anchors within sections -------- */
+
+h4[id^="y-"],
+.year-anchor {
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-soft);
+  font-weight: 600;
+  margin-top: 1.2rem;
+  padding-top: 0.3rem;
+  border-top: 1px dashed var(--rule);
+}
+
+/* -------- Manuscript reviews multi-column list -------- */
+
+.manuscript-reviews ul {
+  columns: 3;
+  column-gap: 2rem;
+  padding-left: 1.1rem;
+  margin-top: 0.3rem;
+  font-size: 0.93rem;
+}
+
+.manuscript-reviews li {
+  break-inside: avoid;
+  padding: 0.1rem 0;
+}
+
+@media (max-width: 900px) {
+  .manuscript-reviews ul { columns: 2; }
+}
+
+@media (max-width: 560px) {
+  .manuscript-reviews ul { columns: 1; }
+}
+
+/* -------- timeline (Pandoc definition lists) -------- */
+
+.timeline dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, max-content) 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.timeline dt {
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.05rem;
+}
+
+.timeline dd {
+  margin: 0;
+  grid-column: 2;
+}
+
+.timeline dd p {
+  margin: 0;
+}
+
+/* -------- tables (grants, students, advisory) -------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.6rem 0 1.2rem;
+  font-size: 0.92rem;
+}
+
+th, td {
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+th {
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Grants: tighter layout with a flexible Title column */
+table.grants-table {
+  font-size: 0.9rem;
+}
+table.grants-table th:nth-child(1),  /* Funder */
+table.grants-table td:nth-child(1) { width: 11rem; }
+table.grants-table th:nth-child(3),  /* Role */
+table.grants-table td:nth-child(3) { width: 4rem; }
+table.grants-table th:nth-child(4),  /* Amount */
+table.grants-table td:nth-child(4) {
+  width: 6rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+table.grants-table th:nth-child(5),  /* Dates */
+table.grants-table td:nth-child(5) {
+  width: 5rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* PhD students table */
+table.students-table {
+  font-size: 0.92rem;
+}
+table.students-table th:nth-child(1),
+table.students-table td:nth-child(1) { width: 12rem; }
+table.students-table th:nth-child(2),
+table.students-table td:nth-child(2) {
+  width: 4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* -------- publication list entries -------- */
+
+.pub-entry {
+  margin-bottom: 0.75rem;
+  padding-left: 1.1rem;
+  text-indent: -1.1rem;
+}
+
+.pub-year {
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-doi {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+/* -------- Wide-screen layout: two-column grid with TOC sidebar -------- */
+
+/* On wide screens, body becomes a CSS grid: main content column + TOC column.
+   TOC uses position:sticky so it stays in view while the content scrolls.
+   Below 1100px we fall back to a single-column centered body and hide the TOC. */
+
+@media (min-width: 1100px) {
+  body {
+    /* Body is a normal block element with extra right padding reserved
+       for the fixed-position TOC. This restores standard margin-collapse
+       behavior between the dashboard and the first h2 — the CSS grid we
+       used before was preventing collapse and creating a persistent gap. */
+    max-width: 80rem;
+    padding: 2rem calc(17rem + 3rem) 4rem 1.5rem;
+    position: relative;
+  }
+
+  nav#TOC {
+    /* Fixed to the viewport, but horizontally anchored near the body's
+       right edge using viewport math so it tracks the centered body. */
+    position: fixed;
+    top: 2rem;
+    right: max(1.5rem, calc((100vw - 80rem) / 2 + 1.5rem));
+    width: 17rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding: 0.75rem 0 0.75rem 1.1rem;
+    border-left: 2px solid var(--rule);
+    font-size: 1rem;
+    line-height: 1.5;
+    background: transparent;
+  }
+  nav#TOC > h2,
+  nav#TOC #toc-title {
+    border: none;
+    padding: 0;
+    margin: 0 0 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+  }
+  nav#TOC ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  nav#TOC ul ul {
+    padding-left: 0.85rem;
+    margin-top: 0.2rem;
+  }
+  nav#TOC li {
+    margin-bottom: 0.3rem;
+  }
+  nav#TOC a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    border: none;
+  }
+  nav#TOC a:hover,
+  nav#TOC a.active {
+    color: var(--accent);
+  }
+}
+
+@media (max-width: 1099px) {
+  nav#TOC {
+    display: none;
+  }
+}
+
+/* -------- responsive -------- */
+
+@media (max-width: 640px) {
+  .dashboard-header {
+    padding: 1.2rem 1rem 1rem;
+  }
+  .dashboard-header .name,
+  .dashboard-header h1.name {
+    font-size: 1.55rem;
+  }
+}
+
+/* -------- print / PDF (weasyprint) -------- */
+
+@page {
+  size: letter;
+  margin: 0.6in 0.65in 0.75in;
+  @bottom-right {
+    content: "Briggs CV — p. " counter(page) " of " counter(pages);
+    font-family: var(--sans);
+    font-size: 8.5pt;
+    color: var(--ink-muted);
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+  /* Rework the dashboard for print: no dark banner (browser Print-to-PDF
+     strips backgrounds by default), so restyle with ink-on-white using the
+     same accent color as h2 section headings. */
+  .dashboard {
+    box-shadow: none;
+    margin-bottom: 1rem;
+    border-radius: 0;
+  }
+  .dashboard-header {
+    background: #fff !important;
+    color: var(--ink) !important;
+    padding: 0 0 0.4rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .dashboard-header .name,
+  .dashboard-header h1.name {
+    color: var(--accent) !important;
+    font-size: 1.7rem;
+    margin-bottom: 0.25rem;
+  }
+  .dashboard-header .titles {
+    color: var(--ink) !important;
+    opacity: 1;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+  .dashboard-header .contact {
+    color: var(--ink-muted) !important;
+    opacity: 1;
+    font-size: 0.82rem;
+    margin-bottom: 0.4rem;
+  }
+  .dashboard-header .contact a {
+    color: var(--accent) !important;
+    border-bottom: none;
+  }
+  /* Honor chips: swap white-on-transparent for dark-on-light */
+  .honor-chips {
+    margin-top: 0.2rem;
+  }
+  .chip {
+    background: #f4f6fa !important;
+    border: 1px solid var(--rule) !important;
+    color: var(--accent) !important;
+    font-size: 0.78rem;
+  }
+  h2 {
+    page-break-after: avoid;
+    margin-top: 1.4rem;
+  }
+  h3, h4 {
+    page-break-after: avoid;
+  }
+  table, .pub-entry {
+    page-break-inside: avoid;
+  }
+  a {
+    color: var(--accent);
+    border-bottom: none;
+  }
+  /* Hide navigation and the PDF download link in printed output */
+  .quarto-alternate-formats,
+  .quarto-title-meta,
+  nav#TOC,
+  .toc-active,
+  .pdf-download,
+  .pdf-download-btn,
+  .pub-view-toggle,
+  .pub-view[data-view="by-topic"] {
+    display: none !important;
+  }
+  /* Always show the by-type view in print, regardless of which one the
+     reader last toggled on screen. */
+  .pub-view[data-view="by-type"] {
+    display: block !important;
+  }
+}
