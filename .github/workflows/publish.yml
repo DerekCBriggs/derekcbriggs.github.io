@@ -30,7 +30,7 @@ jobs:
       - name: Install R packages
         shell: Rscript {0}
         run: |
-          install.packages(c("yaml", "readr", "knitr"))
+          install.packages(c("rmarkdown", "knitr", "yaml", "readr"))
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
