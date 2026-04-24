@@ -760,4 +760,20 @@ National Academy of Education; American Educational Research Association; Nation
     });
   });
 })();
+
+// Prepend a "Derek C. Briggs" entry to the TOC that returns to the dashboard.
+// Quarto's TOC starts at h2 by design, so the dashboard h1 is excluded unless
+// we inject it. We look up the dashboard section's auto-generated ID at load
+// time so the anchor stays correct even if the heading text changes.
+(function () {
+  const tocList = document.querySelector('nav#TOC > ul');
+  const dashSection = document.querySelector('section.dashboard-header');
+  if (!tocList || !dashSection || !dashSection.id) return;
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = '#' + dashSection.id;
+  a.textContent = 'Derek C. Briggs';
+  li.appendChild(a);
+  tocList.insertBefore(li, tocList.firstChild);
+})();
 </script>
