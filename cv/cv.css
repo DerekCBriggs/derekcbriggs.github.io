@@ -399,7 +399,11 @@ table.students-table td:nth-child(2) {
     /* Body is a normal block element with extra right padding reserved
        for the fixed-position TOC. This restores standard margin-collapse
        behavior between the dashboard and the first h2 — the CSS grid we
-       used before was preventing collapse and creating a persistent gap. */
+       used before was preventing collapse and creating a persistent gap.
+       box-sizing:border-box so max-width caps the *outer* box (otherwise
+       padding adds on top of 80rem and the content overflows behind the
+       fixed TOC). */
+    box-sizing: border-box;
     max-width: 80rem;
     padding: 2rem calc(17rem + 3rem) 4rem 1.5rem;
     position: relative;
