@@ -384,7 +384,7 @@ Director, Center for Assessment, Design, Research and Evaluation (CADRE)
 :::
 
 ::: {.last-updated}
-*Last updated `r format(Sys.Date(), "%B %Y")`*
+*Last updated `r format(Sys.Date(), "%B %Y")` · [Two-page version →](cv-short.html){.pdf-download}*
 :::
 
 ## Research Expertise

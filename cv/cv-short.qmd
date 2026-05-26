@@ -1,0 +1,281 @@
+---
+title: "Derek C. Briggs — CV (Short)"
+author: "Derek C. Briggs"
+date: last-modified
+date-format: "MMMM YYYY"
+format:
+  html:
+    theme: none
+    css:
+      - cv.css
+      - cv-short.css
+    toc: false
+    anchor-sections: false
+    link-external-newwindow: true
+    include-in-header:
+      text: |
+        <meta name="description" content="Two-page curriculum vitae of Derek C. Briggs, Professor of Research and Evaluation Methodology, University of Colorado Boulder.">
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+library(yaml)
+library(readr)
+
+pubs_raw     <- yaml::read_yaml("data/publications.yaml")$publications
+grants_raw   <- readr::read_csv("data/grants.csv", show_col_types = FALSE)
+
+esc <- function(x) {
+  if (is.null(x)) return("")
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x
+}
+
+year_sort_key <- function(y) {
+  if (is.numeric(y)) return(as.numeric(y))
+  if (identical(y, "in press")) return(9999)
+  if (identical(y, "in preparation")) return(9998)
+  suppressWarnings(as.numeric(y))
+}
+
+vol_tail <- function(p) {
+  out <- ""
+  if (!is.null(p$volume)) {
+    out <- esc(p$volume)
+    if (!is.null(p$issue)) out <- paste0(out, "(", esc(p$issue), ")")
+  }
+  if (!is.null(p$pages)) {
+    out <- if (nchar(out)) paste0(out, ", ", esc(p$pages)) else esc(p$pages)
+  }
+  if (nchar(out)) paste0(", ", out) else ""
+}
+
+loc_pub <- function(p) {
+  if (is.null(p$publisher) && is.null(p$location)) return("")
+  if (!is.null(p$location) && !is.null(p$publisher)) {
+    sprintf("%s: %s", esc(p$location), esc(p$publisher))
+  } else if (!is.null(p$publisher)) {
+    esc(p$publisher)
+  } else {
+    esc(p$location)
+  }
+}
+
+title_end <- function(p) {
+  last <- substr(p$title, nchar(p$title), nchar(p$title))
+  if (last %in% c("?", "!", ".")) "" else "."
+}
+
+link_html <- function(p) {
+  if (!is.null(p$doi)) {
+    sprintf(' <a href="https://doi.org/%s" class="pub-doi">doi.org/%s</a>',
+            esc(p$doi), esc(p$doi))
+  } else if (!is.null(p$url)) {
+    sprintf(' <a href="%s" class="pub-doi">link</a>', esc(p$url))
+  } else ""
+}
+
+format_pub <- function(p) {
+  year_str <- as.character(p$year)
+  t <- esc(p$title)
+  te <- title_end(p)
+  a <- esc(p$authors)
+
+  body <- switch(p$category,
+    "book" = {
+      lp <- loc_pub(p)
+      sprintf("%s (%s). <em>%s</em>%s%s",
+              a, year_str, t, te,
+              if (nchar(lp)) paste0(" ", lp, ".") else "")
+    },
+    "journal-article" = {
+      venue <- if (!is.null(p$venue))
+        sprintf(" <em>%s</em>%s.", esc(p$venue), vol_tail(p)) else ""
+      sprintf("%s (%s). %s%s%s", a, year_str, t, te, venue)
+    },
+    "book-chapter" = {
+      ed <- if (!is.null(p$editors)) paste0(" In ", esc(p$editors), ",") else " In"
+      book <- if (!is.null(p$venue)) sprintf(" <em>%s</em>", esc(p$venue)) else ""
+      pp <- if (!is.null(p$pages)) sprintf(" (pp. %s)", esc(p$pages)) else ""
+      lp <- loc_pub(p); lp_str <- if (nchar(lp)) paste0(" ", lp, ".") else ""
+      sprintf("%s (%s). %s%s%s%s%s.%s",
+              a, year_str, t, te, ed, book, pp, lp_str)
+    },
+    sprintf("%s (%s). %s%s", a, year_str, t, te)
+  )
+
+  body <- paste0(body, link_html(p))
+  sprintf('<div class="pub-entry">%s</div>', body)
+}
+
+render_featured <- function() {
+  entries <- Filter(function(p) isTRUE(p$featured), pubs_raw)
+  if (!length(entries)) return(invisible())
+  keys <- vapply(entries, function(p) year_sort_key(p$year), numeric(1))
+  entries <- entries[order(keys, decreasing = TRUE)]
+  base::cat(paste(vapply(entries, format_pub, character(1)), collapse = "\n\n"))
+  base::cat("\n")
+}
+
+# Grants summary numbers.
+g_total <- sum(grants_raw$amount)
+g_pi    <- sum(grants_raw$amount[grants_raw$role == "PI"])
+g_copi  <- g_total - g_pi
+g_n     <- nrow(grants_raw)
+g_pi_n  <- sum(grants_raw$role == "PI")
+
+fmt_m <- function(x) {
+  if (x >= 1e6) sprintf("$%.2fM", x / 1e6) else sprintf("$%sK", formatC(round(x / 1e3), big.mark = ","))
+}
+```
+
+::: {.dashboard}
+
+::: {.dashboard-header}
+
+[Full CV](cv.html){.full-cv-btn}
+
+# Derek C. Briggs {.name}
+
+::: {.titles}
+Professor · Research and Evaluation Methodology · University of Colorado Boulder
+
+Associate Dean of Faculty, School of Education · Director, CADRE
+:::
+
+::: {.contact}
+[derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu) ·
+[Website](https://derekcbriggs.github.io/) ·
+[Google Scholar](https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en) ·
+[ORCID: 0000-0003-1628-4661](https://orcid.org/0000-0003-1628-4661)
+:::
+
+::: {.honor-chips}
+[National Academy of Education (2025)]{.chip}
+[AERA Fellow (2023)]{.chip}
+[NCME President (2021–22)]{.chip}
+[AERA Div. D Significant Contribution (2024)]{.chip}
+[h-index 34]{.chip}
+:::
+
+:::
+
+:::
+
+::: {.last-updated}
+*Short CV · Last updated `r format(Sys.Date(), "%B %Y")` · [Full CV →](cv.html)*
+:::
+
+## Research Focus
+
+Psychometrics, causal inference, and assessment policy — with sustained work
+on vertical scaling and growth modeling, the historical and philosophical
+foundations of measurement in the human sciences, learning-progression-based
+scale construction, and the design of large-scale assessment systems that
+inform teaching and learning.
+
+## Professional Experience
+
+::: {.timeline}
+
+2026
+:   Associate Dean of Faculty, School of Education, CU Boulder
+
+2016–
+:   Director, [Center for Assessment, Design, Research and Evaluation (CADRE)](https://www.colorado.edu/cadre/), CU Boulder
+
+2013–
+:   Professor, Research and Evaluation Methodology, CU Boulder
+
+2009–2013
+:   Associate Professor, Research and Evaluation Methodology, CU Boulder
+
+2003–2009
+:   Assistant Professor, Research and Evaluation Methodology, CU Boulder
+
+2002–2003
+:   Postdoctoral Scholar, Berkeley Evaluation and Assessment Research Center, UC Berkeley
+
+:::
+
+## Education
+
+::: {.timeline}
+
+2002
+:   **Ph.D.**, University of California, Berkeley — Education: Quantitative Methods and Evaluation. Advisor: Mark Wilson.
+
+1993
+:   **B.A.**, Carleton College — Economics (Departmental Distinction).
+
+:::
+
+## Selected Honors & Awards
+
+::: {.timeline}
+
+2025
+:   Elected to the National Academy of Education
+
+2024
+:   Award for Significant Contribution to Educational Measurement and Research Methodology, AERA Division D
+
+2023
+:   AERA Fellow
+
+2021–22
+:   President, National Council on Measurement in Education
+
+2020–22
+:   Honorary Research Fellow, University of Oxford, Department of Education
+
+2013–16
+:   Editor, *Educational Measurement: Issues and Practice*
+
+2012
+:   NCME Annual Award for Contributions to Theory and Practice
+
+2007–09
+:   NAEd / Spencer Postdoctoral Fellowship
+
+2004
+:   AERA Division D Outstanding Dissertation Award
+
+:::
+
+## Selected Publications
+
+```{r}
+#| results: asis
+render_featured()
+```
+
+## Grants and Contracts
+
+::: {.grants-summary}
+**Total: `r fmt_m(g_total)` across `r g_n` projects** — `r fmt_m(g_pi)` as PI
+(`r g_pi_n` projects) · `r fmt_m(g_copi)` as Co-PI. Funders include the
+National Science Foundation, Institute of Education Sciences, Spencer Foundation,
+Carnegie Corporation, Keck Foundation, Curriculum Associates, and Denver Public
+Schools.
+:::
+
+## Selected Service & Leadership
+
+::: {.service-compact}
+- **Editor**, *Educational Measurement: Issues and Practice*, 2013–2015
+- **Executive Committee** (elected), National Council on Measurement in Education, 2020–2023
+- **At-Large Board Member** (elected), NCME, 2016–2019
+- **Chair**, Technical Advisory Committee, Multistate Alternate Assessment Consortium (since 2016)
+- Technical Advisory Panels: Smarter Balanced Assessment Consortium (since 2011); PARCC / New Meridian (since 2011); NAEP / ETS Design Advisory Committee (since 2013); state TACs for AZ, KS, NY, UT
+- **Editorial Boards**: *Journal of Educational Measurement* (since 2016); *Educational Assessment* (since 2010)
+- **NCME Presidential Address**, 2022 — *Turning the page to the next chapter of educational measurement*
+- **PhD students graduated**: 15 (2008–2025) at CU Boulder
+:::
