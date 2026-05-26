@@ -14,6 +14,9 @@
 # Rendered site (built by GitHub Actions)
 _site/
 
+# One-shot preview renders (e.g., cv-short.preview.html)
+*.preview.html
+
 # Temp files
 *~
 ~$*
