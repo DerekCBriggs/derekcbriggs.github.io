@@ -1,0 +1,395 @@
+---
+title: "EDUC 8804: Using Artificial Intelligence in Academic Research"
+subtitle: "Fall 2026 &middot; Tuesdays 8:15--10:45 &middot; MBE 170"
+toc: true
+toc-depth: 3
+---
+
+## Instructor
+
+**Derek Briggs**
+
+Office: MBE 400D | Tel: (303) 709-5381 | E-mail: [derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu)
+
+Office Hours: Mondays 12:30--1:30 ([book a time](https://outlook.office.com/bookwithme/user/0db7830a3fbc411da19bdc83f456ca40@colorado.edu/meetingtype/4V1kSm5g7E24IN59y0pi4w2?anonymous&ismsaljsauthenabled&ep=mcard))
+
+Zoom: <https://cuboulder.zoom.us/my/derekbriggs>
+
+## Course Overview
+
+### Purpose
+
+The purpose of this course is to explore and critically evaluate the affordances and limitations of using generative Artificial Intelligence (AI) as a collaborative partner in the conduct, communication and dissemination of academic research.
+
+### Perspective on AI
+
+Whether we like it or not, the fact is that we now live in a world with generative AI. It will soon become (if it isn't already) a ubiquitous tool for academic research. The ethos of this course is motivated by the four principles for working with AI introduced by Ethan Mollick in his 2024 book *Co-Intelligence*.
+
+*Principle 1: Always invite AI to the table.*
+
+> The only way to become knowledgeable about the nuances, limitations and abilities of AI tools is to try them out and learn from experience. This is especially important because what you think you know about the limitations of AI at one point in time might not apply a few months later (see principle 4).
+
+*Principle 2: Be the human in the loop.*
+
+> AI has the potential to extend your capabilities as a researcher, but it can't replace you. In particular, AI tends to not be very good at being meta-cognitive. Without the right oversight AI chatbots can hallucinate and lie. Being the human in the loop means taking responsibility and being on the alert for the ways that errors can be induced by the use of AI.
+
+*Principle 3: Treat AI like a person (give it context and tell it what kind of person it is).*
+
+> This does not mean to anthropomorphize AI, but to appreciate that if it *was* a person with whom you were interacting, you'd always need to make sure that the person had sufficient **context** to be able to help you. Some of this falls under the label of what is known as "prompt engineering" or "context engineering." But it also depends on what the AI knows about you and what it knows about how you want it to respond.
+
+*Principle 4: Assume this is the worst AI you will ever use.*
+
+> When ChatGPT first came out in 2022, I would try it out with test questions from courses I taught about statistics and psychometrics. I was amazed that it could generally produce B- answers. Two years later those answers are as good or better than what I had written in my solutions. AI systems are no longer just LLMs---they can break down requests into chunks and use tools (Python code, the internet) to augment pre-trained knowledge. What AI can do is constantly evolving, so as researchers we need to stay on our toes.
+
+Mollick conceives of AI as offering a form of co-intelligence. In other words, as not replacing human intelligence, but extending it such that we will all want to learn how to function as "cyborgs." The hope is that at worst, AI will help us to become more efficient. At best, it could lead to innovations that would not have otherwise been possible. A core question I wish to have students explore empirically in this course is how and to what extent we should expect the process of research to change when we invite an AI to the table as a collaborator.
+
+### Locating Junctures for AI in Academic Research
+
+Most academic research has some common structural features such as
+
+1.  Identifying a problem that needs to be solved, or a debate that needs to be entered. Making a case for why research on the topic is necessary, and generating research questions.
+
+2.  Providing relevant summary and synthesis of prior research related to the topic. (This can take the form of either a review of the literature, a "conceptual framework" or both.)
+
+3.  Methods for **collecting data** relevant to the research questions.
+
+    a.  Direct observation
+    b.  Interviews
+    c.  Surveys
+    d.  Tests/Assessments
+
+4.  Methods for **analyzing data** relevant to the research questions.
+
+    a.  Thematic coding
+    b.  Measurement
+    c.  Statistical Modeling and Inference
+
+5.  Interpreting results
+
+    a.  Connecting results back to the literature
+    b.  Addressing threats to validity
+    c.  Recognizing limitations
+    d.  Suggesting next steps
+
+6.  Disseminating Results for a Broader Audience
+
+Of course, these features are seldom purely linear, and there are many exceptions to the rule. Of interest in this course is to explore not only how AI can be used in support of these different steps, but also how the results compare in a context where we already have a solid basis for ground truth in the form of previously published studies.
+
+### Course Goals
+
+The goals of the course are to
+
+-   equip students with the conceptual understanding and practical skills to use generative AI as a collaborative tool across the entire research lifecycle, from idea generation to dissemination;
+
+-   foster a critical and empirical mindset for evaluating AI-generated content, recognizing its strengths, limitations, and ethical implications;
+
+-   explore how AI may change the nature of academic research, for better or worse.
+
+### Learning Objectives
+
+Upon successful completion of this course, students will be able to
+
+**LO1 (Conceptual):** Explain the fundamental concepts, terminology, and capabilities of modern AI systems at a conceptual level (e.g., LLMs, transformers, training, fine-tuning, context windows).
+
+**LO2 (Application):** Apply AI tools knowledgably to assist in discrete research tasks, including developing research questions, conducting literature reviews, operationalizing data collection methods, and analyzing both qualitative and quantitative data.
+
+**LO3 (Evaluation):** Design and execute experiments to critically evaluate the performance of different AI models and prompting strategies against a known "ground truth" in their own domain of expertise.
+
+**LO4 (Synthesis):** Integrate AI tools into a coherent research workflow, documenting the process and reflecting on how AI's involvement shaped the research findings.
+
+**LO5 (Ethics):** Identify, discuss, and critique the major ethical and philosophical challenges posed by using AI in research, including algorithmic bias, the alignment problem, environmental impact, and disclosure of use.
+
+## Weekly Structure
+
+### Part 1: Foundations & Core Concepts (Weeks 1--5)
+
+#### Week 1: Introductions and Overview
+
+-   **Topic:** Introductions and Overview of Course and Terminology.
+
+-   **Required Reading**
+
+    -   What is AI? <https://derekcbriggs.github.io/posts/2026-02-05-AI%20Literacy%20Pt%201/>
+
+#### Week 2: What Can AI Do?
+
+-   **Topic:** Collaborating with AI
+
+-   **Required Readings**
+
+    -   *AI Fluency: Framework & Foundations* at <https://academy.claude.com> (sign up for free, there are 14 short lessons in total)
+    -   Mollick, E. (2024). *Co-intelligence: Living and working with AI*. Portfolio.
+    -   What Can AI Do? <https://derekcbriggs.github.io/posts/2026-02-20-26_AI%20Literacy%20Pt%202/>
+
+#### Week 3: Inside the Black Box (Part 1)
+
+-   **Topic:** The Architecture of LLMs
+
+-   **Required Readings**
+
+    -   How Does AI Work? <https://derekcbriggs.github.io/posts/2026-03-05_AI%20Literacy%20Pt%203/>
+    -   Karpathy YouTube video tutorial: <https://www.youtube.com/watch?v=7xTGNNLPyMI>
+
+-   **Optional Resource**
+
+    -   Understanding Transformers: <https://www.3blue1brown.com/lessons/gpt/>
+
+#### Week 4: Inside the Black Box (Part 2)
+
+-   **Topic:** Understanding AI Chatbots and AI Agents
+
+-   **Required Readings**
+
+    -   From Chatting to Collaborating with AI <https://derekcbriggs.github.io/posts/2026-08-19_Agentic%20AI/>
+    -   Giving your agent a persistent memory <https://remikalir.com/blog/claudes-remi-record/>
+    -   Building Effective Agents <https://www.anthropic.com/engineering/building-effective-agents>
+    -   Tracing the thoughts of a large language model <https://www.anthropic.com/news/tracing-thoughts-language-model>
+
+#### Week 5: Big Picture Issues & Introducing the Class Project
+
+-   **Topic:** The Alignment Problem and Environmental Impact.
+
+-   **Class Project Overview:** Using AI to try and replicate the results from ground-truth studies.
+
+-   **Required Reading**
+
+    -   How can we use AI Ethically? <https://derekcbriggs.github.io/posts/2026-04-07-AI%20Literacy%20Pt%204/>
+    -   AI as Normal Technology (2025) <https://knightcolumbia.org/content/ai-as-normal-technology>
+    -   Alignment faking in large language models (2024) <https://www.anthropic.com/news/alignment-faking>
+    -   The Urgency of Interpretability (2025) <https://darioamodei.com/post/the-urgency-of-interpretability>
+    -   Is it OK for AI to write science papers? (2025) <https://www.nature.com/articles/d41586-025-01463-8>
+
+-   **Optional Resources**
+
+    -   Measuring the environmental impact of delivering AI at Google Scale <https://arxiv.org/pdf/2508.15734>
+    -   On the Dangers of Stochastic Parrots <https://dl.acm.org/doi/pdf/10.1145/3442188.3445922>
+    -   Machines of Loving Grace <https://darioamodei.com/essay/machines-of-loving-grace>
+    -   The Gentle Singularity <https://blog.samaltman.com/the-gentle-singularity>
+
+### Part 2: AI in the Research Lifecycle (Weeks 6--12)
+
+#### Week 6: Using AI to Develop Research Questions
+
+-   **Topic:** Brainstorming problems, identifying gaps, and generating RQs.
+
+-   **Class Project:** Results from using AI to generate research questions
+
+-   **Required Reading**
+
+    -   Can LLMs Generate Novel Research Ideas? <https://arxiv.org/pdf/2409.04109>
+    -   The Ideation-Execution Gap <https://arxiv.org/abs/2506.20803>
+
+-   **Optional Resources**
+
+    -   Divergent creativity in humans and large language models <https://www.nature.com/articles/s41598-025-25157-3>
+    -   Theorizing with LLMs <https://www.nber.org/papers/w33033>
+
+#### Week 7: Using AI for Literature Review
+
+-   **Topic:** Finding and organizing prior research literature.
+
+-   **Class Project:** Results from using AI to perform a literature search
+
+-   **Required Reading & Resources**
+
+    -   Deep Research Mode in ChatGPT <https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt> and Research Mode in Claude <https://support.claude.com/en/articles/11088861-use-research-on-claude>[^claude-research]
+    -   OpenAI Deep Research System Card <https://deploymentsafety.openai.com/deep-research>
+    -   GhostCite: A Large-Scale Analysis of Citation Validity in the Age of Large Language Models <https://arxiv.org/pdf/2602.06718>
+    -   From NotebookLM to Gemini Notebook <https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/>
+    -   ResearchRabbit: <https://www.researchrabbit.ai/>
+
+-   **Optional Reading**
+
+    -   Transforming evidence synthesis: A systematic review of the evolution of automated meta-analysis in the age of AI <https://www.cambridge.org/core/journals/research-synthesis-methods/article/transforming-evidence-synthesis-a-systematic-review-of-the-evolution-of-automated-metaanalysis-in-the-age-of-ai/2D8147C2EC26AEECE707BAB17DBD753C>
+    -   DeepScholar-Bench: A Live Benchmark and Automated Evaluation for Generative Research Synthesis <https://arxiv.org/pdf/2508.20033>
+
+[^claude-research]: From Claude (Opus 5): Two caveats worth knowing before you rely on it for lit reviews: research sessions burn through usage limits considerably faster than normal chats, and citation quality is uneven---it retrieves well from the open web but has no privileged access to paywalled journal content, so for anything requiring JSTOR/EBSCO/Web of Science coverage it will systematically under-retrieve and may substitute secondary sources.
+
+#### Week 8: Using AI to Design Survey Instruments, Assessments, & Protocols
+
+-   **Topic:** AI-assisted design of surveys and assessments, interview protocols, and observation guides.
+
+-   **Class Project:** Results from using AI to create survey questions, interview protocols
+
+-   **Required Reading**
+
+    -   Exploring LLMs for Automated Generation and Adaptation of Questionnaires <https://arxiv.org/abs/2501.05985>
+    -   A Preliminary Investigation of LLM Capability for Cognitive Interviewing <https://journals.sagepub.com/doi/10.1177/14707853251369238>
+    -   Gorgun, G. and Bulut, O. (2025), Instruction-Tuned Large-Language Models for Quality Control in Automatic Item Generation: A Feasibility Study. *Educational Measurement: Issues and Practice*, 44: 96-107. <https://doi.org/10.1111/emip.12663>
+
+-   **Optional Resources**
+
+    -   The Ultimate Tutorial for AI-driven Scale Development in Generative Psychometrics: Releasing AIGENIE from its Bottle. <https://arxiv.org/abs/2603.28643>
+    -   Martini, Peter J., Patrick Scagnelli, and Marisol E. Trujillo Medina. 2026. From Prompt to Practice: Evaluating Unedited AI-Generated Psychometric Scales. *Survey Practice* 20 (March). <https://doi.org/10.29115/SP-2026-0002>
+    -   Rothschild, D., Marlar, J., Amaya, A., Barari, S., Buskirk, T., Cobb, C., Gennai, J., Hillygus, D., Korlakai Vinayak, R., Krupenkin, M., Lee, S., Steiger, D., Webb, B. (2026). Responsible AI Integration in Survey Research. American Association for Public Opinion Research. <https://aapor.org/wpcontent/uploads/2026/05/Responsible-AI-Integration-In-Survey-Research.pdf>
+
+#### Week 9: Using AI to Collect and Clean Data
+
+-   **Topic:** Web scraping, data cleaning, and managing qualitative (transcripts) and quantitative (survey responses) data.
+
+-   **Class Project:** Using AI to clean/structure the raw data from the ground-truth studies.
+
+-   **Required Reading & Resources**
+
+    -   How to Install Claude Code: <https://code.claude.com/docs/en/quickstart> or Codex <https://learn.chatgpt.com/docs/codex/cli>
+    -   Data Analyst Augmentation Framework <https://daaf.openaugments.org/index.html>
+    -   Wrangling data with ChatGPT 1: <https://learn.chatgpt.com/use-cases/clean-messy-data>
+    -   Wrangling data with ChatGPT 2: <https://learn.chatgpt.com/use-cases/datasets-and-reports>
+
+-   **Optional Resources**
+
+    -   Integrating Generative AI into R Workflows: From APIs to Shiny Apps <https://runyoncr.github.io/AIMECON_R_WORKSHOP/>
+    -   Programming with LLMs: <https://posit-conf-2025.github.io/llm/>
+
+#### Week 10: Using AI for Qualitative Data Analysis
+
+-   **Topic:** AI-assisted thematic coding and qualitative analysis.
+
+-   **Class Project:** Results from using AI for thematic coding in qualitative ground truth study
+
+-   **Required Reading**
+
+    -   Yang, Y., Ma, L. Artificial intelligence in qualitative analysis: a practical guide and reflections based on results from using GPT to analyze interview data in a substance use program. *Qual Quant* **59**, 2511--2534 (2025). <https://doi.org/10.1007/s11135-025-02066-1>
+    -   AlGhamdi, R. (2026). From Code Variability to Theme Convergence: AI--Human Alignment in Thematic Analysis With Claude Code. *International Journal of Qualitative Methods*, *25*.
+
+#### Week 11: Using AI for Quantitative Data Analysis
+
+-   **Topic:** AI as a co-pilot for statistical modeling, measurement, and psychometrics. (Example: Using AI to write, debug, and interpret R or Python code).
+
+-   **Class Project:** Results from using AI to replicate the analysis from the quantitative ground-truth studies.
+
+-   **Required Reading and Resources**
+
+    -   Sebastian, J., Moon, J.-M., & Camburn, E. (2025). Enhancing Quantitative Analysis in Social Sciences With Large Language Models (LLMs): A Methodological Case Study in Educational Research. *AERA Open*, *11*. <https://journals.sagepub.com/doi/10.1177/23328584251389621>
+    -   Data Analyst Augmentation Framework <https://daaf.openaugments.org/index.html>
+
+#### Week 12: Communicating Results and Acknowledging AI Use
+
+-   **Topic:** Using AI-generated text in manuscripts; using AI to create video summaries, slides, infographics; acknowledgement of AI use.
+
+-   **Class Project:** Results from using AI for these purposes in ground truth studies
+
+-   **Required Reading**
+
+    -   Delving into LLM-assisted writing in biomedical publications through excess vocabulary <https://www.science.org/doi/10.1126/sciadv.adt3813>
+    -   Mastering Gemini Notebook <https://www.youtube.com/watch?v=TGlPNGaHo6I>
+    -   A reporting checklist for large language models in behavioural science <https://www.nature.com/articles/s41562-026-02492-7>
+
+### Part 3: Synthesis & Future (Weeks 13 & 15)
+
+#### Week 13: Philosophical and Ethical Issues in the Use of AI
+
+-   **Topic:** AI Safety Issues. What is the future of human research in an AI world?
+
+-   **Required Reading**
+
+    -   The Adolescence of Technology <https://darioamodei.com/essay/the-adolescence-of-technology>
+    -   Doomer-adjacent Scenario <https://ai-2027.com/>
+    -   The Open AI-Hugging Face Incident <https://www.youtube.com/watch?v=87DyyMV0kCY&t=119s>
+
+-   **Student Project presentations**
+
+#### Week 14: Fall Break (No Class)
+
+#### Week 15: Lessons Learned
+
+-   **Topic:** Final "Lessons Learned" discussion
+
+-   **Student Project presentations**
+
+## Class Activities and Student Assessment
+
+### Collaborative Class Project
+
+I plan to come into the class with a small number of published studies that would serve as ground truth for exploring the use of AI in the research process. A constraint would be access to raw source data. For qualitative studies, this probably means de-identified observations or interview transcripts. For quantitative studies, this could mean de-identified data sets in row by column format.
+
+As a class we could experiment with use of AI to retroactively replicate each stage of the research process with the common studies that have been selected. As an example, I am just about to publish a study that required a lot of understanding about educational curricula, standards and assessment in K-8 mathematics in the United States (<https://osf.io/gcpt3>). It also involved an empirical analysis of publicly available NAEP test results from about 2000 to 2019. My co-authors and I did not use AI at all to do this research and write up the results. Could we use AI to replicate the quantitative results? That seems easy to answer. If we had used AI for each stage of the research process, would we have come to similar findings? That's harder to ascertain.
+
+I will also work with the class to see if we can generate other ideas for candidate ground truth studies that would appeal to the interests of students enrolled in the course.
+
+### Small-Scale Experiments
+
+At the outset of the course, I will have each student identify one or more domains in which they consider themselves "above average" in their expertise based on their prior knowledge and experience. A way to think about this: If someone asked you a question in this domain and you had access to the internet, would you be able to respond accurately 90% of the time?
+
+Throughout the course students will be required to produce memos and 10-minute presentations on some form of "A/B" experiment they conducted using AI to answer a question (or series of questions) within an area of their own expertise. Examples:
+
+-   Compare ChatGPT, Gemini, Claude
+-   Compare different prompting strategies
+-   Compare sub-models within a major model (e.g., "instant" vs "thinking")
+
+Requirement: Before asking the question, the person prompting must attempt to provide what they would regard as the "ground truth" answer.
+
+### Independent Project
+
+There are at least the following options (I am open to working with you on others).
+
+**Option 1:** Pick your own pre-AI or purely human-led study as ground truth, evaluate to what extent you would (or would not) replicate core aspects of the study in a collaboration with AI. For this option to be most worthwhile, you would really want to have access to whatever data was used as a basis for conclusions and claims made in the study.
+
+**Option 2:** Replicate the approach that I took ([described here](https://derekcbriggs.github.io/posts/2026-08-19_Agentic%20AI/)) in which I started with the core idea of a research paper in place, but the execution of the idea was still in pieces. From this starting point, collaborate with an AI agent to write a full draft, submit it to an adversarial peer review, and then revise at least once.
+
+**Option 3:** Collaborate with AI to produce a 10--15-page research grant proposal that would follow the requirements for a funding agency that regularly releases RFPs. Under this option you would need to have a real RFP issued in the past, and the criteria for evaluating grant proposals as key context.
+
+Irrespective of the option, although I am interested in (and expect you to submit) what you actually produce in your AI collaboration, I am more interested in your reflection and evaluation of the way your collaboration proceeded. I'll ask you to evaluate your AI research collaboration with respect to Anthropic's "4D" framework of *delegation, description, discernment and diligence* as described in the *AI Fluency: Framework & Foundations* short course found at [academy.claude.com](https://academy.claude.com).
+
+### Grading
+
+1.  2 Small-scale Experiment Reports and Short Oral Presentations (30%)
+2.  Quiz on "Inside the Black Box of LLMs" Week 3 (10%)
+3.  Active Participation in Class and Short Homework Assignments (20%)
+4.  Independent Project (40%)
+
+### Course Website: Canvas
+
+I will make all presentations, handouts, data sets, and other materials available to you on [Canvas](https://canvas.colorado.edu). This is where updated due dates, activities, announcements will be posted. Please make sure to turn on notifications for Canvas so that you receive course-related announcements during the semester. All assignments should be submitted via Canvas.
+
+### Use of AI Models in this Course
+
+We will be primarily using ChatGPT (OpenAI) and Claude (Anthropic) in this course with some instances of Gemini (Google) as well. Anyone with a CU email account should have access to the "Plus" version of ChatGPT and the "Pro" version of Gemini (these otherwise cost \$20 a month). I would personally recommend paying for the "Pro" version of Claude (\$20 a month) as well, but this is not required. The only requirement is that you have access to either the Pro version of Claude or the Plus version of ChatGPT. Note that the CU enterprise versions of ChatGPT and Gemini have as a default setting that no information shared with the model is publicly disclosed or used to further train the model. If you use a privately purchased version of Claude, you can also disable the feature that allows Anthropic to train or improve their models using your prompts and data.
+
+### Missing Classes
+
+Sometimes life and/or ill health intrudes, and you will be forced to miss a class. When this happens, please let me know as far in advance as possible. If you miss class, it is your responsibility to take the initiative to get back up to speed. Please don't assume that I will seek you out electronically or in person to provide you with materials or announcements you may have missed. If you miss two or more classes for unexcused reasons this will lower the "active participation" component contributing to your final grade.
+
+## University Policies
+
+### Classroom Behavior
+
+Students and faculty are responsible for maintaining an appropriate learning environment in all instructional settings, whether in person, remote, or online. Failure to adhere to such behavioral standards may be subject to discipline. Professional courtesy and sensitivity are especially important with respect to individuals and topics dealing with race, color, national origin, sex, pregnancy, age, disability, creed, religion, sexual orientation, gender identity, gender expression, veteran status, political affiliation, or political philosophy.
+
+Additional classroom behavior information:
+
+-   [Student Classroom and Course-Related Behavior Policy](https://www.colorado.edu/compliance/policies/student-classroom-course-related-behavior)
+-   [Student Code of Conduct](https://www.colorado.edu/sccr/students/honor-code-and-student-code-conduct)
+-   [Office of Institutional Equity and Compliance](https://www.colorado.edu/oiec/)
+
+### Accommodation for Disabilities, Temporary Medical Conditions, and Medical Isolation
+
+If you qualify for accommodations because of a disability, please submit your accommodation letter from Disability Services to your faculty member in a timely manner so that your needs can be addressed. Disability Services determines accommodations based on documented disabilities in the academic environment. Information on requesting accommodations is located on the [Disability Services website](https://www.colorado.edu/disabilityservices/). Contact Disability Services at 303-492-8671 or [DSinfo@colorado.edu](mailto:DSinfo@colorado.edu) for further assistance. If you have a temporary medical condition, see Temporary Medical Conditions on the Disability Services website.
+
+If you have a temporary illness, injury or required medical isolation for which you require adjustment please alert me by email at [derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu).
+
+### Student Names and Pronouns
+
+CU Boulder recognizes that students' legal information does not always align with how they identify. If you wish to have a name other than your legal name appear on your instructors' class rosters and in Canvas, or if you wish to choose pronouns to appear on your instructors' class rosters and in Canvas, visit the [Registrar's website](https://www.colorado.edu/registrar/students/records/info/preferred) for instructions on how to change your personal information in university systems.
+
+### Honor Code
+
+All students enrolled in a University of Colorado Boulder course are responsible for knowing and adhering to the [Honor Code](https://www.colorado.edu/sccr/students/honor-code-and-student-code-conduct). Violations of the Honor Code may include but are not limited to: plagiarism (including use of paper writing services or technology [such as essay bots]), cheating, fabrication, lying, bribery, threat, unauthorized access to academic materials, clicker fraud, submitting the same or similar work in more than one course without permission from all course instructors involved, and aiding academic dishonesty. Understanding the course's syllabus is a vital part of adhering to the Honor Code.
+
+All incidents of academic misconduct will be reported to Student Conduct & Conflict Resolution: [StudentConduct@colorado.edu](mailto:StudentConduct@colorado.edu). Students found responsible for violating the Honor Code will be assigned resolution outcomes from Student Conduct & Conflict Resolution and will be subject to academic sanctions from the faculty member. Visit [Honor Code](https://www.colorado.edu/sccr/students/honor-code-and-student-code-conduct) for more information on the academic integrity policy.
+
+### Sexual Misconduct, Discrimination, Harassment and/or Related Retaliation
+
+CU Boulder is committed to fostering a productive and welcoming learning, working, and living environment. University policy prohibits [protected-class](https://www.colorado.edu/oiec/policies/protected-class-nondiscrimination-policy/protected-class-definitions) discrimination and harassment, sexual misconduct (harassment, exploitation, and assault), intimate partner abuse (dating or domestic violence), stalking, and related retaliation by or against members of our community on- or off-campus. Denial of an approved accommodation for disability, religious observance, or pregnancy or pregnancy related medical conditions may be discriminatory.
+
+The [Office of Institutional Equity and Compliance (OIEC)](https://www.colorado.edu/oiec/) addresses these concerns, and individuals who have been subjected to misconduct can contact OIEC at 303-492-2127 or email [OIEC@colorado.edu](mailto:OIEC@colorado.edu). Information about university policies, [OIEC reporting options](https://www.colorado.edu/oiec/reporting-resolutions/making-report), and [OIEC support resources](https://www.colorado.edu/oiec/support-resources) including confidential services can be found on the [OIEC website](https://www.colorado.edu/oiec/).
+
+Faculty and graduate instructors are required to inform OIEC when someone discloses misconduct regardless of when or where it occurred. This is to ensure that those impacted receive outreach from OIEC about resolution options and support resources. To learn more about reporting and support options for a variety of concerns, visit the [Don't Ignore It page](https://www.colorado.edu/dontignoreit/).
+
+### Accommodation for Religious Obligations
+
+Instructional faculty members must make every reasonable effort to accommodate all students who have conflicts with scheduled exams, assignment deadlines or required attendance due to a religious observance. Whenever possible, students must notify the instructional faculty member at least two weeks in advance of the expected exam, assignment deadline, or attendance conflict to request an accommodation for religious observance. If the start date of the course is less than two weeks before the date of requested accommodation, students must notify the instructional faculty member on the start date of the course. See the [Student Academic Accommodations for Religious Observances Policy](https://www.colorado.edu/compliance/student-academic-accommodations-religious-observances-policy) for more information.
+
+### Mental Health and Wellness
+
+The University of Colorado Boulder is committed to supporting students' mental health and overall wellbeing. If personal, academic, or emotional challenges are affecting your wellbeing or success, [Counseling and Psychiatric Services (CAPS)](https://www.colorado.edu/counseling/) is here to help. CAPS offers counseling, referrals, psychiatric care, crisis support, and much more. Visit CAPS in the C4C, or call (303) 492-2277, 24/7.

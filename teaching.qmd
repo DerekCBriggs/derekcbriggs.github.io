@@ -22,6 +22,7 @@ I teach graduate-level courses in the Research and Evaluation Methodology progra
 | EDUC 8710 | Measurement in Survey Research | Principles of measurement as applied to survey design and analysis |
 | EDUC 8720 | [Psychometric Modeling: Item Response Theory](https://DerekCBriggs.github.io/Measurement-and-Psychometrics/) | Theory and application of IRT models |
 | EDUC 8740 | Latent Variable and Structural Equation Modeling | Advanced methods for modeling latent constructs |
+| EDUC 8804 | [Using Artificial Intelligence in Academic Research](courses/educ-8804-syllabus.qmd) | Critical exploration of generative AI as a collaborative partner across the research lifecycle, from idea generation to dissemination (new for Fall 2026) |
 
 ---
 
