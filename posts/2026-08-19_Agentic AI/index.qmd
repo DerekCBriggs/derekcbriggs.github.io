@@ -6,9 +6,24 @@ description: "How an eight-day collaboration with an AI agent took a manuscript 
 image: images/thumbnail.png
 toc-depth: 4
 draft: false
+resources:
+  - ElevenLabs_from-chatting-to-collaborating-clean.mp3
 ---
 
 ![](images/thumbnail.png){width=100% fig-align="center"}
+
+**Listen to this post**
+
+An audio adaptation narrated using an AI-generated clone of my voice (about 30 minutes).
+
+```{=html}
+<audio controls preload="none" aria-label="Listen to From Chatting to Collaborating with AI" style="width: 100%;">
+  <source src="ElevenLabs_from-chatting-to-collaborating-clean.mp3" type="audio/mpeg">
+  Your browser does not support the audio player.
+</audio>
+```
+
+[Download the audio (MP3)](ElevenLabs_from-chatting-to-collaborating-clean.mp3).
 
 I wear a lot of different hats in my professional career. Researcher, teacher, advisor, reviewer, director—and most recently—administrator. Wearing all of them at once means that some of the things I care about most simply don't get done. Exhibit A: a manuscript I'd been meaning to finish for two years. I had presented the crux of what I regarded as a really good idea at three conferences between 2024 and 2025, written an introduction and a background section in the summer of 2025, and then… nothing. With each passing month I kept beating myself up for not finding the time. I was stuck, and it felt like it would take a month of uninterrupted work to get unstuck.
 
