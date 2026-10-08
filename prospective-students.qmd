@@ -1,0 +1,45 @@
+---
+title: "Advice to Prospective Applicants to the REM PhD Program"
+subtitle: "Derek C. Briggs, Professor, Research and Evaluation Methodology (REM), School of Education, University of Colorado Boulder"
+---
+
+*Last updated: October 2026*
+
+Thank you for your interest in the REM PhD program. This page answers the questions prospective applicants ask me most often. The answers reflect my own views, not those of my REM colleagues or the School of Education. For official information, see the [REM program page](https://www.colorado.edu/education/academics/graduate-programs/research-evaluation-methodology/phd-education-emphasis-research) and the School of Education's [FAQ for PhD applicants](https://www.colorado.edu/education/academics/graduate-programs/faqs-phd-applicants). For how the program works after admission (coursework, advising, the weekly REMinar seminar, assistantships, milestones, and reflections from graduates), see the [REM Program Handbook](https://docs.google.com/document/d/1t4GJFplQ0g0lqhFAn9oMyesQXCFM-dpPjkUkR4v6lQ8/edit?tab=t.0). I adapted this page from Andrew Ho's longer [Advice to Prospective Applicants to the Harvard Ph.D. Program in Education](https://andrewho.scholars.harvard.edu/), which is also worth reading.
+
+## 1. Are you accepting new advisees?
+
+Yes. Every year I am open to accepting a new student and serving as their primary advisor, provided two conditions hold: our research interests fit, and funding is available through a research or evaluation project to support you.
+
+In REM, the full faculty make admissions decisions together. An offer depends on funding being available somewhere in the program, though not always with the primary advisor. For example, I direct the Center for Assessment, Design, Research and Evaluation ([CADRE](https://cadre-cu.github.io/)), and I may serve as primary advisor to a student whose assistantship is principally on a project led by my CADRE colleagues Elena Diaz-Bilello or Dan Mangan. I also lead evaluation projects through CADRE from time to time. The projects that can support a new student change from year to year. Because I also serve as the School's Associate Dean of Faculty, I am limited in how many students I can advise at one time.
+
+If you want to work with me, say so in your application. You do not need to guess whether I am "taking students" this year. Every REM student is also assigned a secondary advisor, so you will have more than one faculty mentor from the start.
+
+## 2. How do admissions and funding work?
+
+You apply to the PhD in Education with an emphasis in REM. The [program page](https://www.colorado.edu/education/academics/graduate-programs/research-evaluation-methodology/phd-education-emphasis-research) lists deadlines and requirements; GRE scores are optional but recommended. The REM faculty read applications and invite selected applicants to interview. The School's [FAQ page](https://www.colorado.edu/education/academics/graduate-programs/faqs-phd-applicants) lists the current timeline.
+
+Admitted students receive a five-year funding guarantee that covers tuition and a stipend in the fall and spring semesters. The funding comes mainly from graduate research assistantships on faculty projects and sometimes from teaching assistantships. Summer funding is not guaranteed. Section IV of the [Handbook](https://docs.google.com/document/d/1t4GJFplQ0g0lqhFAn9oMyesQXCFM-dpPjkUkR4v6lQ8/edit?tab=t.0) has the details.
+
+Because the whole REM faculty reads your application, write for all of them, not only for me.
+
+## 3. Will you meet with me before I apply?
+
+Not as a first step. Many applicants do not know that they can ask faculty for a meeting, so I put my answers in writing where anyone can read them. If you have read this page and the Handbook and still have specific questions that neither answers, email me at [derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu) with those questions. I am happy to set up a short meeting.
+
+## 4. What do you work on?
+
+My work asks what we can justifiably claim about student learning from test scores and other assessment results. Current and recent topics include validity, item response theory and the Rasch model, vertical scales and measures of growth, learning progressions, measurement issues in accountability and causal inference, the history and philosophy of measurement, and uses of AI in measurement and research.
+
+To see what I am working on now, look at my [Google Scholar page sorted by year](https://scholar.google.com/citations?user=FsarJmwAAAAJ&hl=en&view_op=list_works&sortby=pubdate), my [CV](cv/cv.qmd), the [Research](research.qmd) page on this site, my [AI & Education blog](blog.qmd), and the [CADRE website](https://cadre-cu.github.io/). My former advisees work as university faculty (including at Stanford, the University of Delaware, and CU Denver), at research and assessment organizations (including AIR, Cambium Assessment, and the Center for Assessment), and in school districts. My CV lists all of them.
+
+## 5. What advice do you have for my statement of purpose?
+
+My REM colleagues may weigh things differently, so treat this as one reader's view.
+
+- **Read research first.** You should be able to name a recent paper or report you found worth reading and explain why. You do not need to follow every equation.
+- **Describe your research experience, broadly defined.** It can come from teaching, analytic work in a district or state agency, a testing or research organization, program evaluation, or a master's program. REM is a quantitative program, so also show that you are ready for advanced coursework in statistics and psychometrics.
+- **Know my current work, but do not summarize it back to me.** Tell me why feedback from someone with my interests would help you reach your goals. You do not need to want to work on my projects.
+- **Give two or three specific questions you want to study.** "I am interested in assessment and equity" tells me little. "I want to know whether growth scores on my state's test mean the same thing for students who start far below grade level" tells me a lot. You are not committing to a dissertation topic.
+- **Skip the flattery.** Statements about lifelong passion or praise for the program use space you could spend describing where your interests point.
+- **On AI:** The School of Education [strongly discourages](https://www.colorado.edu/education/academics/graduate-programs/faqs-phd-applicants) using AI to draft any part of your responses to application questions. I think it is ok to use under the condition that you are using it to offer critical feedback and advice after you have written a first draft with thoughts and ideas coming from you. We want to get to know something about you, so make sure what you submit is ultimately reflective of your voice.

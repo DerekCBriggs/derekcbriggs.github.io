@@ -8,6 +8,10 @@ I believe that deep understanding of quantitative methods requires both rigorous
 
 I am increasingly incorporating **AI tools** into my teaching---both as a subject of study and as a pedagogical aid. I view AI as an opportunity to help students engage more deeply with difficult concepts, not as a shortcut around the hard work of learning.
 
+### Advice for Prospective PhD Applicants
+
+If you are considering applying to the REM PhD program and want to know whether I am accepting new advisees, please read my [Advice to Prospective Applicants to the REM PhD Program](prospective-students.qmd). It explains how REM admissions and funding work, when I meet with applicants, and what I look for in a statement of purpose.
+
 ---
 
 ## Courses
@@ -50,6 +54,8 @@ I welcome inquiries from prospective graduate students interested in:
 - Quantitative methods in education
 - The intersection of AI and assessment
 
+If you are considering applying to the REM PhD program, please first read my [advice for prospective applicants](prospective-students.qmd).
+
 Please see the [CU Boulder School of Education](https://www.colorado.edu/education/academics/graduate-programs) for information about our graduate programs.
 
 ---
@@ -58,4 +64,4 @@ Please see the [CU Boulder School of Education](https://www.colorado.edu/educati
 
 **Current students:** Please schedule office hours through Canvas or email me directly at [derek.briggs@colorado.edu](mailto:derek.briggs@colorado.edu).
 
-**Prospective students:** I am happy to discuss our programs. Please email with your background and interests.
+**Prospective students:** Please read my [advice for prospective applicants](prospective-students.qmd) first. If you still have specific questions it does not answer, email me with those questions.
