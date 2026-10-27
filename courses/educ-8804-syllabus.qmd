@@ -311,7 +311,7 @@ I will also work with the class to see if we can generate other ideas for candid
 
 At the outset of the course, I will have each student identify one or more domains in which they consider themselves "above average" in their expertise based on their prior knowledge and experience. A way to think about this: If someone asked you a question in this domain and you had access to the internet, would you be able to respond accurately 90% of the time?
 
-Throughout the course students will be required to produce memos and 10-minute presentations on some form of "A/B" experiment they conducted using AI to answer a question (or series of questions) within an area of their own expertise. Examples:
+Throughout the course students will be required to produce 2 memos and 10-minute presentations on some form of "A/B" experiment they conducted using AI to answer a question (or series of questions) within an area of their own expertise. Examples:
 
 -   Compare ChatGPT, Gemini, Claude
 -   Compare different prompting strategies
